@@ -46,3 +46,33 @@ As a result the following database tables will be required:
 * Comment
 
 The above outlines the key elements of the proposed e-commerce model and the remainder of this document is developed with this model in mind.
+
+## 3. User Stories - Minimum Viable Product (MVP)
+
+1. As a **Visiting User** I can **easily view information on the type of business this is** so that **I can quickly determine if the business provides the service/products I require.**
+
+2. As a **Visiting User** I can **view a list of products the business sells** so that **I can choose items I may wish to purchase.**
+
+3. As a **Visiting User** I can **search and filter the products list** so that **I can easily find the products I need.**
+
+4. As a **Visiting User** I can **view the details for a specific product** so that **I can decide if the particular product is the one I wish/need to purchase.**
+
+5. As a **Visiting User** I can **view details, including costs, for delivery** so that **I know what the costs and terms are before I start spending time adding items to a potential purchase list.**
+
+6. As a **Visiting User** I can **add items to a shopping cart** so that **after choosing an item to potentially purchase I can continue to look at other items, add further items, and keep track of the overall potential total.**
+
+7. As a **Visiting User** I can **view my shopping cart purchase summary** so that **I can review all of the items I have added to the cart and the total purchase cost.**
+
+8. As a **Visiting User** I can **adjust the quantity of any item in my cart or remove an item completely** so that **I can easily confirm a final purchase list just prior to making a purchase.**
+
+9. As a **Visiting User** I can **make an online payment with my debit or credit card** so that **I can easily purchase my chosen products.**
+
+10. As a **Visiting User** I can **create an account and save my details** so that **I do not have to enter all of my details each time I make a purchase on this website.**
+
+11. As a **Site Administrator** I can **log in to the admin pages of the website** so that **I can securely carry out admin functions in sections of the site not accessible to the general public.**
+
+12. As a **Site Administrator** I can **add products to the product list** so that **the website can be easily updated with the latest product offerings from the business.**
+
+13. As a **Site Administrator** I can **edit product details** so that **the product details can be easily kept up to date over time.**
+
+14. As a **Site Administrator** I can **delete products from the product list** so that **any products no longer sold by the business are easily removed from the product offering.**
