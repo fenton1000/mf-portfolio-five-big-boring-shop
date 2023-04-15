@@ -76,3 +76,63 @@ The above outlines the key elements of the proposed e-commerce model and the rem
 13. As a **Site Administrator** I can **edit product details** so that **the product details can be easily kept up to date over time.**
 
 14. As a **Site Administrator** I can **delete products from the product list** so that **any products no longer sold by the business are easily removed from the product offering.**
+
+## 4. Features
+
+Please note that the features section contains relevant extracts from the project wireframes. The complete wireframes are included in section 7 of this document.
+
+### 4.1 Navigation Bar
+
+* The navigation bar provides a Home link to return to the home page from any other page. This link will be highlighted to indicate when a user is on the homepage.
+
+* The navigation bar contains the BBS logo. The logo is also a link to the home page in line with likely user expectations.
+
+* When no user is logged in the navigation bar provides links to Register or Log In.
+
+* When a user is logged in the links to My Account and Log Out replace the Register or Log In options.
+
+* The Register, Log In, My Account, and Log Out links are highlighted as active when the appropriate page is open.
+
+* An Admin Only link to the admin log in page is also provided for ease of access. This link will have a different colour to differentiate it from the main user links.
+
+<details><summary>Fig. 4.1.1 Navigation Bar with no user logged in.</summary>
+<img src="documents/navbar-logged-out.png"
+alt="wireframe of the navigation bar when there is no user logged in"></details>
+
+<details><summary>Fig. 4.1.2 Navigation Bar with a user logged in.</summary>
+<img src="documents/navbar-logged-in.png"
+alt="wireframe of the navigation bar when there is a user logged in"></details>
+
+### 4.2 Header
+
+* The header contains the business name "Big Boring Shop" as an h1 heading in a prominent location on the page.
+
+* The header contains a h2 sub-heading "Your weekly shopping delivered!".
+
+* The header contains a hero image with a theme related to the purpose of the website.
+
+<details><summary>Fig. 4.2.1 Header</summary>
+<img src="documents/header.png"
+alt="wireframe of the page header"></details>
+
+### 4.3 Footer
+
+* The footer contains links to social media - Facebook, Instagram, Twitter, YouTube.
+
+* The footer contains the newsletter registration form linking to the mailchimp service.
+
+* The footer is sticky, always appearing at the bottom of the view.
+
+### 4.4 Home Page Main Section
+
+<details><summary>Fig. 4.4.1 Home Page Main Section on Desktop</summary>
+<img src="documents/home-main-desktop.png"
+alt="wireframe of the home page main section on desktop"></details>
+
+<details><summary>Fig. 4.4.2 Home Page Main Section on Mobile</summary>
+<img src="documents/home-main-mobile.png"
+alt="wireframe of the home page main section on a mobile device"></details>
+
+### 4.5 Products Page
+
+* Search and filter options are provided.
