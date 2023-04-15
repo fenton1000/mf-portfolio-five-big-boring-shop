@@ -208,3 +208,73 @@ The following technologies were used in developing and deploying the website:
 ## 11. Testing
 
 ## 12. Deployment
+
+## 13. References and Credits
+
+### 13.1 References
+
+* The Code Institute student Template for Gitpod provided by Code Institute at https://github.com/Code-Institute-Org/gitpod-full-template. This template allows easy set up of a repository and workspace.
+
+* The Code Institute Hello Django and I Think therefore I Blog example projects provided within the online learning system (LMS). These provide general guidance as to minimun project requirements. They also provide an overview of best practice and industry conventions. Furthermore they outline the key aspects of the Django framework, the process to import Django into the IDE and the process to deploy a production version to Heroku.
+
+* The code Institute Boutique Ado example project provided within the online learning system (LMS). This provides general guidance as to minimun project requirements. It also provides an overview of best practice and industry conventions. In particular it provides boilerplate code for this project as well as the process and code required to link to the Stripe payment platform.
+
+* The Code Institute Principles of Agile Development module provided by Code Institute within its online learning system (LMS). This module provides information on Agile theory as well as systems for its practical implementation that have been applied to this project.
+
+* Django version 3.2 documentation available at https://docs.djangoproject.com/en/3.2/. Django is the full-stack framework technology used to develop this project.
+
+* Python version 3.8 documentation available at https://docs.python.org/3.8/. Python is the backend programming language used in the Django full-stack framework technology used to develop this project.
+
+* Bootstrap version 5.3 documentation available at https://getbootstrap.com/docs/5.3/getting-started/introduction/. Bootstrap has been used throughout this project to create page styles and components.
+
+* jQuery documentation available at https://jquery.com/. jQuery has been used for event handling and DOM manipulation including to aid responsivness.
+
+* django-allauth documentation available at https://django-allauth.readthedocs.io/en/latest/index.html. django-allauth has been used for user sign up/ log in/ authentication.
+
+* fontpair information on font styles and pairings at https://www.fontpair.co/.
+
+* Google Fonts documentation available at https://fonts.google.com/. Google Fonts has been used to import The Bubblegum Sans and the Quicksand font styles.
+
+* Answer by username ladhari to a question on Stack Overflow at https://stackoverflow.com/questions/20138049/redirect-user-to-another-url-with-django-allauth-log-in-signal for information on having seperate django redirects for sign up and log in.
+
+* Real Python information on using current user instance in the backend via request.user at https://realpython.com/django-view-authorization/.
+
+* w3schools information on the jQuery val() Method at https://www.w3schools.com/jquery/html_val.asp.
+
+* w3schools information on the jQuery attr() Method at https://www.w3schools.com/jquery/html_attr.asp
+
+* Answers by both username "c-smile" and username "Pointy" to a question on Stack Overflow available at https://stackoverflow.com/questions/6131119/jquery-attribute-selector-variable for information on the correct syntax when using the jQuery attribute selector with a variable as the value.
+
+* "How to use Django Messages Framework" by JAYSHA on ORDINARY CODERS available at https://ordinarycoders.com/blog/article/django-messages-framework for information on creating custom alerts using Django messages.
+
+* Answer by Mahdi Zare to a question on Stack Overflow at https://stackoverflow.com/questions/27064206/django-check-if-a-related-object-exists-error-relatedobjectdoesnotexist for information on using ObjectDoesNotExist from django.core.exceptions.
+
+* "Dynamic classes in navbar" from Django World by Yash Patel available at https://www.youtube.com/watch?v=qLG6B6yWH58 for code and information regarding the addition of the active class to the correct link in the navbar of a base template.
+
+* mdn web docs information on the HTML input type "tel" and the pattern attribute available at https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/tel.
+
+* The W3C Markup Validation Service available at https://validator.w3.org/ for HTML code validation.
+
+* The W3C CSS Validation Service available at https://jigsaw.w3.org/css-validator/ for CSS code validation.
+
+* JS Hint available at https://jshint.com/ for javascript/jquery validation.
+
+* The Code Institute Python Linter available at https://pep8ci.herokuapp.com/ for python validation.
+
+* The amiresponsive website available at https://ui.dev/amiresponsive to check responsiveness.
+
+* Contribution by Levon on Stack Overflow available at https://stackoverflow.com/questions/10660435/how-do-i-split-the-definition-of-a-long-string-over-multiple-lines for information on how to split strings over multiple lines so as not to exceed the maximum line length.
+
+### 13.2 Credits
+
+* Image size and format adjusting by Reduce Images: https://www.reduceimages.com/
+
+* Converting images to webp format by FreeConvert: https://www.freeconvert.com/image-converter
+
+* Favicon generation by favicon.io: https://favicon.io/
+
+* Fellow students in the KCETB-Code Institute cohort for the feedback, advice, and, constant discussion of all things code.
+
+* Ms. Irene Neville, Code Institute cohort facilitator, for the provision of or signposting towards all key pieces of information needed to ensure the successful completion of the project to the required standards.
+
+* Mr. Rohit Sharma (Mentor) for guidance on overall project approach, industry standards and, README requirements.
