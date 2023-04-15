@@ -136,3 +136,26 @@ alt="wireframe of the home page main section on a mobile device"></details>
 ### 4.5 Products Page
 
 * Search and filter options are provided.
+
+## 5. Future Features
+
+## 6. Typography and Color Scheme
+
+### 6.1 Typography
+
+### 6.2 Color Scheme
+
+## 7. Wireframes
+
+## 8. Database Entity Relationship Diagram
+
+## 9. Agile Methodology
+
+## 10. Technology
+
+## 11. Testing
+
+## 12. Deployment
+
+
+
