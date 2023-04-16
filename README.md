@@ -173,7 +173,7 @@ The following technologies were used in developing and deploying the website:
 
 * jQuery
 
-* django-allauth
+* django-allauth v.0.41.0
 
 * Google Fonts
 
