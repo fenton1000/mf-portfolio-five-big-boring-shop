@@ -177,7 +177,7 @@ The following technologies were used in developing and deploying the website:
 
 * Google Fonts
 
-* The IDE used was CodeAnywhere
+* The IDE used was GITPOD
 
 * The repository used is GITHUB
 
@@ -243,6 +243,8 @@ The following technologies were used in developing and deploying the website:
 
 * w3schools information on the jQuery attr() Method at https://www.w3schools.com/jquery/html_attr.asp
 
+* w3schools information on rotate in CSS at https://www.w3schools.com/cssref/css_pr_rotate.php
+
 * Answers by both username "c-smile" and username "Pointy" to a question on Stack Overflow available at https://stackoverflow.com/questions/6131119/jquery-attribute-selector-variable for information on the correct syntax when using the jQuery attribute selector with a variable as the value.
 
 * "How to use Django Messages Framework" by JAYSHA on ORDINARY CODERS available at https://ordinarycoders.com/blog/article/django-messages-framework for information on creating custom alerts using Django messages.
@@ -266,6 +268,8 @@ The following technologies were used in developing and deploying the website:
 * Contribution by Levon on Stack Overflow available at https://stackoverflow.com/questions/10660435/how-do-i-split-the-definition-of-a-long-string-over-multiple-lines for information on how to split strings over multiple lines so as not to exceed the maximum line length.
 
 ### 13.2 Credits
+
+* The hero image is a photo by Sora Shimazaki: https://www.pexels.com/photo/close-up-photo-of-assorted-colored-push-carts-5926217/
 
 * Image size and format adjusting by Reduce Images: https://www.reduceimages.com/
 

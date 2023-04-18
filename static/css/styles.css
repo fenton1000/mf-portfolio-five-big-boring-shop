@@ -1,0 +1,69 @@
+.hero {
+    position: relative;
+    height: 30vw;
+    background: url('/media/pexels-sora-shimazaki-5926217-lscape.webp') no-repeat center center;
+}
+
+.business {
+    height: 30vw;
+    background-color: red;
+    color: yellow;
+}
+
+h1 {
+    font-size: 6vw;
+}
+
+.tagline {
+    position: absolute;
+    bottom: 6vw;
+    left: 8vw;
+    background-color: whitesmoke;
+    width: 50vw;
+    border-radius: 10px;
+    padding: 5px;
+    rotate: 350deg;
+}
+
+.tagline h2 {
+    font-size: 3vw;
+}
+
+.banner {
+    background-color: #212529;
+    color: whitesmoke;
+    font-size: 3vw;
+    letter-spacing: 2px;
+    line-height: 0.8;
+    padding: 2px;
+}
+
+/* For Screens 768px wide and down */
+@media screen and (max-width: 768px) {
+    .hero {
+        display: none;
+    }
+
+    .small-tagline {
+        background-color: whitesmoke;
+        width: 50vw;
+        border-radius: 10px;
+        padding: 2px;
+    }
+    
+    .small-tagline h2 {
+        font-size: 3vw;
+        color: #212529;
+    }
+
+    .business {
+        height: 20vw;
+    }
+}
+
+/* For Screens 768px wide and up */
+@media screen and (min-width: 768px) {
+    .business .small-tagline {
+        display: none;
+    }
+}
