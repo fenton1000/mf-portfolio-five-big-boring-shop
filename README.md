@@ -233,7 +233,7 @@ The following technologies were used in developing and deploying the website:
 
 * fontpair information on font styles and pairings at https://www.fontpair.co/.
 
-* Google Fonts documentation available at https://fonts.google.com/. Google Fonts has been used to import The Bubblegum Sans and the Quicksand font styles.
+* Google Fonts documentation available at https://fonts.google.com/. Google Fonts has been used to import Roboto and Roboto Condensed font styles.
 
 * Answer by username ladhari to a question on Stack Overflow at https://stackoverflow.com/questions/20138049/redirect-user-to-another-url-with-django-allauth-log-in-signal for information on having seperate django redirects for sign up and log in.
 
@@ -269,7 +269,17 @@ The following technologies were used in developing and deploying the website:
 
 ### 13.2 Credits
 
-* The hero image is a photo by Sora Shimazaki: https://www.pexels.com/photo/close-up-photo-of-assorted-colored-push-carts-5926217/
+* The hero image is a photo by Sora Shimazaki sourced from Pexels at: https://www.pexels.com/photo/close-up-photo-of-assorted-colored-push-carts-5926217/
+
+* Photo of eggs by Pixabay sourced from Pexels at: https://www.pexels.com/photo/brown-eggs-on-brown-wooden-bowl-on-beige-knit-textile-162712/
+
+* Photo of sugar by Suzy Hazelwood sourced from Pexels at: https://www.pexels.com/photo/close-up-photo-of-sugar-cubes-in-glass-jar-2523650/
+
+* Photo of a water bottle by Steve Johnson sourced from Pexels at: https://www.pexels.com/photo/clear-disposable-bottle-on-black-surface-1000084/
+
+* Photo of a toothbrush by Karolina Grabowska sourced from Pexels at: https://www.pexels.com/photo/photo-of-toothpaste-on-toothbrush-4202927/
+
+* Photo of toilet paper by Vlada Karpovich sourced from Pexels at: https://www.pexels.com/photo/stack-of-toilet-paper-rolls-in-a-basket-3958185/
 
 * Image size and format adjusting by Reduce Images: https://www.reduceimages.com/
 
