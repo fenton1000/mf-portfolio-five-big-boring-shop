@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
 .hero {
     position: relative;
     height: 30vw;
@@ -11,6 +18,8 @@
 }
 
 h1 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
     font-size: 6vw;
 }
 
@@ -35,7 +44,8 @@ h1 {
     font-size: 3vw;
     letter-spacing: 2px;
     line-height: 0.8;
-    padding: 2px;
+    padding-top: 10px;
+    padding-bottom: 3px;
 }
 
 /* For Screens 768px wide and down */
