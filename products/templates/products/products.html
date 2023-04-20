@@ -9,9 +9,9 @@ Shop!
 <div class="container-fluid py-2 bg-secondary">
     <div class="row">
         <div class="col-12 col-md-6 d-flex justify-content-center">
-            <form class="form-inline d-flex justify-content-center">
+            <form method="GET" action="{% url 'products' %}" class="form-inline d-flex justify-content-center">
                 <div class="form-group mx-sm-3 mb-2">
-                    <input class="form-control" type="search" placeholder="Search" aria-label="search">
+                    <input class="form-control" type="search" name="q" placeholder="Search" aria-label="search">
                 </div>
                 <button type="submit" class="btn btn-success mb-2 ml-2">Search</button>
             </form>
@@ -23,14 +23,21 @@ Shop!
                     Product Categories
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">Fresh Products</a>
-                    <a class="dropdown-item" href="#">Household</a>
+                    <a class="dropdown-item" href="{% url 'products' %}?category=fresh_food">Fresh Food</a>
+                    <a class="dropdown-item" href="{% url 'products' %}?category=cupboard_freezer">Cupboard and Freezer</a>
+                    <a class="dropdown-item" href="{% url 'products' %}?category=drinks">Drinks</a>
+                    <a class="dropdown-item" href="{% url 'products' %}?category=health_beauty">Health and Beauty</a>
+                    <a class="dropdown-item" href="{% url 'products' %}?category=household">Household</a>
                 </div>
             </div>
         </div>
     </div>
 </div>
 <main>
+    <div class="d-flex justify-content-center my-3 text35">
+        <p>{{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}{% if current_category %} in Product Category: <strong>"{{ current_category.friendly_name }}"</strong>{% endif %}
+        </p>
+    </div>
     <div class="d-flex justify-content-around flex-wrap">
         {% for product in products %}
         <div class='d-inline-block m-3'>
