@@ -34,7 +34,8 @@ Shop!
     </div>
 </div>
 <main>
-    <div class="d-flex justify-content-center my-3 text35">
+    <div class="d-flex flex-column align-items-center my-3 text35">
+        <p>Minimum order for Free Delivery is €{{ free_delivery_threshold }}.</p>
         <p>{{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}{% if current_category %} in Product Category: <strong>"{{ current_category.friendly_name }}"</strong>{% endif %}
         </p>
     </div>
