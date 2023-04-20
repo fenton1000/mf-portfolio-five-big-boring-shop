@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}
+Shopping Cart
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h3>Shopping Cart</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            {% if cart_items %}
+            <div></div>
+            {% else %}
+            <p class="text35">Your Cart is empty!</p>
+            <a class="btn btn-secondary" href="{% url 'products' %}">Back to Products Page</a>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}
