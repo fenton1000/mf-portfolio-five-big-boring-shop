@@ -4,6 +4,10 @@
     font-size: 35px;
 }
 
+.width35 {
+    width: 35px;
+}
+
 body {
     margin-top: 56px;
     font-family: 'Roboto', sans-serif;
