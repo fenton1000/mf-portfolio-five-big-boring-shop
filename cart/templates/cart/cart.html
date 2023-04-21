@@ -15,7 +15,9 @@ Shopping Cart
     <div class="row">
         <div class="col">
             {% if cart_items %}
-            <div></div>
+            <div>
+                {{ cart_items }}
+            </div>
             {% else %}
             <p class="text35">Your Cart is empty!</p>
             <a class="btn btn-secondary" href="{% url 'products' %}">Back to Products Page</a>
