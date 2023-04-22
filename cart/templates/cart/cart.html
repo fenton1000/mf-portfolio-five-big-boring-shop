@@ -30,16 +30,26 @@ Shopping Cart
                     {% for item in cart_items %}
                     <tr>
                         <td class="p-3 d-none d-sm-inline">
-                            <img class="img-fluid width35" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                            <img class="img-fluid width35" src="{{ item.product.image.url }}"
+                                alt="{{ item.product.name }}">
                         </td>
                         <td class="py-0 py-sm-3">
                             <p class="my-0">{{ item.product.name }}</p>
+                            <a href="{% url 'remove_from_cart' item.product.id %}"
+                                class="btn btn-outline-danger btn-sm">Remove</a>
                         </td>
                         <td class="py-0 py-sm-3">
                             <p class="my-0">€{{ item.product.price }}</p>
                         </td>
                         <td class="py-0 py-sm-3 w-sm-25">
-                            <p class="my-0">{{ item.quantity }}</p>
+                            <form class="form d-flex flex-column align-items-center"
+                                action="{% url 'adjust_cart' item.product.id %}" method="POST">
+                                {% csrf_token %}
+                                <input class="form-control sm-input m-2" type="number" name="quantity"
+                                    value="{{ item.quantity }}" min="0" max="99" data-item_id="{{ item.product.id }}"
+                                    id="id_qty_{{ item.product.id }}" aria-label="adjustable quantity">
+                                <input type="submit" class="btn btn-outline-success btn-sm" value="Update">
+                            </form>
                         </td>
                         <td class="py-0 py-sm-3 text-right">
                             <p class="my-0">€{{ item.sub_total }}</p>

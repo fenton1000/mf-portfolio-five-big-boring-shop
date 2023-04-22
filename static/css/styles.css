@@ -8,6 +8,10 @@
     width: 35px;
 }
 
+.sm-input {
+    width: 70px;
+}
+
 body {
     margin-top: 56px;
     font-family: 'Roboto', sans-serif;
