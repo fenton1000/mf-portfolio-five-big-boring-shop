@@ -255,6 +255,10 @@ The following technologies were used in developing and deploying the website:
 
 * mdn web docs information on the HTML input type "tel" and the pattern attribute available at https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/tel.
 
+* w3schools information on the HTML data-* attribute available at https://www.w3schools.com/tags/att_data-.asp.
+
+* "How to Get the data-id Attribute of an Element Using jQuery" by TutorialRepublic, available at https://www.tutorialrepublic.com/faq/how-to-get-the-data-id-attribute-of-an-element-using-jquery.php#:~:text=Alternatively%2C%20you%20can%20also%20use,the%20statement%20like%20%24(this). This was a source for guidance on combined use of a data attribute with the jQuery attr() method.
+
 * The W3C Markup Validation Service available at https://validator.w3.org/ for HTML code validation.
 
 * The W3C CSS Validation Service available at https://jigsaw.w3.org/css-validator/ for CSS code validation.

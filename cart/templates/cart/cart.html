@@ -16,12 +16,11 @@ Shopping Cart
         <div class="col">
             {% if cart_items %}
             <div class="table-responsive">
-                <table class="table table-sm table-borderless text-center">
+                <table id="all-items" class="table table-sm table-borderless text-center">
                     <thead>
                         <tr>
                             <th scope="col" class="d-none d-sm-inline"></th>
                             <th scope="col">Product</th>
-                            <th scope="col">Price</th>
                             <th scope="col">Qty</th>
                             <th scope="col" class="text-right">Subtotal</th>
                         </tr>
@@ -35,11 +34,7 @@ Shopping Cart
                         </td>
                         <td class="py-0 py-sm-3">
                             <p class="my-0">{{ item.product.name }}</p>
-                            <a href="{% url 'remove_from_cart' item.product.id %}"
-                                class="btn btn-outline-danger btn-sm">Remove</a>
-                        </td>
-                        <td class="py-0 py-sm-3">
-                            <p class="my-0">€{{ item.product.price }}</p>
+                            <p class="my-3">€{{ item.product.price }}</p>
                         </td>
                         <td class="py-0 py-sm-3 w-sm-25">
                             <form class="form d-flex flex-column align-items-center"
@@ -53,6 +48,12 @@ Shopping Cart
                         </td>
                         <td class="py-0 py-sm-3 text-right">
                             <p class="my-0">€{{ item.sub_total }}</p>
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-outline-danger btn-sm my-3" data-toggle="modal"
+                                data-target="#deleteModal"
+                                data-delete-href="{% url 'remove_from_cart' item.product.id %}">
+                                Remove
+                            </button>
                         </td>
                     </tr>
                     {% endfor %}
@@ -84,5 +85,36 @@ Shopping Cart
         </div>
     </div>
 </div>
+
+<!-- Modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteModalLabel">Remove Item?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Do you wish to permanently remove the full quantity of this item from your Cart?
+                If you wish to change the quantity of this item, select cancel, adjust the quantity and select update.
+                Confirm remove this item in full?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <a id="remove" class="btn btn-danger">Remove</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+
+<!-- js file Script -->
+<script src="{% static 'js/deleteCartItem.js' %}"></script>
 
 {% endblock %}
