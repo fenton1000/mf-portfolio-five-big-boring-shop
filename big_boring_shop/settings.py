@@ -14,6 +14,9 @@ import os
 from pathlib import Path
 from django.contrib.messages import constants as messages
 
+if os.path.isfile('env.py'):
+    import env
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -126,18 +129,42 @@ DATABASES = {
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
+user_att = (
+    'django.contrib.auth.'
+    'password_validation.UserAttribute'
+    'SimilarityValidator'
+)
+
+min_len = (
+    'django.contrib.auth.'
+    'password_validation.'
+    'MinimumLengthValidator'
+)
+
+common = (
+    'django.contrib.auth.'
+    'password_validation.'
+    'CommonPasswordValidator'
+)
+
+numeric = (
+    'django.contrib.auth.'
+    'password_validation.'
+    'NumericPasswordValidator'
+)
+
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'NAME': user_att,
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'NAME': min_len,
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        'NAME': common,
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        'NAME': numeric,
     },
 ]
 
@@ -170,5 +197,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# Stripe
 FREE_DELIVERY_THRESHOLD = 30
 STANDARD_DELIVERY_CHARGE = 10
+STRIPE_CURRENCY = 'usd'
+STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
+STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
