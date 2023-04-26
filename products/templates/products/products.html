@@ -24,7 +24,8 @@ Shop!
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     <a class="dropdown-item" href="{% url 'products' %}?category=fresh_food">Fresh Food</a>
-                    <a class="dropdown-item" href="{% url 'products' %}?category=cupboard_freezer">Cupboard and Freezer</a>
+                    <a class="dropdown-item" href="{% url 'products' %}?category=cupboard_freezer">Cupboard and
+                        Freezer</a>
                     <a class="dropdown-item" href="{% url 'products' %}?category=drinks">Drinks</a>
                     <a class="dropdown-item" href="{% url 'products' %}?category=health_beauty">Health and Beauty</a>
                     <a class="dropdown-item" href="{% url 'products' %}?category=household">Household</a>
@@ -36,7 +37,9 @@ Shop!
 <main>
     <div class="d-flex flex-column align-items-center my-3 text35">
         <p>Minimum order for Free Delivery is €{{ free_delivery_threshold }}</p>
-        <p>{{ products|length }} Product(s){% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}{% if current_category %} in Product Category: <strong>"{{ current_category.friendly_name }}"</strong>{% endif %}
+        <p>{{ products|length }} Product(s){% if search_term %} found for
+            <strong>"{{ search_term }}"</strong>{% endif %}{% if current_category %} in Product Category:
+            <strong>"{{ current_category.friendly_name }}"</strong>{% endif %}
         </p>
     </div>
     <div class="d-flex justify-content-around flex-wrap">
@@ -63,6 +66,12 @@ Shop!
                 <div class="card-body">
                     <a href="{% url 'product_detail' product.id %}" class="card-link">Product Details</a>
                     <a href="#" class="card-link">Add to Cart</a>
+                    {% if request.user.is_superuser %}
+                    <small class="ml-3">
+                        <a href="{% url 'edit_product' product.id %}">Edit</a> |
+                        <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                    </small>
+                    {% endif %}
                 </div>
             </div>
         </div>
