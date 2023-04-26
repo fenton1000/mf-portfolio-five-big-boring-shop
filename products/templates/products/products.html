@@ -43,9 +43,15 @@ Shop!
         {% for product in products %}
         <div class='d-inline-block m-3'>
             <div class="card product-cards">
+                {% if product.image %}
                 <a href="{% url 'product_detail' product.id %}">
                     <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
                 </a>
+                {% else %}
+                <a href="{% url 'product_detail' product.id %}">
+                    <img src="/media/noimage.png" class="card-img-top" alt="{{ product.name }}">
+                </a>
+                {% endif %}
                 <div class="card-body">
                     <h5 class="card-title">{{ product.name }}</h5>
                 </div>

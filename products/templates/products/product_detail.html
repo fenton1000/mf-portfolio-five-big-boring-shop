@@ -10,7 +10,11 @@ Selected Product
     <div class="container-fluid my-3">
         <div class="row">
             <div class="col-12 col-md-6 d-flex justify-content-center">
+                {% if product.image %}
                 <img class="img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                {% else %}
+                <img class="img-fluid" src="/media/noimage.png" alt="{{ product.name }}">
+                {% endif %}
             </div>
             <div class="col d-flex justify-content-center align-items-center text-center">
                 <div class="w-75">

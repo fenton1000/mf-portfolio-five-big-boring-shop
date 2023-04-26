@@ -29,8 +29,13 @@ Shopping Cart
                     {% for item in cart_items %}
                     <tr>
                         <td class="p-3 d-none d-sm-inline">
+                            {% if product.image %}
                             <img class="img-fluid width35" src="{{ item.product.image.url }}"
                                 alt="{{ item.product.name }}">
+                            {% else %}
+                            <img class="img-fluid width35" src="/media/noimage.png"
+                                alt="{{ item.product.name }}">
+                            {% endif %}
                         </td>
                         <td class="py-0 py-sm-3">
                             <p class="my-0">{{ item.product.name }}</p>
