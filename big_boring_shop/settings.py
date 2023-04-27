@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 import os
+import dj_database_url
 from pathlib import Path
 from django.contrib.messages import constants as messages
 
@@ -30,7 +31,7 @@ SECRET_KEY = 'django-insecure-#-uphzsbsh-)8-z+18)u@c#j)*9dbd79u^9pl@q0xcq&phh!q2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['mf-pp5-big-boring-shop.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -119,12 +120,17 @@ MESSAGE_TAGS = {
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
 
 
 # Password validation
