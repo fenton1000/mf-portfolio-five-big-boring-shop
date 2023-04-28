@@ -39,6 +39,10 @@ class Favourites(models.Model):
     """
     Model for saving authenticated users' product favourites lists
     """
+
+    class Meta:
+        verbose_name_plural = 'Favourites'
+
     user = models.ForeignKey(
         User,
         on_delete=models.CASCADE,

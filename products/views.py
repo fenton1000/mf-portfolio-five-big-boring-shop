@@ -5,6 +5,7 @@ from django.db.models import Q
 
 from .models import Product, Category
 from .forms import ProductForm
+from profiles.models import Favourites
 
 
 def products(request):
@@ -129,3 +130,23 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
+
+
+@login_required
+def add_favourite(request, product_id):
+    """ Add a product to user favourite list """
+
+    user = request.user
+    product = get_object_or_404(Product, pk=product_id)
+    if Favourites.objects.filter(
+        user=user,
+        product=product,
+    ).exists():
+        messages.warning(request, 'This product was already on your list!')
+    else:
+        Favourites.objects.create(
+            user=user,
+            product=product,
+        )
+        messages.success(request, 'Product added to Favourites!')
+    return redirect(reverse('product_detail', args=[product.id]))
