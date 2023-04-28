@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}
+Contact Us
+{% endblock %}
+
+{% block content %}
+<h3>Contact Us</h3>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <p>Office Hours: 8am to 8pm - 7 days</p>
+            <p>Telephone Number: 555 123 4567</p>
+        </div>
+        <div class="col-12 col-md-6">
+            <p>Email:</p>
+            <p>For Billing Queries: bill@bigboringshop.ie</p>
+            <p>For Product Queries: products@bigboringshop.ie</p>
+            <p>For all other Queries: help@bigboringshop.ie</p>
+        </div>
+    </div>
+</div>
+<h4>Contact Form</h4>
+
+<p>Please complete the form including your name and email address together with your comment or query and we will get
+    back to you as soon as possible!</p>
+
+<form action="{% url 'contact' %}" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-secondary">Submit</button>
+
+</form>
+
+{% endblock %}
