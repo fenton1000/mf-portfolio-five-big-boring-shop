@@ -4,6 +4,10 @@ from profiles.models import UserProfile
 
 
 class Contact(models.Model):
+    """
+    Model for recording all queries and comments
+    posted via the website contact form
+    """
     user_profile = models.ForeignKey(
         UserProfile,
         on_delete=models.SET_NULL,

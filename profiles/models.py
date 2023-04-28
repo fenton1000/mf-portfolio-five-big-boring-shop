@@ -3,6 +3,8 @@ from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 
+from products.models import Product
+
 
 class UserProfile(models.Model):
     """
@@ -28,6 +30,25 @@ class UserProfile(models.Model):
         blank=True)
     default_county = models.CharField(max_length=80, null=True, blank=True)
     default_eircode = models.CharField(max_length=20, null=True, blank=True)
+
+    def __str__(self):
+        return self.user.username
+
+
+class Favourites(models.Model):
+    """
+    Model for saving authenticated users' product favourites lists
+    """
+    user = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE,
+        related_name='favourites'
+    )
+    product = models.ForeignKey(
+        Product,
+        on_delete=models.CASCADE,
+        related_name='favourites'
+    )
 
     def __str__(self):
         return self.user.username
