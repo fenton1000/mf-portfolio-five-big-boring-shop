@@ -5,7 +5,7 @@ from django.db.models import Q
 
 from .models import Product, Category
 from .forms import ProductForm
-from profiles.models import Favourites
+from profiles.models import Favourites, Rating
 
 
 def products(request):
@@ -49,9 +49,21 @@ def product_detail(request, product_id):
     """ A view to show individual product details """
 
     product = get_object_or_404(Product, pk=product_id)
+    user = request.user
+    user_rating = ''
+
+
+    if Rating.objects.filter(user=user, product=product).exists():
+        user_rating_entry = get_object_or_404(
+            Rating,
+            user=user,
+            product=product
+        )
+        user_rating = user_rating_entry.user_rating
 
     context = {
         'product': product,
+        'user_rating': user_rating,
     }
 
     return render(request, 'products/product_detail.html', context)

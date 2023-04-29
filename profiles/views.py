@@ -110,3 +110,31 @@ def rate_product(request, product_id):
     product.save()
     messages.success(request, f'Your rating for {product.name} has been added')
     return redirect(redirect_url)
+
+
+@login_required
+@require_POST
+def edit_product_rating(request, product_id):
+    """
+    Update a rating in the Rating database for the specified product and user
+    and re-calculate the rating for the product in the Product db.
+    """
+
+    user = request.user
+    product = get_object_or_404(Product, pk=product_id)
+    new_user_rating = int(request.POST.get('user_rating'))
+    redirect_url = request.POST.get('redirect_url')
+    rating_entry = get_object_or_404(Rating, user=user, product=product)
+    current_rating = rating_entry.user_rating
+
+    rating_entry.user_rating = new_user_rating
+    rating_entry.save()
+    
+    sum_of_all_ratings = (
+        (product.rating * product.num_of_raters - current_rating) + new_user_rating
+    )
+    product.rating = sum_of_all_ratings/product.num_of_raters
+
+    product.save()
+    messages.success(request, f'Your rating for {product.name} has been updated')
+    return redirect(redirect_url)
