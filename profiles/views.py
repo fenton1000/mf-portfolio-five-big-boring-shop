@@ -1,7 +1,8 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from .models import UserProfile, Favourites
+from django.views.decorators.http import require_POST
+from .models import UserProfile, Favourites, Rating
 from .forms import UserProfileForm
 
 from checkout.models import Order
@@ -19,7 +20,10 @@ def profile(request):
             form.save()
             messages.success(request, 'Profile updated successfully')
         else:
-            messages.error(request, 'Update failed. Please ensure the form is valid.')
+            messages.error(
+                request,
+                'Update failed. Please ensure the form is valid.'
+            )
     else:
         form = UserProfileForm(instance=profile)
     orders = profile.orders.all()
@@ -62,3 +66,47 @@ def delete_favourite(request, product_id):
     favourite.delete()
     messages.success(request, 'Product deleted from favourites!')
     return redirect('profile')
+
+
+@login_required
+@require_POST
+def rate_product(request, product_id):
+    """
+    Add a rating to the Rating database for the specified product and user
+    and re-calculate the rating and number of raters for the
+    product in the Product db.
+    """
+
+    user = request.user
+    product = get_object_or_404(Product, pk=product_id)
+    user_rating = int(request.POST.get('user_rating'))
+    redirect_url = request.POST.get('redirect_url')
+
+    if Rating.objects.filter(
+        user=user,
+        product=product,
+    ).exists():
+        messages.warning(request, 'You have already rated this product!')
+        return redirect(redirect_url)
+
+    Rating.objects.create(
+        user=user,
+        product=product,
+        user_rating=user_rating,
+    )
+
+    current_num_of_raters = product.num_of_raters
+
+    if current_num_of_raters == 0:
+        product.rating = user_rating
+        product.num_of_raters = 1
+    else:
+        sum_of_all_ratings = (
+            product.rating * current_num_of_raters + user_rating
+        )
+        product.num_of_raters += 1
+        product.rating = sum_of_all_ratings/product.num_of_raters
+
+    product.save()
+    messages.success(request, f'Your rating for {product.name} has been added')
+    return redirect(redirect_url)
