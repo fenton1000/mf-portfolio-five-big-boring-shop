@@ -79,6 +79,27 @@ class Rating(models.Model):
         return self.user.username
 
 
+class Comment(models.Model):
+    """
+    Model for saving authenticated users' product comments
+    """
+
+    user = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE,
+        related_name='comments'
+    )
+    product = models.ForeignKey(
+        Product,
+        on_delete=models.CASCADE,
+        related_name='comments'
+    )
+    comments = models.TextField(null=False, blank=False)
+
+    def __str__(self):
+        return self.user.username
+
+
 @receiver(post_save, sender=User)
 def create_or_update_user_profile(sender, instance, created, **kwargs):
     """
