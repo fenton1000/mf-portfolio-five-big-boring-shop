@@ -59,7 +59,7 @@ Selected Product
                     <p>You gave this product a rating of {{ user_rating }}/5</p>
                     <small class="ml-3">
                         <a href="#" id="id_edit_rating">Edit my Rating</a> |
-                        <a class="text-danger" href="#">Delete my Rating</a>
+                        <a class="text-danger" href="{% url 'delete_product_rating' product.id %}?redirect_url={{ request.path }}">Delete my Rating</a>
                     </small>
                     <form id="edit_rating_form" action="{% url 'edit_product_rating' product.id %}" method="POST" class="d-none">
                         {% csrf_token %}
