@@ -58,6 +58,27 @@ class Favourites(models.Model):
         return self.user.username
 
 
+class Rating(models.Model):
+    """
+    Model for saving authenticated users' product ratings
+    """
+
+    user = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE,
+        related_name='ratings'
+    )
+    product = models.ForeignKey(
+        Product,
+        on_delete=models.CASCADE,
+        related_name='ratings'
+    )
+    user_rating = models.IntegerField(null=False, blank=False)
+
+    def __str__(self):
+        return self.user.username
+
+
 @receiver(post_save, sender=User)
 def create_or_update_user_profile(sender, instance, created, **kwargs):
     """

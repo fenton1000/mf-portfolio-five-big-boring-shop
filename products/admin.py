@@ -5,6 +5,11 @@ from .models import Product, Category
 
 
 class ProductAdmin(admin.ModelAdmin):
+    readonly_fields = (
+        'rating',
+        'num_of_raters',
+    )
+
     list_display = (
         'sku',
         'name',

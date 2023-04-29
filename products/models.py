@@ -33,6 +33,7 @@ class Product(models.Model):
         null=True,
         blank=True
     )
+    num_of_raters = models.IntegerField(null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
 
     def __str__(self):
