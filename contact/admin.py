@@ -13,7 +13,7 @@ class ContactAdmin(admin.ModelAdmin):
         'query',
         'date',
     )
-    
+
     list_display = (
         'date',
         'email',

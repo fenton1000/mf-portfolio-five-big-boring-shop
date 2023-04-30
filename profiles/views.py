@@ -129,22 +129,27 @@ def edit_product_rating(request, product_id):
 
     rating_entry.user_rating = new_user_rating
     rating_entry.save()
-    
+
     sum_of_all_ratings = (
-        (product.rating * product.num_of_raters - current_rating) + new_user_rating
+        (product.rating * product.num_of_raters - current_rating)
+        + new_user_rating
     )
     product.rating = sum_of_all_ratings/product.num_of_raters
 
     product.save()
-    messages.success(request, f'Your rating for {product.name} has been updated')
+    messages.success(
+        request, f'Your rating for {product.name} has been updated'
+    )
     return redirect(redirect_url)
 
 
 @login_required
 def delete_product_rating(request, product_id):
     """
-    Delete a rating entry in the Rating database for the specified product and user
-    and re-calculate the rating for the product in the Product db.
+    Delete a rating entry in the Rating database for
+    the specified product and user
+    and re-calculate the rating for the
+    product in the Product db.
     """
 
     user = request.user
@@ -161,12 +166,16 @@ def delete_product_rating(request, product_id):
         product.rating = None
         product.num_of_raters = 0
     else:
-        sum_of_all_ratings = (product.rating * product.num_of_raters - current_rating)
+        sum_of_all_ratings = (
+            product.rating * product.num_of_raters - current_rating
+        )
         product.rating = sum_of_all_ratings/new_num_of_raters
         product.num_of_raters = new_num_of_raters
 
     product.save()
-    messages.success(request, f'Your rating for {product.name} has been deleted')
+    messages.success(
+        request, f'Your rating for {product.name} has been deleted'
+    )
     return redirect(redirect_url)
 
 
@@ -203,7 +212,9 @@ def edit_comment(request, comment_id):
         edited_comment = request.POST.get('edited_comment')
         comment.comment = edited_comment
         comment.save()
-        messages.success(request, f'Your comment on {comment.product.name} has been edited')
+        messages.success(
+            request, f'Your comment on {comment.product.name} has been edited'
+        )
         return redirect(redirect_url)
     else:
         redirect_url = request.GET['redirect_url']
@@ -213,7 +224,6 @@ def edit_comment(request, comment_id):
             'redirect_url': redirect_url,
         }
         return render(request, template, context)
-
 
 
 @login_required
@@ -228,5 +238,7 @@ def delete_comment(request, comment_id):
     redirect_url = request.GET['redirect_url']
     comment.delete()
 
-    messages.success(request, f'Your comment on {product_name} has been deleted')
+    messages.success(
+        request, f'Your comment on {product_name} has been deleted'
+    )
     return redirect(redirect_url)

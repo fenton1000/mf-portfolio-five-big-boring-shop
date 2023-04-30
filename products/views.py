@@ -54,7 +54,6 @@ def product_detail(request, product_id):
     all_comments = Comment.objects.filter(product=product)
     user_rating = ''
 
-
     if Rating.objects.filter(user=user, product=product).exists():
         user_rating_entry = get_object_or_404(
             Rating,
