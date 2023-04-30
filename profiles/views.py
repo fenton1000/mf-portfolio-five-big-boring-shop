@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.http import require_POST
-from .models import UserProfile, Favourites, Rating
+from .models import UserProfile, Favourites, Rating, Comment
 from .forms import UserProfileForm
 
 from checkout.models import Order
@@ -167,4 +167,26 @@ def delete_product_rating(request, product_id):
 
     product.save()
     messages.success(request, f'Your rating for {product.name} has been deleted')
+    return redirect(redirect_url)
+
+
+@login_required
+@require_POST
+def add_comment(request, product_id):
+    """
+    Add a comment to the Comment database for the specified product and user
+    """
+
+    user = request.user
+    product = get_object_or_404(Product, pk=product_id)
+    comment = request.POST.get('comment')
+    redirect_url = request.POST.get('redirect_url')
+
+    Comment.objects.create(
+        user=user,
+        product=product,
+        comment=comment,
+    )
+
+    messages.success(request, f'Your comment on {product.name} has been added')
     return redirect(redirect_url)

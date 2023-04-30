@@ -5,7 +5,7 @@ from django.db.models import Q
 
 from .models import Product, Category
 from .forms import ProductForm
-from profiles.models import Favourites, Rating
+from profiles.models import Favourites, Rating, Comment
 
 
 def products(request):
@@ -50,6 +50,8 @@ def product_detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
     user = request.user
+    current_user_comments = Comment.objects.filter(user=user, product=product)
+    all_comments = Comment.objects.filter(product=product)
     user_rating = ''
 
 
@@ -64,6 +66,8 @@ def product_detail(request, product_id):
     context = {
         'product': product,
         'user_rating': user_rating,
+        'current_user_comments': current_user_comments,
+        'all_comments': all_comments
     }
 
     return render(request, 'products/product_detail.html', context)

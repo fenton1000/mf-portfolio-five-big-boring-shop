@@ -94,7 +94,8 @@ class Comment(models.Model):
         on_delete=models.CASCADE,
         related_name='comments'
     )
-    comments = models.TextField(null=False, blank=False)
+    date = models.DateTimeField(auto_now_add=True)
+    comment = models.TextField(null=False, blank=False)
 
     def __str__(self):
         return self.user.username
