@@ -23,7 +23,10 @@ def cart_contents(request):
             'product': product,
         })
 
-    if total < settings.FREE_DELIVERY_THRESHOLD:
+    if total == 0:
+        delivery = 0
+        free_delivery_delta = settings.FREE_DELIVERY_THRESHOLD
+    elif total < settings.FREE_DELIVERY_THRESHOLD:
         delivery = settings.STANDARD_DELIVERY_CHARGE
         free_delivery_delta = settings.FREE_DELIVERY_THRESHOLD - total
     else:
