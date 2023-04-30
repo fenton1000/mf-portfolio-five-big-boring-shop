@@ -10,4 +10,5 @@ urlpatterns = [
     path('delete_product_rating/<product_id>', views.delete_product_rating, name='delete_product_rating'),
     path('add_comment/<product_id>', views.add_comment, name='add_comment'),
     path('delete_comment/<comment_id>', views.delete_comment, name='delete_comment'),
+    path('edit_comment/<comment_id>', views.edit_comment, name='edit_comment'),
 ]

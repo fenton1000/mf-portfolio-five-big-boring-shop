@@ -193,6 +193,30 @@ def add_comment(request, product_id):
 
 
 @login_required
+def edit_comment(request, comment_id):
+    """
+    Update a comment in the Comment database for the specified product and user
+    """
+    comment = get_object_or_404(Comment, pk=comment_id)
+    if request.method == 'POST':
+        redirect_url = request.POST.get('redirect_url')
+        edited_comment = request.POST.get('edited_comment')
+        comment.comment = edited_comment
+        comment.save()
+        messages.success(request, f'Your comment on {comment.product.name} has been edited')
+        return redirect(redirect_url)
+    else:
+        redirect_url = request.GET['redirect_url']
+        template = 'profiles/edit_comment_form.html'
+        context = {
+            'comment': comment,
+            'redirect_url': redirect_url,
+        }
+        return render(request, template, context)
+
+
+
+@login_required
 def delete_comment(request, comment_id):
     """
     Delete a comment in the Comment database

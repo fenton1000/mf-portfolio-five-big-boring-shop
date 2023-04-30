@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}
+Edit Comment
+{% endblock %}
+
+{% block content %}
+
+<form action="{% url 'edit_comment' comment.id %}" method="POST">
+    {% csrf_token %}
+    <label for="edit_comment">Edit your comment on {{comment.product.name}}:</label>
+    <textarea id="edit_comment" name="edited_comment" rows="10" cols="50"
+        required>{{comment.comment}}</textarea>
+    <input type="submit" class="btn btn-secondary" value="Update Comment">
+    <input type="hidden" name="redirect_url" value="{{redirect_url}}">
+</form>
+
+{% endblock %}
