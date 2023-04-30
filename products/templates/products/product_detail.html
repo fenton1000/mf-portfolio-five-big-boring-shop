@@ -100,6 +100,12 @@ Selected Product
                 {% for comment in current_user_comments %}
                 <p>{{comment.date}}</p>
                 <p>{{comment.comment}}</p>
+                <small class="ml-3">
+                    <a href="#" id="id_edit_comment">Edit this Comment</a> |
+                    <a class="text-danger"
+                        href="{% url 'delete_comment' comment.id %}?redirect_url={{ request.path }}">Delete
+                        this Comment</a>
+                </small>
                 {% endfor %}
                 {% else %}
                 <p>You have not commented on this product</p>

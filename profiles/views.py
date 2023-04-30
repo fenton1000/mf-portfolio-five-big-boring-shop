@@ -190,3 +190,19 @@ def add_comment(request, product_id):
 
     messages.success(request, f'Your comment on {product.name} has been added')
     return redirect(redirect_url)
+
+
+@login_required
+def delete_comment(request, comment_id):
+    """
+    Delete a comment in the Comment database
+    for the loggin in user
+    """
+
+    comment = get_object_or_404(Comment, pk=comment_id)
+    product_name = comment.product.name
+    redirect_url = request.GET['redirect_url']
+    comment.delete()
+
+    messages.success(request, f'Your comment on {product_name} has been deleted')
+    return redirect(redirect_url)
