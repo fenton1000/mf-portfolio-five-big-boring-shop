@@ -120,8 +120,8 @@ h4 {
     border-radius: 0;
 }
 
-/* For Screens 768px wide and down */
-@media screen and (max-width: 768px) {
+/* For Screens 767px wide and down */
+@media screen and (max-width: 767px) {
     .hero {
         display: none;
     }
