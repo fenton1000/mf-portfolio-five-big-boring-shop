@@ -17,7 +17,7 @@ Selected Product
                 {% if product.image %}
                 <img class="img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
                 {% else %}
-                <img class="img-fluid" src="/media/noimage.png" alt="{{ product.name }}">
+                <img class="img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                 {% endif %}
             </div>
             <div class="col d-flex justify-content-center align-items-center text-center">
