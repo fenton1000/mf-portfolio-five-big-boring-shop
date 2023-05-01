@@ -50,17 +50,21 @@ def product_detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
     user = request.user
-    current_user_comments = Comment.objects.filter(user=user, product=product)
     all_comments = Comment.objects.filter(product=product)
+    current_user_comments = None
     user_rating = ''
-
-    if Rating.objects.filter(user=user, product=product).exists():
-        user_rating_entry = get_object_or_404(
-            Rating,
+    if user.is_authenticated:
+        current_user_comments = Comment.objects.filter(
             user=user,
             product=product
         )
-        user_rating = user_rating_entry.user_rating
+        if Rating.objects.filter(user=user, product=product).exists():
+            user_rating_entry = get_object_or_404(
+                Rating,
+                user=user,
+                product=product
+            )
+            user_rating = user_rating_entry.user_rating
 
     context = {
         'product': product,

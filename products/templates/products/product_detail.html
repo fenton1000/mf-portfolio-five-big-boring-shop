@@ -95,6 +95,7 @@ Selected Product
         </div>
         <div class="row">
             <div class="col-12 col-md-6">
+                {% if user.is_authenticated %}
                 {% if current_user_comments %}
                 <p>You have made the following comments on this product:</p>
                 {% for comment in current_user_comments %}
@@ -118,6 +119,7 @@ Selected Product
                     <input type="submit" class="btn btn-secondary" value="Comment">
                     <input type="hidden" name="redirect_url" value="{{ request.path }}">
                 </form>
+                {% endif %}
             </div>
             <div class="col-12 col-md-6">
                 <div class="all-comments">
