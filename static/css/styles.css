@@ -33,6 +33,7 @@ body {
 h1,
 h3,
 h4,
+h5,
 label {
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: 700;
@@ -51,6 +52,12 @@ h3 {
 h4 {
     font-size: 40px;
     margin-bottom: 30px;
+}
+
+h5 {
+    font-size: 35px;
+    margin-bottom: 30px;
+    margin-top: 30px;
 }
 
 .tagline {
