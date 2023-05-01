@@ -6,89 +6,86 @@ Shopping Cart
 {% endblock %}
 
 {% block content %}
-<div class="container">
+<div class="container-fluid">
     <div class="row">
         <div class="col">
-            <h3>Shopping Cart</h3>
+            <h3 class="text-center">Shopping Cart</h3>
         </div>
     </div>
     <div class="row">
-        <div class="col">
+        <div id="all-items" class="col">
             {% if cart_items %}
-            <div class="table-responsive">
-                <table id="all-items" class="table table-sm table-borderless text-center">
-                    <thead>
-                        <tr>
-                            <th scope="col" class="d-none d-sm-inline"></th>
-                            <th scope="col">Product</th>
-                            <th scope="col">Qty</th>
-                            <th scope="col" class="text-right">Subtotal</th>
-                        </tr>
-                    </thead>
-
-                    {% for item in cart_items %}
-                    <tr>
-                        <td class="p-3 d-none d-sm-inline">
-                            {% if item.product.image %}
-                            <img class="img-fluid width35" src="{{ item.product.image.url }}"
-                                alt="{{ item.product.name }}">
-                            {% else %}
-                            <img class="img-fluid width35" src="/media/noimage.png"
-                                alt="{{ item.product.name }}">
-                            {% endif %}
-                        </td>
-                        <td class="py-0 py-sm-3">
-                            <p class="my-0">{{ item.product.name }}</p>
-                            <p class="my-3">€{{ item.product.price }}</p>
-                        </td>
-                        <td class="py-0 py-sm-3 w-sm-25">
-                            <form class="form d-flex flex-column align-items-center"
-                                action="{% url 'adjust_cart' item.product.id %}" method="POST">
-                                {% csrf_token %}
-                                <input class="form-control sm-input m-2" type="number" name="quantity"
-                                    value="{{ item.quantity }}" min="0" max="99" data-item_id="{{ item.product.id }}"
-                                    id="id_qty_{{ item.product.id }}" aria-label="adjustable quantity">
-                                <input type="submit" class="btn btn-outline-success btn-sm" value="Update">
-                            </form>
-                        </td>
-                        <td class="py-0 py-sm-3 text-right">
-                            <p class="my-0">€{{ item.sub_total }}</p>
-                            <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-outline-danger btn-sm my-4" data-toggle="modal"
-                                data-target="#deleteModal"
-                                data-delete-href="{% url 'remove_from_cart' item.product.id %}">
-                                Remove
-                            </button>
-                        </td>
-                    </tr>
-                    {% endfor %}
-                    <tr>
-                        <td colspan="5" class="pt-5 text-right">
-                            <h6><strong>Cart Total: €{{ total|floatformat:2 }}</strong></h6>
-                            <h6>Delivery: €{{ delivery|floatformat:2 }}</h6>
-                            <h4 class="mt-4"><strong>Grand Total: €{{ grand_total|floatformat:2 }}</strong></h4>
-                            {% if free_delivery_delta > 0 %}
-                            <p class="mb-1 text-danger">
-                                You could get free delivery by spending just <strong>€{{ free_delivery_delta }}</strong>
-                                more!
-                            </p>
-                            {% endif %}
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="5" class="text-right">
-                            <a href="{% url 'products' %}" class="btn btn-secondary my-2">Keep Shopping!</a>
-                            <a href="{% url 'checkout' %}" class="btn btn-success">Secure Checkout</a>
-                        </td>
-                    </tr>
-                </table>
+            <div class="row">
+                <div class="col text-center text-md-left">
+                    <h5 class="mx-md-5">Product</h5>
+                </div>
+                <div class="col text-right">
+                    <h5>Subtotal</h5>
+                </div>
             </div>
-            {% else %}
-            <p class="text35">Your Cart is empty!</p>
-            <a class="btn btn-secondary" href="{% url 'products' %}">Back to Products Page</a>
-            {% endif %}
+            {% for item in cart_items %}
+            <div class="row">
+                <div class="col col-md-9">
+                    <div class="row">
+                        <div class="col-12 col-md-4 d-flex justify-content-center">
+                            {% if item.product.image %}
+                            <img class="width100" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                            {% else %}
+                            <img class="width100" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
+                            {% endif %}
+                        </div>
+                        <div class="col-12 col-md-4 text-center">
+                            <p class="m-0 my-md-3">{{ item.product.name }}</p>
+                            <p class="m-0 my-md-3">€{{ item.product.price }}</p>
+                        </div>
+                        <div class="col-12 col-md-4 d-flex justify-content-center align-items-center">
+                            <form class="d-flex flex-column flex-md-row" action="{% url 'adjust_cart' item.product.id %}" method="POST">
+                                {% csrf_token %}
+                                <label class="text-center m-1" for="id_qty_{{ item.product.id }}">Qty:</label>
+                                <input class="m-1" type="number" name="quantity" value="{{ item.quantity }}" min="0" max="99"
+                                    data-item_id="{{ item.product.id }}" id="id_qty_{{ item.product.id }}">
+                                <input type="submit" class="btn btn-outline-success btn-sm m-1" value="Update Qty">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-md-3 d-flex flex-column justify-content-end">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-outline-danger btn-sm mx-auto my-2" data-toggle="modal"
+                        data-target="#deleteModal" data-delete-href="{% url 'remove_from_cart' item.product.id %}">
+                        Remove form Cart!
+                    </button>
+                    <p class="m-1 text-right">€{{ item.sub_total }}</p>
+                </div>
+            </div>
+            <hr>
+            {% endfor %}
+            <div class="row">
+                <div class="col text-right">
+                    <h6><strong>Cart Total: €{{ total|floatformat:2 }}</strong></h6>
+                    <h6>Delivery: €{{ delivery|floatformat:2 }}</h6>
+                    <h4 class="mt-4"><strong>Grand Total: €{{ grand_total|floatformat:2 }}</strong></h4>
+                    {% if free_delivery_delta > 0 %}
+                    <p class="mb-1 text-danger">
+                        You could get free delivery by spending just <strong>€{{ free_delivery_delta }}</strong>
+                        more!
+                    </p>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col d-flex justify-content-end">
+                    <a href="{% url 'products' %}" class="btn btn-secondary m-2">Keep Shopping!</a>
+                    <a href="{% url 'checkout' %}" class="btn btn-success m-2">Secure Checkout</a>
+                </div>
+            </div>
         </div>
+        {% else %}
+        <p class="text35">Your Cart is empty!</p>
+        <a class="btn btn-secondary" href="{% url 'products' %}">Back to Products Page</a>
+        {% endif %}
     </div>
+</div>
 </div>
 
 <!-- Modal -->
