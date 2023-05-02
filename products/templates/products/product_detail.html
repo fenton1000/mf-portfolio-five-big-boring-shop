@@ -45,7 +45,10 @@ Selected Product
                     {% if request.user.is_superuser %}
                     <small class="ml-3">
                         <a href="{% url 'edit_product' product.id %}">Edit</a> |
-                        <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                        <!-- Trigger modal -->
+                        <a id="delete-product-link" class="text-danger" href="#" data-toggle="modal"
+                            data-target="#deleteModal"
+                            data-delete-href="{% url 'delete_product' product.id %}">Delete</a>
                     </small>
                     {% endif %}
                 </div>
@@ -144,10 +147,32 @@ Selected Product
         </div>
     </div>
 </main>
+<!-- Modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteModalLabel">Delete Product?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Do you wish to permanently remove this item from the product database?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <a id="delete-product" class="btn btn-danger">Remove</a>
+            </div>
+        </div>
+    </div>
+</div>
 
 {% endblock %}
 
 {% block postloadjs %}
 {{ block.super }}
 <script src="{% static 'products/js/form.js' %}"></script>
+<script src="{% static 'products/js/adminDeleteProduct.js' %}"></script>
 {% endblock %}
