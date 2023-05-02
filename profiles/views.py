@@ -42,7 +42,11 @@ def profile(request):
 @login_required
 def order_history(request, order_number):
     user = request.user
-    order = get_object_or_404(Order, order_number=order_number, user_profile=user.userprofile)
+    order = get_object_or_404(
+        Order,
+        order_number=order_number,
+        user_profile=user.userprofile
+    )
 
     messages.info(request, (
         f'This is a past confirmation for order number {order_number}. '
@@ -208,7 +212,8 @@ def edit_comment(request, comment_id):
     """
     Update a comment in the Comment database for the specified product and user
     """
-    comment = get_object_or_404(Comment, pk=comment_id)
+    user = request.user
+    comment = get_object_or_404(Comment, pk=comment_id, user=user)
     if request.method == 'POST':
         redirect_url = request.POST.get('redirect_url')
         edited_comment = request.POST.get('edited_comment')
@@ -235,7 +240,8 @@ def delete_comment(request, comment_id):
     for the loggin in user
     """
 
-    comment = get_object_or_404(Comment, pk=comment_id)
+    user = request.user
+    comment = get_object_or_404(Comment, pk=comment_id, user=user)
     product_name = comment.product.name
     redirect_url = request.GET['redirect_url']
     comment.delete()
