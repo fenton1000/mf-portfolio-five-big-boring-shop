@@ -35,29 +35,6 @@ class UserProfile(models.Model):
         return self.user.username
 
 
-class Favourites(models.Model):
-    """
-    Model for saving authenticated users' product favourites lists
-    """
-
-    class Meta:
-        verbose_name_plural = 'Favourites'
-
-    user = models.ForeignKey(
-        User,
-        on_delete=models.CASCADE,
-        related_name='favourites'
-    )
-    product = models.ForeignKey(
-        Product,
-        on_delete=models.CASCADE,
-        related_name='favourites'
-    )
-
-    def __str__(self):
-        return self.user.username
-
-
 class Rating(models.Model):
     """
     Model for saving authenticated users' product ratings

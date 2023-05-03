@@ -2,11 +2,12 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.http import require_POST
-from .models import UserProfile, Favourites, Rating, Comment
+from .models import UserProfile, Rating, Comment
 from .forms import UserProfileForm
 
 from checkout.models import Order
 from products.models import Product
+from favourites.models import Favourites
 
 
 @login_required
@@ -60,18 +61,6 @@ def order_history(request, order_number):
     }
 
     return render(request, template, context)
-
-
-@login_required
-def delete_favourite(request, product_id):
-    """ Delete a product from user favourite list """
-
-    user = request.user
-    product = get_object_or_404(Product, pk=product_id)
-    favourite = get_object_or_404(Favourites, user=user, product=product)
-    favourite.delete()
-    messages.success(request, 'Product deleted from favourites!')
-    return redirect('profile')
 
 
 @login_required

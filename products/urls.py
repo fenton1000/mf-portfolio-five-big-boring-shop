@@ -11,9 +11,4 @@ urlpatterns = [
         views.delete_product,
         name='delete_product'
     ),
-    path(
-        'add_favourite/<int:product_id>/',
-        views.add_favourite,
-        name='add_favourite'
-    ),
 ]
