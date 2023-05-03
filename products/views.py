@@ -5,7 +5,7 @@ from django.db.models import Q
 
 from .models import Product, Category
 from .forms import ProductForm
-from profiles.models import Rating, Comment
+from comments_ratings.models import Rating, Comment
 from favourites.models import Favourites
 
 

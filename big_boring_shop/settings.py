@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'profiles',
     'contact',
     'favourites',
+    'comments_ratings',
     'storages',
 ]
 
