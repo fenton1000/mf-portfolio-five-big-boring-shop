@@ -13,7 +13,7 @@ Edit Comment
     <textarea id="edit_comment" name="comment" rows="10" cols="50" required>{{comment_rating_entry.comment}}</textarea>
     <label for="id_rating_{{ product.id }}">Rate this Product:</label>
     <select name="user_rating" id="id_rating_{{ product.id }}">
-        <option value="">Please choose one!</option>
+        <option value="0">Please choose one!</option>
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -24,4 +24,10 @@ Edit Comment
     <input type="hidden" name="redirect_url" value="{{redirect_url}}">
 </form>
 
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+<script src="{% static 'comments_ratings/js/ratingSelect.js' %}"
+    data-user-rating="{% if comment_rating_entry.user_rating %}{{comment_rating_entry.user_rating}}{% else %}0{% endif %}"></script>
 {% endblock %}

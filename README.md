@@ -273,6 +273,8 @@ The following technologies were used in developing and deploying the website:
 
 * Contribution by Rahul Gupta on Stack Overflow available at https://stackoverflow.com/questions/31925009/django-media-url-not-set-in-template for information on adding the media context processor in settings.py so as to use MEDIA_URL in templates.
 
+* w3schools information on Python Date Time at https://www.w3schools.com/python/gloss_python_date.asp
+
 ### 13.2 Credits
 
 * The hero image is a photo by Sora Shimazaki sourced from Pexels at: https://www.pexels.com/photo/close-up-photo-of-assorted-colored-push-carts-5926217/
