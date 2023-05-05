@@ -37,6 +37,9 @@ Selected Product
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     </form>
                     <a class="btn btn-secondary m-3" href="{% url 'products' %}" role="button">Back</a>
+                    {% if product.rating %}
+                    <p>Product Rating of {{ product.rating }}/5 based on {{ product.num_of_raters }} reviews</p>
+                    {% endif %}
                     {% if request.user.is_authenticated %}
                     <small class="ml-3">
                         <a href="{% url 'add_favourite' product.id %}">Add to Favourites</a>
@@ -58,86 +61,70 @@ Selected Product
         <div class="row">
             <div class="col-12 col-md-6 border-right">
                 {% if user.is_authenticated %}
-                {% if current_user_comments %}
-                <p>You have made the following comments on this product:</p>
-                {% for comment in current_user_comments %}
+                {% if current_user_comment_rating %}
+                {% for comment in current_user_comment_rating %}
+                <p>You have made the following comment on this product:</p>
                 <div class="border">
-                    <p>{{comment.date}}</p>
+                    {% if comment.date_updated %}
+                    <p>Comment updated on {{ comment.date_updated}}</p>
+                    {% else %}
+                    <p>Comment created on {{comment.date_created}}</p>
+                    {% endif %}
                     <p>{{comment.comment}}</p>
+                    {% if comment.user_rating %}
+                    <p>You gave this product a rating of {{ comment.user_rating }}/5</p>
+                    {% else %}
+                    Rating: No Rating!
+                    {% endif %}
                     <small class="ml-3">
-                        <a href="{% url 'edit_comment' comment.id %}?redirect_url={{ request.path }}">Edit this
-                            Comment</a> |
+                        <a href="{% url 'edit_product_comment_rating' product.id %}?redirect_url={{ request.path }}">Edit
+                            this
+                            Comment/Rating</a> |
                         <a class="text-danger"
-                            href="{% url 'delete_comment' comment.id %}?redirect_url={{ request.path }}">Delete
+                            href="{% url 'delete_product_comment_rating' product.id %}?redirect_url={{ request.path }}">Delete
                             this Comment</a>
                     </small>
                 </div>
                 {% endfor %}
                 {% else %}
                 <p>You have not commented on this product</p>
-                {% endif %}
-                <form action="{% url 'add_comment' product.id %}" method="POST">
+                <form action="{% url 'comment_rate_product' product.id %}" method="POST">
                     {% csrf_token %}
                     <label for="id_add_comment_{{ product.id }}">Add a comment about this Product:</label>
                     <textarea id="id_add_comment_{{ product.id }}" name="comment" rows="10" cols="50"
                         required></textarea>
+                    <label for="id_rating_{{ product.id }}">Rate this Product:</label>
+                    <select name="user_rating" id="id_rating_{{ product.id }}">
+                        <option value="0">Please choose one!</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
                     <input type="submit" class="btn btn-secondary" value="Comment">
                     <input type="hidden" name="redirect_url" value="{{ request.path }}">
                 </form>
                 {% endif %}
+                {% endif %}
             </div>
             <div class="col-12 col-md-6">
-                {% if product.rating %}
-                <p>Product Rating of {{ product.rating }}/5 based on {{ product.num_of_raters }} reviews</p>
-                {% endif %}
-                {% if request.user.is_authenticated %}
-                {% if user_rating == '' %}
-                <form action="{% url 'rate_product' product.id %}" method="POST">
-                    {% csrf_token %}
-                    <label for="id_rating_{{ product.id }}">Rate this Product:</label>
-                    <select name="user_rating" id="id_rating_{{ product.id }}" required>
-                        <option value="">Please choose one!</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select>
-                    <input type="submit" class="btn btn-secondary" value="Add Rating">
-                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                </form>
-                {% else %}
-                <p>You gave this product a rating of {{ user_rating }}/5</p>
-                <small class="ml-3">
-                    <a href="#" id="id_edit_rating">Edit my Rating</a> |
-                    <a class="text-danger"
-                        href="{% url 'delete_product_rating' product.id %}?redirect_url={{ request.path }}">Delete
-                        my Rating</a>
-                </small>
-                <form id="edit_rating_form" action="{% url 'edit_product_rating' product.id %}" method="POST"
-                    class="d-none">
-                    {% csrf_token %}
-                    <label for="id_edit_rating_{{ product.id }}">Rate this Product:</label>
-                    <select name="user_rating" id="id_edit_rating_{{ product.id }}" required>
-                        <option value="">Please choose one!</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select>
-                    <input type="submit" class="btn btn-secondary" value="Update Rating">
-                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                </form>
-                {% endif %}
-                {% endif %}
                 <div class="all-comments border">
-                    {% if all_comments %}
+                    {% if all_comments_ratings %}
                     <p>Customer Comments/Reviews:</p>
-                    {% for comment in all_comments %}
-                    <p>{{comment.date}}</p>
+                    {% for comment in all_comments_ratings %}
+                    {% if comment.date_updated %}
+                    <p>Comment updated on {{ comment.date_updated}}</p>
+                    {% else %}
+                    <p>Comment created on {{comment.date_created}}</p>
+                    {% endif %}
                     <p>By: {{comment.user.username}}</p>
                     <p>{{comment.comment}}</p>
+                    {% if comment.user_rating %}
+                    <p>{{comment.user.username}} gave this product a rating of {{ comment.user_rating }}/5</p>
+                    {% else %}
+                    Rating: No Rating!
+                    {% endif %}
                     {% endfor %}
                     {% else %}
                     <p>Noboby has reviewed or commented on this product yet! Why not be the first!</p>
@@ -173,6 +160,5 @@ Selected Product
 
 {% block postloadjs %}
 {{ block.super }}
-<script src="{% static 'products/js/form.js' %}"></script>
 <script src="{% static 'products/js/adminDeleteProduct.js' %}"></script>
 {% endblock %}

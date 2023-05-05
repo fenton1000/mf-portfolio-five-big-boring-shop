@@ -5,7 +5,7 @@ from django.db.models import Q
 
 from .models import Product, Category
 from .forms import ProductForm
-from comments_ratings.models import Rating, Comment
+from comments_ratings.models import CommentRating
 from favourites.models import Favourites
 
 
@@ -51,27 +51,18 @@ def product_detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
     user = request.user
-    all_comments = Comment.objects.filter(product=product)
-    current_user_comments = None
-    user_rating = ''
+    all_comments_ratings = CommentRating.objects.filter(product=product)
+    current_user_comment_rating = None
     if user.is_authenticated:
-        current_user_comments = Comment.objects.filter(
+        current_user_comment_rating = CommentRating.objects.filter(
             user=user,
             product=product
         )
-        if Rating.objects.filter(user=user, product=product).exists():
-            user_rating_entry = get_object_or_404(
-                Rating,
-                user=user,
-                product=product
-            )
-            user_rating = user_rating_entry.user_rating
 
     context = {
         'product': product,
-        'user_rating': user_rating,
-        'current_user_comments': current_user_comments,
-        'all_comments': all_comments
+        'current_user_comment_rating': current_user_comment_rating,
+        'all_comments_ratings': all_comments_ratings
     }
 
     return render(request, 'products/product_detail.html', context)
