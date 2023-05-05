@@ -80,9 +80,9 @@ Selected Product
                         <a href="{% url 'edit_product_comment_rating' product.id %}?redirect_url={{ request.path }}">Edit
                             this
                             Comment/Rating</a> |
-                        <a class="text-danger"
-                            href="{% url 'delete_product_comment_rating' product.id %}?redirect_url={{ request.path }}">Delete
-                            this Comment</a>
+                        <!-- Trigger modal -->
+                        <a id="delete-comment-link" class="text-danger" href="#" data-toggle="modal"
+                            data-target="#deleteCommentModal">Delete this Comment</a>
                     </small>
                 </div>
                 {% endfor %}
@@ -134,7 +134,7 @@ Selected Product
         </div>
     </div>
 </main>
-<!-- Modal -->
+<!-- Admin Delete Modal -->
 <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -155,7 +155,28 @@ Selected Product
         </div>
     </div>
 </div>
-
+<!-- Comment Delete Modal -->
+<div class="modal fade" id="deleteCommentModal" tabindex="-1" role="dialog" aria-labelledby="deleteCommentModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteCommentModalLabel">Delete Comment?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Do you wish to permanently delete your comment and rating?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <a href="{% url 'delete_product_comment_rating' product.id %}?redirect_url={{ request.path }}"
+                    class="btn btn-danger">Delete Comment</a>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
 
 {% block postloadjs %}

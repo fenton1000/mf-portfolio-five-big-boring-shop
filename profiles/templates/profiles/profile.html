@@ -85,10 +85,38 @@ My Profile
             <div class="col-3">
                 <p class="my-0">{{ favourite.product.price }}</p>
                 <small class="ml-3">
-                    <a href="{% url 'delete_favourite' favourite.product.id %}">Delete from Favourites</a>
+                    <!-- Trigger modal -->
+                    <a class="text-danger" href="#" data-toggle="modal"
+                    data-target="#deleteFavouriteModal"
+                    data-delete-href="{% url 'delete_favourite' favourite.product.id %}">Delete from Favourites</a>
                 </small>
             </div>
         </div>
         {% endfor %}
     </div>
-    {% endblock %}
+    <!-- Modal Favourite Modal -->
+<div class="modal fade" id="deleteFavouriteModal" tabindex="-1" role="dialog" aria-labelledby="deleteFavouriteModalLabel"
+aria-hidden="true">
+<div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="deleteFavouriteModalLabel">Delete Favourite?</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            Do you wish to remove this item from your favourites list?
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            <a id="delete-selected-favourite" class="btn btn-danger">Remove</a>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}
+{% block postloadjs %}
+{{ block.super }}
+<script src="{% static 'profiles/js/deleteFavourite.js' %}"></script>
+{% endblock %}
