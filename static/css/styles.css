@@ -8,6 +8,10 @@
     width: 100px;
 }
 
+.width200 {
+    width: 200px;
+}
+
 .sm-input {
     width: 70px;
 }
@@ -97,6 +101,67 @@ h6 {
 
 .btn-sm {
     padding: 1px;
+}
+
+form {
+    padding: 5px;
+    width: 70%;
+}
+
+form p {
+    margin: 5px;
+}
+
+form input {
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #000000;
+    width: 100%;
+}
+
+form input:hover {
+    border: 1px solid #32cf2d;
+}
+
+form input[type=checkbox] {
+    height: 20px;
+    width: 20px;
+}
+
+form select {
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #000000;
+    width: 100%;
+}
+
+form select:hover {
+    border: 1px solid #32cf2d;
+}
+
+form textarea {
+    border-radius: 5px;
+    border: 1px solid #000000;
+    width: 100%;
+}
+
+form textarea:hover {
+    border: 1px solid #32cf2d;
+}
+
+#cart-quantity {
+    width: 40%;
+    height: 30px;
+}
+
+#cart-quantity-form {
+    width: 100%;
+}
+
+#cart-quantity-submit {
+    height: 30px;
+    width: 100px;
+    padding: 2px 0px;
 }
 
 /* Product Form */

@@ -13,19 +13,20 @@ My Profile
 <div class="container">
     <div class="row">
         <div class="col">
-            <h2 class="mb-4">My Profile</h2>
+            <h3 class="mb-4 text-center">My Profile</h3>
+            <hr>
         </div>
     </div>
     <div class="row">
-        <div class="col-12 col-lg-6">
+        <div class="col-12 col-lg-5 d-flex flex-column align-items-center">
             <p class="text-muted">Default Delivery Information</p>
             <form class="mt-3" action="{% url 'profile' %}" method="POST" id="profile-update-form">
                 {% csrf_token %}
-                {{ form }}
-                <button class="btn btn-secondary rounded-0 text-uppercase float-right">Update Information</button>
+                {{ form.as_p }}
+                <button class="btn btn-secondary my-3">Update Information</button>
             </form>
         </div>
-        <div class="col-12 col-lg-6">
+        <div class="col-12 col-lg-7 d-flex flex-column align-items-center">
             <p class="text-muted">Order History</p>
             <div class="order-history table-responsive">
                 <table class="table table-sm table-borderless">
@@ -62,58 +63,69 @@ My Profile
                 </table>
             </div>
         </div>
-        {% for favourite in favourites %}
-        <div class="row">
-            <div class="col-9">
-                <div class="row">
-                    <div class="col">
-                        {% if favourite.product.image %}
-                        <img class="img-fluid width35" src="{{ favourite.product.image.url }}"
-                            alt="{{ favourite.product.name }}">
-                        {% else %}
-                        <img class="img-fluid width35" src="/media/noimage.png" alt="{{ favourite.product.name }}">
-                        {% endif %}
-                    </div>
-                    <div class="col">
-                        <p class="my-0">{{ favourite.product.name }}</p>
-                    </div>
-                    <div class="col">
-                        <p class="my-0">{{ favourite.product.description }}</p>
-                    </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <hr>
+            <p class="text-muted text-center my-5">Favourites!</p>
+            <hr>
+        </div>
+    </div>
+    {% for favourite in favourites %}
+    <div class="row">
+        <div class="col col-md-9">
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    {% if favourite.product.image %}
+                    <img class="width100" src="{{ favourite.product.image.url }}"
+                        alt="{{ favourite.product.name }}">
+                    {% else %}
+                    <img class="width100" src="/media/noimage.png" alt="{{ favourite.product.name }}">
+                    {% endif %}
+                </div>
+                <div class="col-12 col-md-4">
+                    <p class="my-0">Product:</p>
+                    <p class="my-0">{{ favourite.product.name }}</p>
+                </div>
+                <div class="col-12 col-md-4">
+                    <p class="my-0">Description:</p>
+                    <p class="my-0">{{ favourite.product.description }}</p>
                 </div>
             </div>
-            <div class="col-3">
-                <p class="my-0">{{ favourite.product.price }}</p>
-                <small class="ml-3">
-                    <!-- Trigger modal -->
-                    <a class="text-danger" href="#" data-toggle="modal"
-                    data-target="#deleteFavouriteModal"
-                    data-delete-href="{% url 'delete_favourite' favourite.product.id %}?redirect_url={{ request.path }}">Delete from Favourites</a>
-                </small>
+        </div>
+        <div class="col col-md-3 d-flex flex-column justify-content-end align-items-end">
+            <small class="ml-3">
+                <!-- Trigger modal -->
+                <a class="text-danger" href="#" data-toggle="modal" data-target="#deleteFavouriteModal"
+                    data-delete-href="{% url 'delete_favourite' favourite.product.id %}?redirect_url={{ request.path }}">Delete
+                    from Favourites</a>
+            </small>
+            <p class="my-0 text-right">€{{ favourite.product.price }}</p>
+        </div>
+    </div>
+    <hr>
+    {% endfor %}
+</div>
+<!-- Modal Favourite Modal -->
+<div class="modal fade" id="deleteFavouriteModal" tabindex="-1" role="dialog"
+    aria-labelledby="deleteFavouriteModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteFavouriteModalLabel">Delete Favourite?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Do you wish to remove this item from your favourites list?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <a id="delete-selected-favourite" class="btn btn-danger">Remove</a>
             </div>
         </div>
-        {% endfor %}
     </div>
-    <!-- Modal Favourite Modal -->
-<div class="modal fade" id="deleteFavouriteModal" tabindex="-1" role="dialog" aria-labelledby="deleteFavouriteModalLabel"
-aria-hidden="true">
-<div class="modal-dialog" role="document">
-    <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title" id="deleteFavouriteModalLabel">Delete Favourite?</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-        <div class="modal-body">
-            Do you wish to remove this item from your favourites list?
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-            <a id="delete-selected-favourite" class="btn btn-danger">Remove</a>
-        </div>
-    </div>
-</div>
 </div>
 {% endblock %}
 {% block postloadjs %}

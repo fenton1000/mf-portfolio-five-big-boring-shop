@@ -20,10 +20,10 @@ Selected Product
                 <img class="img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                 {% endif %}
             </div>
-            <div class="col d-flex justify-content-center align-items-center text-center">
-                <div class="w-75">
+            <div class="col d-flex justify-content-center">
+                <div class="w-75 d-flex flex-column align-items-center text-center">
                     <h4>{{ product.name }}</h4>
-                    <p>{{ product.description }}</p>
+                    <p class="my-0">{{ product.description }}</p>
                     <p class="price">€{{ product.price }}</p>
                     <p>Category: {{ product.category.friendly_name}}</p>
                     <p>SKU: {{ product.sku}}</p>
@@ -68,12 +68,12 @@ Selected Product
         </div>
         <h6 class="text-center">Comments and Ratings</h6>
         <div class="row">
-            <div class="col-12 col-md-6 border-right">
+            <div class="col-12 col-md-6 d-flex justify-content-center">
                 {% if user.is_authenticated %}
                 {% if current_user_comment_rating %}
                 {% for comment in current_user_comment_rating %}
-                <p>You have made the following comment on this product:</p>
                 <div class="border">
+                    <p>You have made the following comment on this product:</p>
                     {% if comment.date_updated %}
                     <p>Comment updated on {{ comment.date_updated}}</p>
                     {% else %}
@@ -96,22 +96,21 @@ Selected Product
                 </div>
                 {% endfor %}
                 {% else %}
-                <p>You have not commented on this product</p>
                 <form action="{% url 'comment_rate_product' product.id %}" method="POST">
                     {% csrf_token %}
                     <label for="id_add_comment_{{ product.id }}">Add a comment about this Product:</label>
-                    <textarea id="id_add_comment_{{ product.id }}" name="comment" rows="10" cols="50"
+                    <textarea class="my-3" id="id_add_comment_{{ product.id }}" name="comment" rows="10" cols="50"
                         required></textarea>
                     <label for="id_rating_{{ product.id }}">Rate this Product:</label>
                     <select name="user_rating" id="id_rating_{{ product.id }}">
                         <option value="0">Please choose one!</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
+                        <option value="1">1/5</option>
+                        <option value="2">2/5</option>
+                        <option value="3">3/5</option>
+                        <option value="4">4/5</option>
+                        <option value="5">5/5</option>
                     </select>
-                    <input type="submit" class="btn btn-secondary" value="Comment">
+                    <input type="submit" class="btn btn-secondary my-3" value="Comment">
                     <input type="hidden" name="redirect_url" value="{{ request.path }}">
                 </form>
                 {% endif %}
