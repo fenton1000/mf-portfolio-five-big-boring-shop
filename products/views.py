@@ -53,16 +53,20 @@ def product_detail(request, product_id):
     user = request.user
     all_comments_ratings = CommentRating.objects.filter(product=product)
     current_user_comment_rating = None
+    on_favourites = False
     if user.is_authenticated:
         current_user_comment_rating = CommentRating.objects.filter(
             user=user,
             product=product
         )
+        if Favourites.objects.filter(product=product, user=user).exists():
+            on_favourites = True
 
     context = {
         'product': product,
         'current_user_comment_rating': current_user_comment_rating,
-        'all_comments_ratings': all_comments_ratings
+        'all_comments_ratings': all_comments_ratings,
+        'on_favourites': on_favourites
     }
 
     return render(request, 'products/product_detail.html', context)

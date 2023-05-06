@@ -88,7 +88,7 @@ My Profile
                     <!-- Trigger modal -->
                     <a class="text-danger" href="#" data-toggle="modal"
                     data-target="#deleteFavouriteModal"
-                    data-delete-href="{% url 'delete_favourite' favourite.product.id %}">Delete from Favourites</a>
+                    data-delete-href="{% url 'delete_favourite' favourite.product.id %}?redirect_url={{ request.path }}">Delete from Favourites</a>
                 </small>
             </div>
         </div>

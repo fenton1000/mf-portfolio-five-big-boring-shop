@@ -31,8 +31,9 @@ def delete_favourite(request, product_id):
     """ Delete a product from user favourite list """
 
     user = request.user
+    redirect_url = request.GET['redirect_url']
     product = get_object_or_404(Product, pk=product_id)
     favourite = get_object_or_404(Favourites, user=user, product=product)
     favourite.delete()
     messages.success(request, 'Product deleted from favourites!')
-    return redirect('profile')
+    return redirect(redirect_url)

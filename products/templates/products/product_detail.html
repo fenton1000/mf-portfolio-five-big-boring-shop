@@ -42,7 +42,11 @@ Selected Product
                     {% endif %}
                     {% if request.user.is_authenticated %}
                     <small class="ml-3">
+                        {% if on_favourites %}
+                        <a class="text-danger" href="{% url 'delete_favourite' product.id %}?redirect_url={{ request.path }}">Delete from Favourites</a>
+                        {% else %}
                         <a href="{% url 'add_favourite' product.id %}">Add to Favourites</a>
+                        {% endif %}
                     </small>
                     {% endif %}
                     {% if request.user.is_superuser %}
