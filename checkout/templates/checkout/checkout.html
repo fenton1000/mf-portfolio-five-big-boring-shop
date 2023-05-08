@@ -40,7 +40,7 @@ Checkout
     </div>
     <div class="row">
         <div class="col d-flex justify-content-center p-0 m-lg-5">
-            <form id="checkout-form" action="{% url 'checkout' %}" method="POST" id="payment-form">
+            <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                 {% csrf_token %}
                 <fieldset class="rounded px-3 mb-5">
                     <legend class="fieldset-label px-2 w-auto">Details</legend>
