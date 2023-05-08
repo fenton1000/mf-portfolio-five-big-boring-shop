@@ -1,1 +1,1 @@
-Boutique Ado Confirmation for Order Number {{ order.order_number }}
+Big Boring Shop Confirmation for Order Number {{ order.order_number }}
