@@ -205,7 +205,9 @@ footer {
 footer ul {
     display: flex;
     flex-direction: column;
+    height: 90%;
     align-items: center;
+    justify-content: space-around;
 }
 
 footer li {
@@ -220,6 +222,14 @@ footer a {
 
 .socials {
     color: #212529;
+}
+
+/* Mailchimp */
+#mc_embed_signup {
+    background: #fff;
+    clear: left;
+    font: 14px Helvetica, Arial, sans-serif;
+    max-width: 600px;
 }
 
 /* For Screens 767px wide and down */
@@ -250,6 +260,19 @@ footer a {
 
     footer ul {
         align-items: start;
+        flex-direction: row;
+    }
+
+    .padding-left-small-0 {
+        padding-left: 0;
+    }
+
+    #mc_embed_signup {
+        margin: 2px;
+    }
+
+    #mc_embed_signup form {
+        margin: 5px;
     }
 }
 
