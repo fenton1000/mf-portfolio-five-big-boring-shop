@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /cart/
+Sitemap: https://mf-pp5-big-boring-shop.herokuapp.com/sitemap.xml
