@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/products/</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/contact/</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/accounts/signup/</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/accounts/login/</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/cart/</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/products/?category=fresh_food</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/products/?category=cupboard_freezer</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/products/?category=drinks</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/products/?category=health_beauty</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/products/?category=household</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/products/8/</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/products/9/</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/products/10/</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/products/11/</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/products/12/</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/products/13/</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/products/14/</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/products/15/</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/products/16/</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/products/17/</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/products/18/</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/products/19/</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/products/20/</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/products/21/</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/products/22/</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/products/23/</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/products/24/</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/products/25/</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/products/26/</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/products/27/</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/accounts/password/reset/</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/accounts/login/?next=/comments_ratings/delete_product_comment_rating/8%3Fredirect_url%3D/products/8/</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/accounts/login/?next=/comments_ratings/delete_product_comment_rating/9%3Fredirect_url%3D/products/9/</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/accounts/login/?next=/comments_ratings/delete_product_comment_rating/10%3Fredirect_url%3D/products/10/</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/accounts/login/?next=/comments_ratings/delete_product_comment_rating/11%3Fredirect_url%3D/products/11/</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/accounts/login/?next=/comments_ratings/delete_product_comment_rating/12%3Fredirect_url%3D/products/12/</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/accounts/login/?next=/comments_ratings/delete_product_comment_rating/13%3Fredirect_url%3D/products/13/</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/accounts/login/?next=/comments_ratings/delete_product_comment_rating/14%3Fredirect_url%3D/products/14/</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/accounts/login/?next=/comments_ratings/delete_product_comment_rating/15%3Fredirect_url%3D/products/15/</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/accounts/login/?next=/comments_ratings/delete_product_comment_rating/16%3Fredirect_url%3D/products/16/</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/accounts/login/?next=/comments_ratings/delete_product_comment_rating/17%3Fredirect_url%3D/products/17/</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/accounts/login/?next=/comments_ratings/delete_product_comment_rating/18%3Fredirect_url%3D/products/18/</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/accounts/login/?next=/comments_ratings/delete_product_comment_rating/19%3Fredirect_url%3D/products/19/</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/accounts/login/?next=/comments_ratings/delete_product_comment_rating/20%3Fredirect_url%3D/products/20/</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/accounts/login/?next=/comments_ratings/delete_product_comment_rating/21%3Fredirect_url%3D/products/21/</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/accounts/login/?next=/comments_ratings/delete_product_comment_rating/22%3Fredirect_url%3D/products/22/</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/accounts/login/?next=/comments_ratings/delete_product_comment_rating/23%3Fredirect_url%3D/products/23/</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/accounts/login/?next=/comments_ratings/delete_product_comment_rating/24%3Fredirect_url%3D/products/24/</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/accounts/login/?next=/comments_ratings/delete_product_comment_rating/25%3Fredirect_url%3D/products/25/</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/accounts/login/?next=/comments_ratings/delete_product_comment_rating/26%3Fredirect_url%3D/products/26/</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/accounts/login/?next=/comments_ratings/delete_product_comment_rating/27%3Fredirect_url%3D/products/27/</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/accounts/signup/?next=%2Fcomments_ratings%2Fdelete_product_comment_rating%2F8%3Fredirect_url%3D%2Fproducts%2F8%2F</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/accounts/signup/?next=%2Fcomments_ratings%2Fdelete_product_comment_rating%2F9%3Fredirect_url%3D%2Fproducts%2F9%2F</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/accounts/signup/?next=%2Fcomments_ratings%2Fdelete_product_comment_rating%2F10%3Fredirect_url%3D%2Fproducts%2F10%2F</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/accounts/signup/?next=%2Fcomments_ratings%2Fdelete_product_comment_rating%2F11%3Fredirect_url%3D%2Fproducts%2F11%2F</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/accounts/signup/?next=%2Fcomments_ratings%2Fdelete_product_comment_rating%2F12%3Fredirect_url%3D%2Fproducts%2F12%2F</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/accounts/signup/?next=%2Fcomments_ratings%2Fdelete_product_comment_rating%2F13%3Fredirect_url%3D%2Fproducts%2F13%2F</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/accounts/signup/?next=%2Fcomments_ratings%2Fdelete_product_comment_rating%2F14%3Fredirect_url%3D%2Fproducts%2F14%2F</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/accounts/signup/?next=%2Fcomments_ratings%2Fdelete_product_comment_rating%2F15%3Fredirect_url%3D%2Fproducts%2F15%2F</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/accounts/signup/?next=%2Fcomments_ratings%2Fdelete_product_comment_rating%2F16%3Fredirect_url%3D%2Fproducts%2F16%2F</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/accounts/signup/?next=%2Fcomments_ratings%2Fdelete_product_comment_rating%2F17%3Fredirect_url%3D%2Fproducts%2F17%2F</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/accounts/signup/?next=%2Fcomments_ratings%2Fdelete_product_comment_rating%2F18%3Fredirect_url%3D%2Fproducts%2F18%2F</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/accounts/signup/?next=%2Fcomments_ratings%2Fdelete_product_comment_rating%2F19%3Fredirect_url%3D%2Fproducts%2F19%2F</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/accounts/signup/?next=%2Fcomments_ratings%2Fdelete_product_comment_rating%2F20%3Fredirect_url%3D%2Fproducts%2F20%2F</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/accounts/signup/?next=%2Fcomments_ratings%2Fdelete_product_comment_rating%2F21%3Fredirect_url%3D%2Fproducts%2F21%2F</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/accounts/signup/?next=%2Fcomments_ratings%2Fdelete_product_comment_rating%2F22%3Fredirect_url%3D%2Fproducts%2F22%2F</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/accounts/signup/?next=%2Fcomments_ratings%2Fdelete_product_comment_rating%2F23%3Fredirect_url%3D%2Fproducts%2F23%2F</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/accounts/signup/?next=%2Fcomments_ratings%2Fdelete_product_comment_rating%2F24%3Fredirect_url%3D%2Fproducts%2F24%2F</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/accounts/signup/?next=%2Fcomments_ratings%2Fdelete_product_comment_rating%2F25%3Fredirect_url%3D%2Fproducts%2F25%2F</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/accounts/signup/?next=%2Fcomments_ratings%2Fdelete_product_comment_rating%2F26%3Fredirect_url%3D%2Fproducts%2F26%2F</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/accounts/signup/?next=%2Fcomments_ratings%2Fdelete_product_comment_rating%2F27%3Fredirect_url%3D%2Fproducts%2F27%2F</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/accounts/login/?next=%2Fcomments_ratings%2Fdelete_product_comment_rating%2F8%3Fredirect_url%3D%2Fproducts%2F8%2F</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/accounts/login/?next=%2Fcomments_ratings%2Fdelete_product_comment_rating%2F9%3Fredirect_url%3D%2Fproducts%2F9%2F</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/accounts/login/?next=%2Fcomments_ratings%2Fdelete_product_comment_rating%2F10%3Fredirect_url%3D%2Fproducts%2F10%2F</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/accounts/login/?next=%2Fcomments_ratings%2Fdelete_product_comment_rating%2F11%3Fredirect_url%3D%2Fproducts%2F11%2F</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/accounts/login/?next=%2Fcomments_ratings%2Fdelete_product_comment_rating%2F12%3Fredirect_url%3D%2Fproducts%2F12%2F</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/accounts/login/?next=%2Fcomments_ratings%2Fdelete_product_comment_rating%2F13%3Fredirect_url%3D%2Fproducts%2F13%2F</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/accounts/login/?next=%2Fcomments_ratings%2Fdelete_product_comment_rating%2F14%3Fredirect_url%3D%2Fproducts%2F14%2F</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/accounts/login/?next=%2Fcomments_ratings%2Fdelete_product_comment_rating%2F15%3Fredirect_url%3D%2Fproducts%2F15%2F</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/accounts/login/?next=%2Fcomments_ratings%2Fdelete_product_comment_rating%2F16%3Fredirect_url%3D%2Fproducts%2F16%2F</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/accounts/login/?next=%2Fcomments_ratings%2Fdelete_product_comment_rating%2F17%3Fredirect_url%3D%2Fproducts%2F17%2F</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/accounts/login/?next=%2Fcomments_ratings%2Fdelete_product_comment_rating%2F18%3Fredirect_url%3D%2Fproducts%2F18%2F</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/accounts/login/?next=%2Fcomments_ratings%2Fdelete_product_comment_rating%2F19%3Fredirect_url%3D%2Fproducts%2F19%2F</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/accounts/login/?next=%2Fcomments_ratings%2Fdelete_product_comment_rating%2F20%3Fredirect_url%3D%2Fproducts%2F20%2F</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/accounts/login/?next=%2Fcomments_ratings%2Fdelete_product_comment_rating%2F21%3Fredirect_url%3D%2Fproducts%2F21%2F</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/accounts/login/?next=%2Fcomments_ratings%2Fdelete_product_comment_rating%2F22%3Fredirect_url%3D%2Fproducts%2F22%2F</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/accounts/login/?next=%2Fcomments_ratings%2Fdelete_product_comment_rating%2F23%3Fredirect_url%3D%2Fproducts%2F23%2F</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/accounts/login/?next=%2Fcomments_ratings%2Fdelete_product_comment_rating%2F24%3Fredirect_url%3D%2Fproducts%2F24%2F</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/accounts/login/?next=%2Fcomments_ratings%2Fdelete_product_comment_rating%2F25%3Fredirect_url%3D%2Fproducts%2F25%2F</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/accounts/login/?next=%2Fcomments_ratings%2Fdelete_product_comment_rating%2F26%3Fredirect_url%3D%2Fproducts%2F26%2F</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://mf-pp5-big-boring-shop.herokuapp.com/accounts/login/?next=%2Fcomments_ratings%2Fdelete_product_comment_rating%2F27%3Fredirect_url%3D%2Fproducts%2F27%2F</loc>
+  <lastmod>2023-05-09T08:56:09+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+
+
+</urlset>
