@@ -28,8 +28,6 @@ Based on the above key features that will need to be provided are as follows:
 
 * Product search and filter options.
 
-* Out of stock notices.
-
 * Order notifications.
 
 * Product Ratings/ Reviews.
@@ -39,11 +37,15 @@ Based on the above key features that will need to be provided are as follows:
 As a result the following database tables will be required:
 
 * User
+* Email Address
 * User Profile
 * Products
+* Category
 * Order
 * Order Item
-* Comment
+* Comment/Rating
+* Contact
+* Favourites
 
 The above outlines the key elements of the proposed e-commerce model and the remainder of this document is developed with this model in mind.
 
