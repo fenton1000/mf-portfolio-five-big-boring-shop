@@ -225,7 +225,69 @@ alt="wireframe of the home page main section on a mobile device"></details>
 
 ![Database ERD showing the data models and their relationships](documents/erd.png "Database Entity Relationship Diagram")
 
-## 9. Search Engine Optimisation
+## 9. Search Engine Optimisation (SEO)
+
+A process of determining keywords for the purpose of Search Engine Optimisation was undertaken in steps as follows:
+
+### 9.1 Step 1 - Topics
+Key topics the business would wish to rank highly for and that customers would likely search for were determined and listed as follows:
+
+* Weekly Shopping
+* Grocery Shopping
+* Shopping Delivery
+
+### 9.2 Step 2 - Keyword Dump
+
+Keywords were then listed under these topics:
+
+* Weekly Shopping
+
+Supermarket, Shopping ,Local, Online shopping, Best places to do my weekly shopping
+
+* Grocery Shopping
+
+Groceries, Grocery, Fresh Food, Cupboard, Freezer, Drinks, Health and Beauty, Household, Value for money, grocery shopping
+
+* Shopping Delivery
+
+Delivery, Deliver my groceries, Deliver my shopping, Local delivery from a local store, Best place to get my weekly shopping delivered from
+
+### 9.3 Step 3 - Google Search
+
+Using the above list of potential keywords google searches were undertaken to discover popular search terms via the search bar prompts and the “people also searched for” section of returned results. The following list of popular search terms was compiled:
+
+* Best places to do weekly shopping in Ireland
+* Which app is best for daily grocery shopping?
+* How do I only go to the grocery store once a week?
+* How do I plan a grocery delivery?
+* Same-day grocery delivery
+* Grocery Delivery Ireland
+* Plan a shopping list
+
+### 9.4 Step 4 - Final Short-tail and Long-tail Keyword List
+
+Based on the information gathered in steps 1 to 3, a refined final list of both short-tail and long-tail keywords was reached with the aim of using keywords that are sufficiently popular to generate searches while not being so competitive as to leave the business too far from the top of the list of search results.
+
+The final keyword list is as follows:
+
+1. Online grocery shopping in Ireland
+2. Supermarket delivery in Ireland
+3. Grocery delivery in Ireland
+4. Deliver my weekly shopping
+5. Planning a grocery delivery
+6. Convenient grocery shopping and delivery
+7. Supermarket Delivery
+8. Grocery Delivery
+9. Weekly Shopping
+10. Make a shopping list
+11. Make weekly shopping less boring
+
+### 9.5 SEO Implementation
+
+* Firstly meta-data has been added to the base.html head element including a description and keywords list based on the list above.
+* Secondly, keywords have been added to the home page text, including some in strong HTML element tags, while maintaining the informative nature and flow of the text.
+* Image file names, link/anchor text, and alt text are relevant and include keywords where possible.
+* On links to external resources rel=”noopener” or rel=”nofollow” have been used as appropriate.
 
 ## 10. Web Marketing
 
