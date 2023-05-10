@@ -223,6 +223,8 @@ alt="wireframe of the home page main section on a mobile device"></details>
 
 ## 8. Database Entity Relationship Diagram
 
+![Database ERD showing the data models and their relationships](documents/erd.png "Database Entity Relationship Diagram")
+
 ## 9. Search Engine Optimisation
 
 ## 10. Web Marketing
