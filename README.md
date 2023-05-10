@@ -149,9 +149,15 @@ alt="wireframe of the home page main section on a mobile device"></details>
 
 ## 8. Database Entity Relationship Diagram
 
-## 9. Agile Methodology
+## 9. Search Engine Optimisation
 
-## 10. Technology
+## 10. Web Marketing
+
+## 11. Facebook Business Page
+
+## 12. Agile Methodology
+
+## 13. Technology
 
 The following technologies were used in developing and deploying the website:
 
@@ -205,13 +211,13 @@ The following technologies were used in developing and deploying the website:
 
 * The amiresponsive website was used to check responsiveness.
 
-## 11. Testing
+## 14. Testing
 
-## 12. Deployment
+## 15. Deployment
 
-## 13. References and Credits
+## 16. References and Credits
 
-### 13.1 References
+### 16.1 References
 
 * The Code Institute student Template for Gitpod provided by Code Institute at https://github.com/Code-Institute-Org/gitpod-full-template. This template allows easy set up of a repository and workspace.
 
@@ -275,7 +281,7 @@ The following technologies were used in developing and deploying the website:
 
 * w3schools information on Python Date Time at https://www.w3schools.com/python/gloss_python_date.asp
 
-### 13.2 Credits
+### 16.2 Credits
 
 * The hero image is a photo by Sora Shimazaki sourced from Pexels at: https://www.pexels.com/photo/close-up-photo-of-assorted-colored-push-carts-5926217/
 
