@@ -181,6 +181,46 @@ alt="wireframe of the home page main section on a mobile device"></details>
 
 ## 7. Wireframes
 
+### 7.1 Home Page on Desktop
+
+![Wireframe of the website home page on a desktop view](documents/desktop-home-page.png "Home Page on Desktop")
+
+### 7.2 Home Page on Mobile
+
+![Wireframe of the website home page on a mobile view](documents/mobile-home-page.png "Home Page on Mobile")
+
+### 7.3 Product Page on Desktop
+
+![Wireframe of the website product page on a desktop view](documents/desktop-product-page.png "Product Page on Desktop")
+
+### 7.4 Product Page on Mobile
+
+![Wireframe of the website product page on a mobile view](documents/mobile-product-page.png "Product Page on Mobile")
+
+### 7.5 Product Detail Page on Desktop
+
+![Wireframe of the website product detail page on a desktop view](documents/desktop-product-detail.png "Product Detail Page on Desktop")
+
+### 7.6 Product Detail Page on Mobile
+
+![Wireframe of the website product detail page on a mobile view](documents/mobile-product-detail.png "Product Detail Page on Mobile")
+
+### 7.7 Profile Page on Desktop
+
+![Wireframe of the website profile page on a desktop view](documents/desktop-profile-page.png "Profile Page on Desktop")
+
+### 7.8 Profile Page on Mobile
+
+![Wireframe of the website profile page on a mobile view](documents/mobile-profile-page.png "Profile Page on Mobile")
+
+### 7.9 Shopping Cart Page on Desktop
+
+![Wireframe of the website shopping cart page on a desktop view](documents/desktop-shopping-cart.png "Shopping Cart Page on Desktop")
+
+### 7.10 Shopping Cart Page on Mobile
+
+![Wireframe of the website shopping cart page on a mobile view](documents/mobile-shopping-cart.png "Shopping Cart Page on Mobile")
+
 ## 8. Database Entity Relationship Diagram
 
 ## 9. Search Engine Optimisation
