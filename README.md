@@ -79,6 +79,38 @@ The above outlines the key elements of the proposed e-commerce model and the rem
 
 14. As a **Site Administrator** I can **delete products from the product list** so that **any products no longer sold by the business are easily removed from the product offering.**
 
+15.  As a **Visiting User** I can **navigate to a contact page** so that **I can view the various ways to contact the business including by means of a contact form.**
+
+16. As a **Visiting User** I can **complete a contact form and provide my name, email and comment or query** so that **I can easily contact the business and expect a reply.**
+
+17. As a **Registered User**  I can **add products to a favourites list as I shop** so that **I can easily find the products I buy most often on future visits.**
+
+18. As a **Registered User** I can **view my favourites list** so that **I can easily add any of these items to my cart when shopping.**
+
+19. As a **Registered User** I can **delete items from my favourites list** so that **I can keep my list up to date with my current preferences.**
+
+20. As a **Registered User** I can **rate products** so that **I can assist my fellow customers and benefit when they do likewise.**
+
+21. As a **Registered User** I can **see rating I gave on products I have rated** so that **I know if I have previously rated a product and what rating I gave it.**
+
+22. As a **Registered User** I can **edit the rating I gave to products** so that **I can easily change my view of a product over time.**
+
+23. As a **Registered User** I can **delete the rating I gave to a product** so that **I can easily remove my input regarding a particular product if I no longer have a view on it.**
+
+24. As a **Registered User** I can **comment on products** so that **I can assist my fellow customers and benefit when they do likewise.**
+
+25. As a **Registered User** I can **see comments I made on products** so that **I know if I have previously commented on a product and what comment I made**
+
+26. As a **Registered User** I can **edit comments I made about products** so that **I can easily change my view of a product over time.**
+
+27. As a **Registered User** I can **delete comments I made on a product** so that **I can easily remove my input regarding a particular product if I no longer have a view on it.**
+
+28. As a **Visiting User** I can **see an icon for the website on page tabs** so that **I can easily navigate pages when I have multiple tabs open.**
+
+29. As a **Visiting User** I can **opt to sign up to a digital newsletter from the business** so that **I can keep up to date with new products and latest offers.**
+
+30. As a **business owner** I can **maintain website consistency through the provision of a custom 404 page** so that **even when an error occurs that leads to a 404 return, the customer does not feel as if they have exited the site and can easily return to the home page.**
+
 ## 4. Features
 
 Please note that the features section contains relevant extracts from the project wireframes. The complete wireframes are included in section 7 of this document.
