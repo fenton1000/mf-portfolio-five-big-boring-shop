@@ -374,6 +374,61 @@ alt="Screenshot of the admin page for setting opening hours and shows the hours 
 
 ## 12. Agile Methodology
 
+An Agile methodology and tools have been applied to the management of this project. Tools available within GitHub have been used to apply these methodologies.
+
+The GitHub issues list has been used to create User Stories and Epics as well as raising issues for bugs, README, testing and UX Enhancement. The issues list for this project is available <a href="https://github.com/fenton1000/mf-portfolio-five-big-boring-shop/issues" target="_blank">here.</a>
+
+Labels have been applied to the issues using both the GitHub-provided labels for bug, enhancement and documentation as well as the creation of custom labels for story points and must-have, should-have, and could-have labels for prioritization.
+
+**Available Labels**
+
+![Screenshot of available lables](documents/labels.png "Available Labels")
+
+Using the milestones feature in GitHub a Product Backlog was created. Issues raised and deemed to require work were passed to the Product Backlog to become Product Backlog Items (PBIs). In the case of this project all issues raised passed to the Product Backlog.
+
+Again using the milestones feature iteration timeboxes were created. For this project the length of a timebox was 8 days for all but the last iteration and in total 3 such 8-day iterations were achieved during the development of the MVP. The final iteration occurred between final mentor review and submission and was a 4 day timebox. The milestones for this project are available <a href="https://github.com/fenton1000/mf-portfolio-five-big-boring-shop/milestones" target="_blank">here.</a>
+
+Prior to being added to an iteration the acceptance critera for user stories were added and user stories were broken down into the tasks required to achieved the acceptance criteria. The acceptance criteria were written in non-technical language to clearly outline what was needed for the user story to be considered fulfilled. The tasks include the technical requirements.
+
+In the case of bugs, readme, testing, and enhancements, a list of tasks required to be completed to address the issue was added.
+
+The tasks and acceptance criteria for any individual task can be viewed by opening the individual issue in the issues list or in the milestone.
+
+Finally, prior to adding any issue to an iteration timebox the appropriate labels were added to assign story points, priority and as necessary hightlight additional information such as the issue being a bug.
+
+The four timebox iterations for the project are as follows:
+
+**Iteration 1**
+
+![Screenshot of the top half of the iteration one timebox](documents/iteration-1-a.png "Iteration One")
+![Screenshot of the bottom half of the iteration one timebox](documents/iteration-1-b.png "Iteration One")
+
+**Iteration 2**
+
+![Screenshot of iteration two timebox](documents/iteration-2.png "Iteration Two")
+
+**Iteration 3**
+
+![Screenshot of iteration three timebox](documents/iteration-3.png "Iteration Three")
+
+**Iteration 4**
+
+![Screenshot of iteration four timebox](documents/iteration-4.png "Iteration Four")
+
+For iteration 1 the story points total was set to 14. However only 6 PBIs were fully completed in the iteration with a a couple of PBIs ongoing at that point. Therefore at the start of iteration 2 the story point total was limited to 8. However in this iteration further PBIs were added throughout resulting in 22 points being completed. This gives and average velocity of approximately 14 points over the first two iterations. In iteration 3 the total story points added in the beginning was 12.
+
+When assigning and prioritising PBIs in a timebox, it was ensured that the story-point total for must-have PBIs was set to less than 60% of the total. In practice the percentage was generally much lower than this maximum allowed. It was also ensured that could-have PBIs made up at least 20% of the story-point total.
+
+Finally a kanban board was used to assist in the tracking and coordination of PBIs on a day-to-day basis. This board was set up as a virtual board using the projects tool in GitHub with PBIs added to the board at the commencement of iterations and moving from "Todo" to "In Progress" to "Done". The project board for this project can be viewed <a href="https://github.com/users/fenton1000/projects/6" target="_blank">here.</a>
+
+**Board at Start**
+
+![Screenshot of the kanban board at the start of the project](documents/kanban-start.png "Board at Start")
+
+**Board near End**
+
+![Screenshot of the kanban board near the end of the project](documents/kanban-end.png "Board near End")
+
 ## 13. Technology
 
 The following technologies were used in developing and deploying the website:
