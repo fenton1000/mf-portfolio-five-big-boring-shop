@@ -121,21 +121,27 @@ Please note that the features section contains relevant extracts from the projec
 
 * The navigation bar contains the BBS logo. The logo is also a link to the home page in line with likely user expectations.
 
-* When no user is logged in the navigation bar provides links to Register or Log In.
+* The navigation bar provides a Shopping link to bring users to the page listing all products available for sale. This link will be highlighted to indicate when a user is on the shopping page.
 
-* When a user is logged in the links to My Account and Log Out replace the Register or Log In options.
+* The navigation bar provides a Contact Us link to bring users to the page listing contact details for the business and a contact form. This link will be highlighted to indicate when a user is on the Contact Us page.
 
-* The Register, Log In, My Account, and Log Out links are highlighted as active when the appropriate page is open.
+* When no user is logged in the navigation bar Account dropdown provides links to Register or Log In.
 
-* An Admin Only link to the admin log in page is also provided for ease of access. This link will have a different colour to differentiate it from the main user links.
+* When a user is logged in the Account dropdown provides links to My Profile and Log Out in place of the Register or Log In options.
 
-<details><summary>Fig. 4.1.1 Navigation Bar with no user logged in.</summary>
-<img src="documents/navbar-logged-out.png"
-alt="wireframe of the navigation bar when there is no user logged in"></details>
+* An Admin dropdown with links to the Django Admin Panel and the Add Product pages is available when a superuser is logged in.
 
-<details><summary>Fig. 4.1.2 Navigation Bar with a user logged in.</summary>
-<img src="documents/navbar-logged-in.png"
-alt="wireframe of the navigation bar when there is a user logged in"></details>
+* A link to the shopping cart page is also provided in the form of a shopping cart logo together with the current grand total in the cart.
+
+* In the mobile view the main navigation collapses to a toggle button with just the BSS logo and the cart remaining visible.
+
+<details><summary>Fig. 4.1.1 Navigation Bar - Desktop</summary>
+<img src="documents/desktop-navbar.png"
+alt="wireframe of the navigation bar in desktop view"></details>
+
+<details><summary>Fig. 4.1.2 Navigation Bar - Mobile</summary>
+<img src="documents/mobile-navbar.png"
+alt="wireframe of the navigation bar in mobile view"></details>
 
 ### 4.2 Header
 
@@ -143,11 +149,15 @@ alt="wireframe of the navigation bar when there is a user logged in"></details>
 
 * The header contains a h2 sub-heading "Your weekly shopping delivered!".
 
-* The header contains a hero image with a theme related to the purpose of the website.
+* The header contains a hero image in desktop view with a theme related to the purpose of the website.
 
-<details><summary>Fig. 4.2.1 Header</summary>
-<img src="documents/header.png"
-alt="wireframe of the page header"></details>
+<details><summary>Fig. 4.2.1 Header - Desktop</summary>
+<img src="documents/desktop-header.png"
+alt="wireframe of the page header in desktop view"></details>
+
+<details><summary>Fig. 4.2.2 Header - Mobile</summary>
+<img src="documents/mobile-header.png"
+alt="wireframe of the page header in mobile view"></details>
 
 ### 4.3 Footer
 
@@ -155,29 +165,107 @@ alt="wireframe of the page header"></details>
 
 * The footer contains the newsletter registration form linking to the mailchimp service.
 
-* The footer is sticky, always appearing at the bottom of the view.
+<details><summary>Fig. 4.3.1 Footer - Desktop</summary>
+<img src="documents/desktop-footer.png"
+alt="wireframe of the page footer in desktop view"></details>
+
+<details><summary>Fig. 4.3.2 Footer - Mobile</summary>
+<img src="documents/mobile-footer.png"
+alt="wireframe of the page footer in mobile view"></details>
 
 ### 4.4 Home Page Main Section
 
-<details><summary>Fig. 4.4.1 Home Page Main Section on Desktop</summary>
-<img src="documents/home-main-desktop.png"
-alt="wireframe of the home page main section on desktop"></details>
+* The home page contains a banner with the phrases "Time is precious so don't waste it shopping for bleach!" and "Let us take care of the Boring Stuff while You do You!!"
 
-<details><summary>Fig. 4.4.2 Home Page Main Section on Mobile</summary>
-<img src="documents/home-main-mobile.png"
-alt="wireframe of the home page main section on a mobile device"></details>
+* The home page contains an About Us section.
 
-### 4.5 Products Page
+* The home page contains a section with information on delivery.
 
-* Search and filter options are provided.
+* The mobile view is essentially the same except that the About Us and Delivery sections are vertically stacked as opposed to being alongside one another in the desktop view.
+
+<details><summary>Fig. 4.4.1 Home Page Main Section</summary>
+<img src="documents/home-main.png"
+alt="wireframe of the home page main section"></details>
+
+### 4.5 Shopping/Products Page
+
+* The shopping/products page contains a search bar and a product categories button allowing customers to easily filter the products list.
+
+* A product summary is displayed on a product card. Both clicking on the image and the Product Details link will lead to the detail page for that product.
+
+* The individual cards wil wrap according to screen width and so will display side by side in rows on larger screens and in a single column on the smallest screens.
+
+<details><summary>Fig. 4.5.1 Shopping/Products Page</summary>
+<img src="documents/products-page.png"
+alt="wireframe of the shopping page main section"></details>
+
+### 4.6 Product Detail Page
+
+* An image of the product together with the product name, description, price, SKU, and product category are displayed.
+
+* An input field is provided to select the required quantity of the product and an add-to-cart button available to add the selected quantity of the item to the shopping cart.
+
+* A Back button allows the shopper to return to the main products page.
+
+* If the user is logged in the option to add the item to favourites is provided or a heart symbol is displayed if the item is already on the logged in users favourites together with the option to delete it from the favourites list.
+
+* If the user is an admin superuser the product management options to edit or delete a product are provided.
+
+* If a user is not logged in the comments and ratings section will only display other users' comments and ratings if they exist and will not provide an option to leave a comment or rating.
+
+* If the user is logged in a comment and rating form will appear to allow the user to comment on and rate the product. If they have already commented on the product, this comment will appear highlighted as the user's, together with options to edit and delete the comment/rating.
+
+* When a user adds or edits a rating the overall product rating is updated accordingly.
+
+<details><summary>Fig. 4.6.1 Product Detail Page - Desktop</summary>
+<img src="documents/product-detail-section-desktop.png"
+alt="wireframe of the product detail section on desktop"></details>
+
+<details><summary>Fig. 4.6.2 Product Detail Page - Mobile</summary>
+<img src="documents/product-detail-section-mobile.png"
+alt="wireframe of the product detail section on mobile"></details>
+
+### 4.7 Shopping Cart
+
+* A summary of the shopping cart items is displayed.
+
+* An option to adjust the quantity of any particular item is provided.
+
+* An option to remove an item from the cart is provided.
+
+* The total, delivery charge, and grand-total are displayed.
+
+* A button to return to shopping is provided.
+
+* A button to proceed to the checkout is provided.
+
+<details><summary>Fig. 4.7.1 Shopping Cart - Desktop</summary>
+<img src="documents/shopping-cart-section-desktop.png"
+alt="wireframe of the shopping cart section on desktop"></details>
+
+<details><summary>Fig. 4.7.2 Shopping Cart - Mobile</summary>
+<img src="documents/shopping-cart-section-mobile.png"
+alt="wireframe of the shopping cart section on mobile"></details>
+
+### 4.8 Checkout Page
+
+* A brief summary of the charges to be processed is provided.
+
+* This page contains a form with fields for full name, email address, phone number, Street Address 1, Street Address 2, Town or City, County and Eircode (post-code).
+
+* A checkbox is provided for logged-in users, allowing them the option to add or update the user's profile with the details provided.
+
+* A payment card input field is provided. This is an element provided by Stripe.
+
+* Buttons to "Adjust Cart" or "Complete Order" are provided.
 
 ## 5. Future Features
 
 The following future features could be added in time:
 
-1. A stock control system including the ability for admin to review stock quantities and the automatic displaying of out of stock information to customers when it occurs.
+1. A stock control system including the ability for admin to review stock quantities and the automatic displaying of out-of-stock information to customers when it occurs.
 
-2. A system for managing order fulfilment and delivery confirmation.
+2. A system for managing order fulfillment and delivery confirmation.
 
 3. An enhanced chat style contact us feature rather than just a simple contact form as currently provided.
 
