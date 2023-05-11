@@ -595,6 +595,26 @@ alt="Screenshot of the successful HTML validation result for shopping products p
 
 For pages requiring a logged-in user validation was undertaken by Direct Input as follows:
 
+#### 14.1.2 CSS Code Validation
+
+CSS code validation was carried out using the W3C CSS Validation Service. Files were tested by direct input and were successfully validated as follows:
+
+**File: styles.css**
+
+<details><summary>Fig. 14.1.2.1 CSS Validation Result for styles.css</summary>
+<img src="documents/css-val-styles.png"
+alt="Screenshot of the successful CSS validation result for the styles.css file."></details>
+
+#### 14.1.3 Javascript/jquery Code Validation
+
+Javascript code validation was carried out using JS Hint. Each file was tested by direct input and was successfully validated as follows:
+
+**File: ratingSelect.js in the comment_rating app**
+
+<details><summary>Fig. 14.1.3.1 js Validation Result for ratingSelect.js</summary>
+<img src="documents/js-val-ratingSelect.png"
+alt="Screenshot of the successful javascript validation result for the ratingSelect.js file."></details>
+
 ## 15. Deployment
 
 ## 16. References and Credits
