@@ -503,7 +503,7 @@ The following technologies were used in developing and deploying the website:
 
 * Python version 3.8 documentation available at https://docs.python.org/3.8/. Python is the backend programming language used in the Django full-stack framework technology used to develop this project.
 
-* Bootstrap version 5.3 documentation available at https://getbootstrap.com/docs/5.3/getting-started/introduction/. Bootstrap has been used throughout this project to create page styles and components.
+* Bootstrap version 4.4 documentation available at https://getbootstrap.com/docs/5.3/getting-started/introduction/. Bootstrap has been used throughout this project to create page styles and components.
 
 * jQuery documentation available at https://jquery.com/. jQuery has been used for event handling and DOM manipulation including to aid responsivness.
 
@@ -512,8 +512,6 @@ The following technologies were used in developing and deploying the website:
 * fontpair information on font styles and pairings at https://www.fontpair.co/.
 
 * Google Fonts documentation available at https://fonts.google.com/. Google Fonts has been used to import Roboto and Roboto Condensed font styles.
-
-* Answer by username ladhari to a question on Stack Overflow at https://stackoverflow.com/questions/20138049/redirect-user-to-another-url-with-django-allauth-log-in-signal for information on having seperate django redirects for sign up and log in.
 
 * Real Python information on using current user instance in the backend via request.user at https://realpython.com/django-view-authorization/.
 
@@ -530,8 +528,6 @@ The following technologies were used in developing and deploying the website:
 * Answer by Mahdi Zare to a question on Stack Overflow at https://stackoverflow.com/questions/27064206/django-check-if-a-related-object-exists-error-relatedobjectdoesnotexist for information on using ObjectDoesNotExist from django.core.exceptions.
 
 * "Dynamic classes in navbar" from Django World by Yash Patel available at https://www.youtube.com/watch?v=qLG6B6yWH58 for code and information regarding the addition of the active class to the correct link in the navbar of a base template.
-
-* mdn web docs information on the HTML input type "tel" and the pattern attribute available at https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/tel.
 
 * w3schools information on the HTML data-* attribute available at https://www.w3schools.com/tags/att_data-.asp.
 
@@ -559,13 +555,43 @@ The following technologies were used in developing and deploying the website:
 
 * Photo of eggs by Pixabay sourced from Pexels at: https://www.pexels.com/photo/brown-eggs-on-brown-wooden-bowl-on-beige-knit-textile-162712/
 
+* Photo of milk by Pixabay sourced from Pexels at: https://www.pexels.com/photo/close-up-of-milk-against-blue-background-248412/
+
+* Photo of carrots by mali maeder sourced from Pexels at: https://www.pexels.com/photo/orange-carrots-on-table-143133/
+
+* Photo of steak by mali maeder sourced from Pexels at: https://www.pexels.com/photo/red-meat-with-chili-pepper-and-green-spies-65175/
+
 * Photo of sugar by Suzy Hazelwood sourced from Pexels at: https://www.pexels.com/photo/close-up-photo-of-sugar-cubes-in-glass-jar-2523650/
+
+* Photo of Ice-cream by Alisha Mishra sourced from Pexels at: https://www.pexels.com/photo/scooped-chocolate-ice-cream-in-black-container-1346341/
+
+* Photo of spaghetti by Pixabay sourced from Pexels at: https://www.pexels.com/photo/blur-carbohydrates-close-up-cooking-262905/
+
+* Photo of coffee by Igor Haritanovich sourced from Pexels at: https://www.pexels.com/photo/coffee-beans-1695052/
 
 * Photo of a water bottle by Steve Johnson sourced from Pexels at: https://www.pexels.com/photo/clear-disposable-bottle-on-black-surface-1000084/
 
+* Photo of sparkling water by Srattha Nualsate sourced from Pexels at: https://www.pexels.com/photo/a-close-up-shot-of-a-glass-of-sparkling-water-12987479/
+
+* Photo of cola by Ron Lach sourced from Pexels at: https://www.pexels.com/photo/close-up-shot-of-a-soft-drink-with-ice-cubes-8879611/
+
+* Photo of orange juice by Arina Krasnikova sourced from Pexels at: https://www.pexels.com/photo/yellow-juice-in-clear-drinking-glass-on-white-surface-7377099/
+
 * Photo of a toothbrush by Karolina Grabowska sourced from Pexels at: https://www.pexels.com/photo/photo-of-toothpaste-on-toothbrush-4202927/
 
+* Photo of soap by Tabitha Mort sourced from Pexels at: https://www.pexels.com/photo/brown-sliced-soaps-773252/
+
+* Photo of toothpaste by Karolina Grabowska sourced from Pexels at: https://www.pexels.com/photo/white-toothpaste-tube-and-bamboo-toothbrush-on-wooden-surface-4465126/
+
+* Photo of a razor by Robert Golebiewski sourced from Pexels at: https://www.pexels.com/photo/close-up-photo-of-a-blue-and-gray-razor-on-a-white-surface-4429185/
+
 * Photo of toilet paper by Vlada Karpovich sourced from Pexels at: https://www.pexels.com/photo/stack-of-toilet-paper-rolls-in-a-basket-3958185/
+
+* Photo of a mop by Liliana Drew sourced from Pexels at: https://www.pexels.com/photo/a-person-cleaning-the-floor-9462167/
+
+* Photo of a dust pan and brush by cottonbro studio sourced from Pexels at: https://www.pexels.com/photo/brown-wooden-brush-on-brown-wooden-table-4108711/
+
+* Photo of bath towels by Dom J sourced from Pexels at: https://www.pexels.com/photo/white-and-maroon-rugs-45980/
 
 * Image size and format adjusting by Reduce Images: https://www.reduceimages.com/
 
