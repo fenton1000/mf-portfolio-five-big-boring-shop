@@ -615,6 +615,12 @@ Javascript code validation was carried out using JS Hint. Each file was tested b
 <img src="documents/js-val-ratingSelect.png"
 alt="Screenshot of the successful javascript validation result for the ratingSelect.js file."></details>
 
+#### 14.1.4 Python Code Validation
+
+In the first instance python validation has been implemented by way of constant monitoring of the problems list in the IDE. All python files were found to be free of problems.
+
+In addition all key files containing custom code were tested using the Code Institute Python Linter and were found to be error free. Examples of tests for key files are shown hereunder:
+
 ## 15. Deployment
 
 ## 16. References and Credits
