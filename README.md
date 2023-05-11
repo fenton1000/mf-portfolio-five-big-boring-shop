@@ -573,6 +573,22 @@ The following technologies were used in developing and deploying the website:
 
 ## 14. Testing
 
+### 14.1 Code Validation
+
+#### 14.1.1 HTML Code Validation
+
+HTML code validation was carried out using the W3C Markup Validation Service. All code was successfully validated as outlined hereunder.
+
+For public pages validation was undertaken by URI as follows:
+
+Home page at : https://mf-pp5-big-boring-shop.herokuapp.com/
+
+<details><summary>Fig. 14.1.1.1 HTML Validation Result for Home page</summary>
+<img src="documents/html-val-home.png"
+alt="Screenshot of the successful HTML validation result for home page."></details>
+
+For pages requiring a logged in user validation was undertaken by Direct Input as follows:
+
 ## 15. Deployment
 
 ## 16. References and Credits
