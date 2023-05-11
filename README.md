@@ -581,13 +581,19 @@ HTML code validation was carried out using the W3C Markup Validation Service. Al
 
 For public pages validation was undertaken by URI as follows:
 
-Home page at : https://mf-pp5-big-boring-shop.herokuapp.com/
+Home page at: https://mf-pp5-big-boring-shop.herokuapp.com/
 
 <details><summary>Fig. 14.1.1.1 HTML Validation Result for Home page</summary>
 <img src="documents/html-val-home.png"
 alt="Screenshot of the successful HTML validation result for home page."></details>
 
-For pages requiring a logged in user validation was undertaken by Direct Input as follows:
+Shopping/Products page at: https://mf-pp5-big-boring-shop.herokuapp.com/products/
+
+<details><summary>Fig. 14.1.1.2 HTML Validation Result for Shopping/Products page</summary>
+<img src="documents/html-val-products.png"
+alt="Screenshot of the successful HTML validation result for shopping products page."></details>
+
+For pages requiring a logged-in user validation was undertaken by Direct Input as follows:
 
 ## 15. Deployment
 
