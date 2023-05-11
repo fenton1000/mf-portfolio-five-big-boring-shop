@@ -319,6 +319,50 @@ The following potential strategies have been considered. The key elements influe
 
 ## 11. Facebook Business Page
 
+Further to the web marketing strategy outlined above, a facebook business page was prepared for the business. Key information about the business including business type, web address, telephone number, location and opening hours were included. The hero image used in the website was also used as the header image for the page to ensure a consistent appearance and theme. A shop on website button was also added.
+
+Screenshots of the facebook business page are included hereunder:
+
+Fig. 11.1 Facebook Page Header
+
+![Screenshot of the facebook business page header](documents/facebook1.png "Facebook Page Header")
+
+<details><summary>Fig. 11.2 Facebook Page About Section - Part A.</summary>
+<img src="documents/facebook2.png"
+alt="Screenshot of the top half of the facebook page about section"></details>
+
+<details><summary>Fig. 11.3 Facebook Page About Section - Part B.</summary>
+<img src="documents/facebook3.png"
+alt="Screenshot of the bottom half of the facebook page about section"></details>
+
+<details><summary>Fig. 11.4 Facebook Page Created Info.</summary>
+<img src="documents/facebook4.png"
+alt="Screenshot of the page created information"></details>
+
+<details><summary>Fig. 11.5 Facebook Page 1st Post</summary>
+<img src="documents/facebook5.png"
+alt="Screenshot of the first post"></details>
+
+<details><summary>Fig. 11.6 Facebook Page - Shop on Website button added.</summary>
+<img src="documents/facebook6.png"
+alt="Screenshot of the shop on website button added notification"></details>
+
+<details><summary>Fig. 11.7 Facebook Page - Website address updated notification.</summary>
+<img src="documents/facebook7.png"
+alt="Screenshot of the website address updated notification"></details>
+
+<details><summary>Fig. 11.8 Facebook Page - Profile Picture updated notification.</summary>
+<img src="documents/facebook8.png"
+alt="Screenshot of the profile picture updated notification"></details>
+
+<details><summary>Fig. 11.9 Facebook Page Opening Hours.</summary>
+<img src="documents/facebook9.png"
+alt="Screenshot of the displayed opening hours"></details>
+
+<details><summary>Fig. 11.10 Facebook Page - Editing Opening Hours.</summary>
+<img src="documents/facebook10.png"
+alt="Screenshot of the admin page for setting opening hours and shows the hours matching those on the website."></details>
+
 ## 12. Agile Methodology
 
 ## 13. Technology
