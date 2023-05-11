@@ -173,6 +173,15 @@ alt="wireframe of the home page main section on a mobile device"></details>
 
 ## 5. Future Features
 
+The following future features could be added in time:
+
+1. A stock control system including the ability for admin to review stock quantities and the automatic displaying of out of stock information to customers when it occurs.
+
+2. A system for managing order fulfilment and delivery confirmation.
+
+3. An enhanced chat style contact us feature rather than just a simple contact form as currently provided.
+
+
 ## 6. Typography and Color Scheme
 
 ### 6.1 Typography
