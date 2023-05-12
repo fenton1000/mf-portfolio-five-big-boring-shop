@@ -282,3 +282,26 @@ footer a {
         display: none;
     }
 }
+
+/* For Screens 400px wide and down */
+@media screen and (max-width: 400px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    .business {
+        height: 80px;
+    }
+
+    .small-tagline {
+        width: 200px;
+    }
+
+    .small-tagline h2 {
+        font-size: 12px;
+    }
+
+    .banner {
+        font-size: 12px;
+    }
+}
