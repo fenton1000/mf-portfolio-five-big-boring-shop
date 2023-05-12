@@ -68,33 +68,10 @@ Selected Product
         </div>
         <h6 class="text-center">Comments and Ratings</h6>
         <div class="row">
-            <div class="col-12 col-md-6 d-flex justify-content-center">
+            <div class="col-12 d-flex justify-content-center">
                 {% if user.is_authenticated %}
                 {% if current_user_comment_rating %}
-                {% for comment in current_user_comment_rating %}
-                <div class="border">
-                    <p>You have made the following comment on this product:</p>
-                    {% if comment.date_updated %}
-                    <p>Comment updated on {{ comment.date_updated}}</p>
-                    {% else %}
-                    <p>Comment created on {{comment.date_created}}</p>
-                    {% endif %}
-                    <p>{{comment.comment}}</p>
-                    {% if comment.user_rating %}
-                    <p>You gave this product a rating of {{ comment.user_rating }}/5</p>
-                    {% else %}
-                    Rating: No Rating!
-                    {% endif %}
-                    <small class="ml-3">
-                        <a href="{% url 'edit_product_comment_rating' product.id %}?redirect_url={{ request.path }}">Edit
-                            this
-                            Comment/Rating</a> |
-                        <!-- Trigger modal -->
-                        <a id="delete-comment-link" class="text-danger" href="#" data-toggle="modal"
-                            data-target="#deleteCommentModal">Delete this Comment</a>
-                    </small>
-                </div>
-                {% endfor %}
+                <p class="text-center">Your comment/rating for this product appears in the comment list hereunder!</p>
                 {% else %}
                 <form action="{% url 'comment_rate_product' product.id %}" method="POST">
                     {% csrf_token %}
@@ -116,26 +93,55 @@ Selected Product
                 {% endif %}
                 {% endif %}
             </div>
-            <div class="col-12 col-md-6">
+            <div class="col d-flex justify-content-center text-center">
                 <div class="all-comments border">
                     {% if all_comments_ratings %}
-                    <p>Customer Comments/Reviews:</p>
                     {% for comment in all_comments_ratings %}
+                    {% if user.is_authenticated and user == comment.user %}
+                    <p class="bold">You made the following comment on this product:</p>
                     {% if comment.date_updated %}
                     <p>Comment updated on {{ comment.date_updated}}</p>
                     {% else %}
                     <p>Comment created on {{comment.date_created}}</p>
                     {% endif %}
-                    <p>By: {{comment.user.username}}</p>
+                    <p>{{comment.comment}}</p>
+                    {% if comment.user_rating %}
+                    <p>You gave this product a rating of {{ comment.user_rating }}/5</p>
+                    {% else %}
+                    Rating: No Rating!
+                    {% endif %}
+                    <small class="ml-3">
+                        <a href="{% url 'edit_product_comment_rating' product.id %}?redirect_url={{ request.path }}">Edit
+                            this
+                            Comment/Rating</a>
+                    </small>
+                    <small class="ml-3">
+                        <!-- Trigger modal -->
+                        <a id="delete-comment-link" class="text-danger" href="#" data-toggle="modal"
+                            data-target="#deleteCommentModal">Delete this Comment</a>
+                    </small>
+                    {% else %}
+                    {% if comment.date_updated %}
+                    <p>{{comment.user.username}} updated this comment on {{ comment.date_updated}}</p>
+                    {% else %}
+                    <p>{{comment.user.username}} created this comment on {{comment.date_created}}</p>
+                    {% endif %}
                     <p>{{comment.comment}}</p>
                     {% if comment.user_rating %}
                     <p>{{comment.user.username}} gave this product a rating of {{ comment.user_rating }}/5</p>
                     {% else %}
                     Rating: No Rating!
                     {% endif %}
+                    <hr>
+                    {% endif %}
                     {% endfor %}
                     {% else %}
+                    {% if user.is_authenticated %}
                     <p>Noboby has reviewed or commented on this product yet! Why not be the first!</p>
+                    {% else %}
+                    <p>Noboby has reviewed or commented on this product yet! Why not register for an account above and
+                        be the first!</p>
+                    {% endif %}
                     {% endif %}
                 </div>
             </div>
