@@ -259,6 +259,83 @@ alt="wireframe of the shopping cart section on mobile"></details>
 
 * Buttons to "Adjust Cart" or "Complete Order" are provided.
 
+### 4.9 Checkout Success Page
+
+* A shopper is redirected to this page following submission of a payment.
+
+* This page displays a success message that includes an order number.
+
+* This page displays an order summary.
+
+* This page contains a back to home button
+
+### 4.10 Edit Comment/Rating Page
+
+* This page is reached when a logged-in user opts to edit a comment/rating from the product detail page.
+
+* This page displays the same form as provided to add a comment but pre-populated with the existing comment/rating.
+
+* An update comment button is provided.
+
+### 4.11 Contact Us Page
+
+* This page contains contact details for the business.
+
+* A contact form is also provided. The form contains fields for full name, email and Query.
+
+* A submit button is provided. Upon submission the page refreshes with confirmation of the message sent displayed at the top of the page.
+
+* When queries/comments are submitted in this way they can be viewed by the business in the admin panel. The admin panel also displays fields for viewed and closed to allow easy administration of queries/comments on the admin side.
+
+### 4.12 My Profile Page
+
+* This page is available to logged-in users only and contains 3 sections, Default Delivery Information, Order History, and Favourites.
+
+* The Default Delivery Information is displayed as an editable form, pre-populated with any previously saved information and a button to submit updated information.
+
+* The Order History section displays a list summary of all previous orders. The order number is a link to the details of that order.
+
+* The Favourites section displays the user’s favourites list together with an option to delete any favourite from the list. **NB Note that deleting an item from the list here will refresh the profile page. The option to remove an item from favourites is also provided in the product detail page and appears to the user as a toggle between adding and deleting. This is achieved by passing the appropriate redirect URL to the delete favourite view.**
+
+* Both the image and the product name of any item on the favourites list are links to the product detail page for the item.
+
+<details><summary>Fig. 4.11.1 Profile Page - Desktop</summary>
+<img src="documents/profile-section-desktop.png"
+alt="wireframe of the profile page on desktop"></details>
+
+<details><summary>Fig. 4.11.2 Profile Page - Mobile</summary>
+<img src="documents/profile-section-mobile.png"
+alt="wireframe of the profile page on mobile"></details>
+
+### 4.13 Order History Page
+
+* This page is reached by clicking on an order link from the order history section of the My Profile page.
+
+* It uses the same template as the checkout success page.
+
+* The information message at the top informs the user that they are viewing an historic order in this case.
+
+### 4.14 Product Management – Add Product Page
+
+* This page is only available to admin/superusers
+
+* This page displays a form for adding a product with fields for category, SKU, name, description and price.
+
+* A button to add an image is also available
+
+* An Add Product button and a Cancel button are provided.
+
+### 4.15 Product Management – Edit Product Page
+
+* This page is reached via a link in the product detail page available to logged-in superusers.
+
+* The form is the same as that provided for adding products but is pre-populated with the existing product information.
+
+* Options to add an image or remove an image are provided.
+
+* An Update Product button and a Cancel button are provided.
+
+
 ## 5. Future Features
 
 The following future features could be added in time:
