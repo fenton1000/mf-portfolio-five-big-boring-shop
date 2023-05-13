@@ -335,6 +335,35 @@ alt="wireframe of the profile page on mobile"></details>
 
 * An Update Product button and a Cancel button are provided.
 
+### 4.16 Sign In Form
+
+* The page containing this form is reached by clicking on Sign In from the Account dropdown on the navigation bar.
+
+* The form contains fields to enter a username or email address and user password.
+
+* The form has a submit button to process the entered information.
+
+### 4.17 Sign Up Form
+
+* The page containing this form is reached by clicking on Register from the Account dropdown on the navigation bar.
+
+* The form contains fields to enter and confirm an email address, a field to enter a unique username, and fields to enter and confirm a user password.
+
+* The form has a submit button to process the entered information.
+
+### 4.18 Password Reset Form
+
+* The page containing this form is reached by clicking on the Forgot Password? link on the Sign In page.
+
+* The form contains a field to enter an email address.
+
+* The form has a "Reset my Password" submit button to process the entered information.
+
+### 4.19 Sign Out Page
+
+* This page is reached by clicking on Sign Out from the Account dropdown on the navigation bar when a user is logged in.
+
+* The page has a Sign Out button and a Back button to return to the home page without logging out.
 
 ## 5. Future Features
 
