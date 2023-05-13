@@ -375,6 +375,11 @@ The following future features could be added in time:
 
 3. An enhanced chat style contact us feature rather than just a simple contact form as currently provided.
 
+4. Give users the ability to log in using an existing social media account.
+
+5. Create an admin approval flow for customer product comments.
+
+6. Give users the ability to filter product comments by date, rating, view my comments etc.
 
 ## 6. Typography and Color Scheme
 
