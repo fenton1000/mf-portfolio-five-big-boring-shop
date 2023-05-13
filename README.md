@@ -385,7 +385,39 @@ The following future features could be added in time:
 
 ### 6.1 Typography
 
+The overall theme of the website is to be simple, clear, and a little brash in line with the simple product offering the business wants to proudly promote and shout about.
+
+The text styles chosen are Roboto and Roboto Condensed. These give a simple easy to read and business-like appearance.
+
+Roboto Condensed with a font weight of 700 has been used for headings, input labels and product prices.
+
+Roboto has been used for all other texts. Generally the font weight used is 400 with occasional use of a 700 font weight where bold text is required.
+
 ### 6.2 Color Scheme
+
+As stated above the site aims to keep a simple appearance with a slightly brash approach to catch the eye and confidently put forward its product offering. Therefore the chosen colours either are, or are close to, primary colours. 
+
+#ff0000 (red) has been used as the background for the business name and the name is displayed in #ffff00 (yellow).
+
+#f5f5f5 is a close to white color and is used as the background color for the h2 heading in the header and as the text color for the catchphrase banner on the homepage.
+
+#212529 is a close to black color and is used as the background color for the catchphrase banner on the homepage and as the default text color.
+
+#000000 (black) is used as the border color for form input fields, for form select fields and for form text areas.
+
+#32cf2d is a close to green color and is the hover color for form input fields, for form select fields and for form text areas.
+
+#e4eef7 is a light grey color chosen to provide the footer with a degree of contrast from other page content across all pages.
+
+#df1a1a is a bright red color used for the heart icon to indicate products on a user’s favourites list.
+
+#17a2b8, the bootstrap 4.4 “info” color is the background color for the About Us section on the home page and for the product category filter button on the product page.
+
+#f8f9fa, the bootstrap 4.4 “light” color is the background color for the Delivery section on the home page.
+
+#28a745, the bootstrap 4.4 “success” color has been used for green buttons.
+
+#6c757d, the bootstrap 4.4 “secondary” color is used for grey buttons.
 
 ## 7. Wireframes
 
