@@ -36,7 +36,11 @@ Selected Product
                         <input type="submit" class="btn btn-secondary" value="Add to Cart">
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     </form>
+                    {% if from_profile %}
+                    <a class="btn btn-secondary m-3" href="{% url 'profile' %}" role="button">Back</a>
+                    {% else %}
                     <a class="btn btn-secondary m-3" href="{% url 'products' %}" role="button">Back</a>
+                    {% endif %}
                     {% if product.rating %}
                     <p>Product Rating of {{ product.rating }}/5 based on {{ product.num_of_raters }} reviews</p>
                     {% endif %}

@@ -77,15 +77,21 @@ My Profile
             <div class="row">
                 <div class="col-12 col-md-4">
                     {% if favourite.product.image %}
-                    <img class="width100" src="{{ favourite.product.image.url }}"
-                        alt="{{ favourite.product.name }}">
+                    <a href="{% url 'product_detail' favourite.product.id %}?from_profile=True">
+                        <img class="width100" src="{{ favourite.product.image.url }}"
+                            alt="{{ favourite.product.name }}">
+                    </a>
                     {% else %}
-                    <img class="width100" src="/media/noimage.png" alt="{{ favourite.product.name }}">
+                    <a href="{% url 'product_detail' favourite.product.id %}?from_profile=True">
+                        <img class="width100" src="/media/noimage.png" alt="{{ favourite.product.name }}">
+                    </a>
                     {% endif %}
                 </div>
                 <div class="col-12 col-md-4">
-                    <p class="my-0">Product:</p>
-                    <p class="my-0">{{ favourite.product.name }}</p>
+                    <a href="{% url 'product_detail' favourite.product.id %}?from_profile=True">
+                        <p class="my-0">Product:</p>
+                        <p class="my-0">{{ favourite.product.name }}</p>
+                    </a>
                 </div>
                 <div class="col-12 col-md-4">
                     <p class="my-0">Description:</p>

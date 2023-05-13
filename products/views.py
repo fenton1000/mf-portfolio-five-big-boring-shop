@@ -54,6 +54,7 @@ def product_detail(request, product_id):
     all_comments_ratings = CommentRating.objects.filter(product=product)
     current_user_comment_rating = None
     on_favourites = False
+    from_profile = None
     if user.is_authenticated:
         current_user_comment_rating = CommentRating.objects.filter(
             user=user,
@@ -62,11 +63,16 @@ def product_detail(request, product_id):
         if Favourites.objects.filter(product=product, user=user).exists():
             on_favourites = True
 
+    if request.GET:
+        if 'from_profile' in request.GET:
+            from_profile = True
+
     context = {
         'product': product,
         'current_user_comment_rating': current_user_comment_rating,
         'all_comments_ratings': all_comments_ratings,
-        'on_favourites': on_favourites
+        'on_favourites': on_favourites,
+        'from_profile': from_profile
     }
 
     return render(request, 'products/product_detail.html', context)
