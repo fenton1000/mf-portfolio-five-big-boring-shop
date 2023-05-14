@@ -824,6 +824,24 @@ CSS code validation was carried out using the W3C CSS Validation Service. Files 
 <img src="documents/css-val-styles.png"
 alt="Screenshot of the successful CSS validation result for the styles.css file."></details>
 
+**File: checkout.css**
+
+<details><summary>Fig. 14.1.2.2 CSS Validation Result for checkout.css</summary>
+<img src="documents/css-val-checkout.png"
+alt="Screenshot of the successful CSS validation result for the checkout.css file."></details>
+
+**File: products.css**
+
+<details><summary>Fig. 14.1.2.3 CSS Validation Result for products.css</summary>
+<img src="documents/css-val-products.png"
+alt="Screenshot of the successful CSS validation result for the products.css file."></details>
+
+**File: profile.css**
+
+<details><summary>Fig. 14.1.2.4 CSS Validation Result for profile.css</summary>
+<img src="documents/css-val-profile.png"
+alt="Screenshot of the successful CSS validation result for the profile.css file."></details>
+
 #### 14.1.3 Javascript/jquery Code Validation
 
 Javascript code validation was carried out using JS Hint. Each file was tested by direct input and was successfully validated as follows:
