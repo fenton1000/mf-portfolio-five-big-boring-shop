@@ -764,13 +764,55 @@ alt="Screenshot of the successful HTML validation result for the sign in page.">
 
 The following pages do not require log in but contain very little content without an active user and therefore have been tested by way of direct input to the validator after adding items to the shopping cart:
 
-Shopping Cart:
+Shopping Cart Page:
 
 <details><summary>Fig. 14.1.1.7 HTML Validation Result for Shopping Cart page</summary>
 <img src="documents/html-val-cart.png"
 alt="Screenshot of the successful HTML validation result for the shopping cart page."></details>
 
+Checkout Page:
+
+This validation displays one warning. This is in relation to the use of an h1 heading in code taken from and credited to the Boutique Ado walkthrough project by code Institute and is used to create the spinner that appears to users while a payment is being processed.
+
+<details><summary>Fig. 14.1.1.8 HTML Validation Result for Checkout page</summary>
+<img src="documents/html-val-checkout.png"
+alt="Screenshot of the successful HTML validation result for the checkout page."></details>
+
+Checkout Success Page:
+
+<details><summary>Fig. 14.1.1.9 HTML Validation Result for Checkout Success page</summary>
+<img src="documents/html-val-checkout-success.png"
+alt="Screenshot of the successful HTML validation result for the checkout success page."></details>
+
 For pages requiring a logged-in user validation was undertaken by Direct Input as follows:
+
+Sign Out Page:
+
+<details><summary>Fig. 14.1.1.10 HTML Validation Result for Sign Out page</summary>
+<img src="documents/html-val-signout.png"
+alt="Screenshot of the successful HTML validation result for the sign out page."></details>
+
+My Profile Page:
+
+<details><summary>Fig. 14.1.1.11 HTML Validation Result for My Profile page</summary>
+<img src="documents/html-val-profile.png"
+alt="Screenshot of the successful HTML validation result for the my profile page."></details>
+
+Order History Page:
+
+This is a sample test of one Order History page. There could potentially be numerous pages for each registered user but all are created using the same template and so the underlying html is the same.
+
+<details><summary>Fig. 14.1.1.12 HTML Validation Result for an Order History page</summary>
+<img src="documents/html-val-order-history.png"
+alt="Screenshot of the successful HTML validation result for an order history page."></details>
+
+Admin Add Product Page:
+
+This validation contains one error in the code copied from the chrome inspector for the page. However this error is not occurring in any custom code created for the project. It is instead occurring in code for the display of form errors created by django's template form tags.
+
+<details><summary>Fig. 14.1.1.13 HTML Validation Result for Admin Add Product page</summary>
+<img src="documents/html-val-add-product.png"
+alt="Screenshot of the HTML validation result for the admin add product page."></details>
 
 #### 14.1.2 CSS Code Validation
 
