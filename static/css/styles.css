@@ -149,16 +149,16 @@ form textarea:hover {
     border: 1px solid #32cf2d;
 }
 
-#cart-quantity {
+.cart-quantity {
     width: 40%;
     height: 30px;
 }
 
-#cart-quantity-form {
+.cart-quantity-form {
     width: 100%;
 }
 
-#cart-quantity-submit {
+.cart-quantity-submit {
     height: 30px;
     width: 100px;
     padding: 2px 0px;

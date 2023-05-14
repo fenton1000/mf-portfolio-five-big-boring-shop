@@ -722,7 +722,7 @@ The following technologies were used in developing and deploying the website:
 
 HTML code validation was carried out using the W3C Markup Validation Service. All code was successfully validated as outlined hereunder.
 
-For public pages validation was undertaken by URI as follows:
+For public pages validation was undertaken by URI where appropriate as follows:
 
 Home page at: https://mf-pp5-big-boring-shop.herokuapp.com/
 
@@ -735,6 +735,40 @@ Shopping/Products page at: https://mf-pp5-big-boring-shop.herokuapp.com/products
 <details><summary>Fig. 14.1.1.2 HTML Validation Result for Shopping/Products page</summary>
 <img src="documents/html-val-products.png"
 alt="Screenshot of the successful HTML validation result for shopping products page."></details>
+
+Product Detail page at: https://mf-pp5-big-boring-shop.herokuapp.com/products/10/
+
+This is a sample test of one of many product detail pages. However the product detail pages are all created using the same template and so the underlying html is the same.
+
+<details><summary>Fig. 14.1.1.3 HTML Validation Result for Sample Product Detail page</summary>
+<img src="documents/html-val-product-detail.png"
+alt="Screenshot of the successful HTML validation result for a sample product detail page."></details>
+
+Contact Us Page at: https://mf-pp5-big-boring-shop.herokuapp.com/contact/
+
+<details><summary>Fig. 14.1.1.4 HTML Validation Result for Contact Us page</summary>
+<img src="documents/html-val-contact.png"
+alt="Screenshot of the successful HTML validation result for contact us page."></details>
+
+Sign Up Page at: https://mf-pp5-big-boring-shop.herokuapp.com/accounts/signup/
+
+<details><summary>Fig. 14.1.1.5 HTML Validation Result for Sign Up page</summary>
+<img src="documents/html-val-signup.png"
+alt="Screenshot of the successful HTML validation result for the sign up page."></details>
+
+Sign In Page at: https://mf-pp5-big-boring-shop.herokuapp.com/accounts/login/
+
+<details><summary>Fig. 14.1.1.6 HTML Validation Result for Sign In page</summary>
+<img src="documents/html-val-signin.png"
+alt="Screenshot of the successful HTML validation result for the sign in page."></details>
+
+The following pages do not require log in but contain very little content without an active user and therefore have been tested by way of direct input to the validator after adding items to the shopping cart:
+
+Shopping Cart:
+
+<details><summary>Fig. 14.1.1.7 HTML Validation Result for Shopping Cart page</summary>
+<img src="documents/html-val-cart.png"
+alt="Screenshot of the successful HTML validation result for the shopping cart page."></details>
 
 For pages requiring a logged-in user validation was undertaken by Direct Input as follows:
 

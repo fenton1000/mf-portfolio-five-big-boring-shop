@@ -39,12 +39,12 @@ Shopping Cart
                             <p class="m-0 my-md-3">€{{ item.product.price }}</p>
                         </div>
                         <div class="col-12 col-md-4 d-flex justify-content-center align-items-center">
-                            <form id="cart-quantity-form" class="d-flex flex-column align-items-center flex-lg-row" action="{% url 'adjust_cart' item.product.id %}" method="POST">
+                            <form class="cart-quantity-form d-flex flex-column align-items-center flex-lg-row" action="{% url 'adjust_cart' item.product.id %}" method="POST">
                                 {% csrf_token %}
                                 <label class="text-center m-1" for="id_qty_{{ item.product.id }}">Qty:</label>
-                                <input id="cart-quantity" class="m-1" type="number" name="quantity" value="{{ item.quantity }}" min="0" max="99"
+                                <input class="m-1 cart-quantity" type="number" name="quantity" value="{{ item.quantity }}" min="0" max="99"
                                     data-item_id="{{ item.product.id }}" id="id_qty_{{ item.product.id }}">
-                                <input id="cart-quantity-submit" type="submit" class="btn btn-outline-success m-1" value="Update Qty">
+                                <input type="submit" class="btn btn-outline-success cart-quantity-submit m-1" value="Update Qty">
                             </form>
                         </div>
                     </div>
