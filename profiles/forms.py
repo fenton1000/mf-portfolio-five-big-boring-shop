@@ -12,7 +12,6 @@ class UserProfileForm(forms.ModelForm):
             "default_street_address1": _("Address Line 1"),
             "default_street_address2": _("Address Line 2"),
             "default_town_or_city": _("Town/City"),
-            "default_town_or_city": _("Town/City"),
             "default_county": _("County"),
             "default_eircode": _("Eircode"),
         }
