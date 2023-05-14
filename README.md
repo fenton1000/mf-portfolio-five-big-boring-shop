@@ -872,9 +872,9 @@ alt="Screenshot of the successful javascript validation result for the deleteFav
 
 #### 14.1.4 Python Code Validation
 
-In the first instance python validation has been implemented by way of constant monitoring of the problems list in the IDE. All python files were found to be free of problems.
+In the first instance python validation has been implemented by way of constant monitoring of the problems list in the IDE. All custom python files were found to be free of problems.
 
-In addition all key files containing custom code were tested using the Code Institute Python Linter and were found to be error free. Examples of tests for key files are shown hereunder:
+In addition python code was checked by running python3 -m flake8 in the command line of the GITPOD IDE. As a result, errors found were addressed as per commit number 138 "Correct flake8 errors". This included the deletion of unused files. Any outstanding errors in this list related to automatically generated files such as migration files and were largely in relation to lines being too long but were left, as to edit these files was considered unnece4ssary and may lead to other problems.
 
 ## 15. Deployment
 
