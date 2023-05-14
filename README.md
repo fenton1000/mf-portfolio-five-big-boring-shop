@@ -852,6 +852,24 @@ Javascript code validation was carried out using JS Hint. Each file was tested b
 <img src="documents/js-val-ratingSelect.png"
 alt="Screenshot of the successful javascript validation result for the ratingSelect.js file."></details>
 
+**File: deleteCartItem.js in the cart app**
+
+<details><summary>Fig. 14.1.3.2 js Validation Result for deleteCartItem.js</summary>
+<img src="documents/js-val-deleteCartItem.png"
+alt="Screenshot of the successful javascript validation result for the deleteCartItem.js file."></details>
+
+**File: adminDeleteProduct.js in the products app**
+
+<details><summary>Fig. 14.1.3.3 js Validation Result for adminDeleteProduct.js</summary>
+<img src="documents/js-val-adminDeleteProduct.png"
+alt="Screenshot of the successful javascript validation result for the adminDeleteProduct.js file."></details>
+
+**File: deleteFavourite.js in the profile app**
+
+<details><summary>Fig. 14.1.3.4 js Validation Result for deleteFavourite.js</summary>
+<img src="documents/js-val-deleteFavourite.png"
+alt="Screenshot of the successful javascript validation result for the deleteFavourite.js file."></details>
+
 #### 14.1.4 Python Code Validation
 
 In the first instance python validation has been implemented by way of constant monitoring of the problems list in the IDE. All python files were found to be free of problems.
