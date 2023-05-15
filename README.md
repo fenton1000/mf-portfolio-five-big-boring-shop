@@ -1058,13 +1058,286 @@ Delete Confirmation Modal - Cancel| Clicking this option will cancel the deletio
 Delete confirmation Modal - Delete Comment|Clicking this option will delete the user comment/rating|Clicked Delete Comment|The user comment/rating was deleted
 Comments and Ratings - Logged Out User|A logged out user can view comments/ratings but cannot leave edit or delete comments/ratings|Logged out and viewed the test product detail page|Comment and ratings are visible but the user has no option to leave a comment/rating or edit delete
 
+**Shopping Cart Page**
+
+<details><summary>Fig. 14.2.2.9 Shopping Cart Page</summary>
+<img src="documents/site-cart.png"
+alt="Screenshot of the shopping cart page"></details>
+
+
+This feature has certain requirements tested as follows:
+
+Feature/Operation|Expect|Action|Result
+---|---|---|---
+Update Quantity|Adjusting the quantity and clicking Update Qty will adjust the quantity in the cart|Changed quantity from 1 to 2 of a test product and clicked update qty|The cart quantity changed as shown by the change to the subtotal
+Update Quantity|Setting the quantity to 0 and clicking update will remove the product from the cart|Set the quantity to 0 on a test product and clicked update qty|The product was removed from the cart
+Remove from Cart|Clicking on Remove from Cart will open a delete confirmation modal|Clicked on Remove from Cart for a test product|A delete confirmation modal opened
+Delete Confirmation Modal - Cancel|Clicking cancel will stop the deletion process|Clicked cancel|The deletion process for the test product was cancelled
+Delete Confirmation Modal - Remove|Clicking remove will remove the product from the cart|Clicked Remove|The test product was removed from the cart
+Subtotal for each product|This will automatically update based on the quantity of a product in the cart|Added 2 no. of a test product costing €2.40|The subtotal correctly displays as €4.80
+Cart Total|This will automatically update to show the current goods total|Added products with sub-totals of €4.80 and €2.40|Cart total correctly updates to €7.20
+Delivery|Will show as €10 when the cart total is less than €30|Added items to cart totalling less than €30|Delivery is displayed as costing €10
+Delivery|Will show as €0 when the cart total is more than €30|Added items to cart totalling more than €30|Delivery is displayed as costing €0
+Grand Total|Will show the total to be charged including delivery|Added test items to a value of €7.20|Grand Total correctly shows as €17.20 including delivery
+Grand Total|The total here will also be displayed in the navbar with the cart icon|Added test items to a value of €7.20|Grand Total correctly shows as €17.20 including delivery in the navbar
+Free Delivery Difference|Will show the additional amount to be spent to get free delivery|Added test items to a value of €7.20|Free Delivery Difference correctly shows as €22.80
+Keep Shopping! Button|Clicking this button will take the user back to the shopping/products page|Clicked Keep Shopping!|The shopping/products page opened
+Secure Checkout|Clicking this button will take the user to the checkout page|Clicked Secure Checkout|The checkout page opened
+
+**Checkout Page**
+
+<details><summary>Fig. 14.2.2.10 Checkout Page</summary>
+<img src="documents/site-checkout.png"
+alt="Screenshot of the checkout page"></details>
+
+
+This feature has certain requirements tested as follows:
+
+Feature/Operation|Expect|Action|Result
+---|---|---|---
+Keep Shopping! Button|Clicking this button will bring a user to the shopping/products page|Clicked button|The shopping/products page opened 
+Required Full Name field|Submitting the form without a Full Name returns error|Clicked Complete Order with Full Name field blank|Required field message appears
+Required Email Address field|Submitting the form without an Email Address returns error|Clicked Complete Order with Email Address field blank|Required field message appears
+Email Address|Submitting the form with an entry not in an email address format returns error|Clicked Submit Details with Email field containing no @|Email error message appears
+Required Phone number field|Submitting the form without a Phone Number returns error|Clicked Complete Order with Phone Number field blank|Required field message appears
+Required Street Address 1 field|Submitting the form without a Street Address 1 returns error|Clicked Complete Order with Street Address 1 field blank|Required field message appears
+Street Address 2 field|Submitting the form without a Street Address 2 is accepted|Clicked Complete Order with Street Address 2 field blank|No error returned on this field
+Required Town or City field|Submitting the form without a Town or City returns error|Clicked Complete Order with Town or City field blank|Required field message appears
+County field|Submitting the form without a County is accepted|Clicked Complete Order with County field blank|No error returned on this field
+Eircode field|Submitting the form without an Eircode is accepted|Clicked Complete Order with Eircode field blank|No error returned on this field
+Required Payment field|Submitting the form without payment details returns an error|Clicked Complete Order with payment field blank|Error message appears
+Payment field|Entering an invalid number displays Your card number is invalid error message|Entered invalid number|Error message appears
+Payment field|Entering a card number but no expiry date displays Your card's expiration date is incomplete error message|Entered valid card number without expiry date|Error message appears
+Payment field|Entering a card number and expiry but no CVC displays Your card's security code is incomplete error message|Entered valid card number and expiry date without CVC|Error message appears
+Adjust Cart button|Clicking this button returns the user to the shopping cart page|Clicked Adjust Cart|The shopping cart page opened
+Your card will be charged|This will indicate the grand total to be charged|Entered sample cart totalling €17.20|The correct total of €17.20 is displayed
+Complete Order|Clicking this button with the form completed charges the payment card|Clicked button|The payment was processed as per the stripe events log below
+Complete Order|Clicking this button adds the order to the order database|Clicked button|The order is added to the database
+Complete Order|Clicking this button sends an automated confirmation email to the customer|Clicked button|A confirmation email was sent as per the screen shot below
+Complete Order|Clicking this button opens the checkout success page|Clicked button|The checkout success page opens
+Create an Account - No user logged in|Clicking this link takes a user to the Sign Up page|Clicked link|The sign up page opens
+login - No user logged in|Clicking this link takes a user to the Sign In page|Clicked link|The sign in page opens
+Checkout form - User Logged in|Checkout form is pre-populated with profile data|Navigated to checkout with a logged-in user|Checkout form was pre-populated.
+Save to Profile Option|Save to profile checkbox provided when a user is logged-in|Navigated to checkout with a logged-in user|Save to profile checkbox appears
+Save to Profile|Updating information in the checkout form and checking the update profile box will update the saved profile information when the order is completed|Made alterations to the test user information, checked the save box, and completed an order|The changes made to the user details are reflected in the user profile
+
+<details><summary>Fig. 14.2.2.11 Stripe Event Log</summary>
+<img src="documents/stripe.png"
+alt="Screenshot of the stripe event log showing payment success"></details>
+
+<details><summary>Fig. 14.2.2.12 Email Confirmation</summary>
+<img src="documents/confirmation.png"
+alt="Screenshot of the email confirmation received by the test customer"></details>
+
+**Checkout Success Page**
+
+<details><summary>Fig. 14.2.2.13 Checkout Success Page</summary>
+<img src="documents/site-checkout-success.png"
+alt="Screenshot of the checkout success page"></details>
+
+
+This feature has certain requirements tested as follows:
+
+Feature/Operation|Expect|Action|Result
+---|---|---|---
+Success Message|A success message appears at the top of the page including the order number|Completed checkout process|Success message appears
+Order Summary|Order summary appears including email address for confirmation email|Completed checkout process|Order Summary is displayed on success page
+Back to Home button|Clicking this button takes the user back to the home page|Clicked button|Home page opened
+
+**Edit Comment/Rating Page**
+
+<details><summary>Fig. 14.2.2.14 Edit Comment/Rating Page</summary>
+<img src="documents/site-edit-comment.png"
+alt="Screenshot of the edit comment rating page"></details>
+
+This feature has certain requirements tested as follows:
+
+Feature/Operation|Expect|Action|Result
+---|---|---|---
+Edit Comment/Rating Form|This form appears when a logged-in user clicks on the option to edit a comment/rating and is pre-populated with the existing data|Logged in and navigated to a product that the logged-in test user has commented on and clicked on the edit link|The edit comment/rating page opens with the existing comment and rating filled in.
+Edit Comment/Rating form - Required comment field|Trying to submit the form without a comment is not allowed|Tried to submit the edit form without a comment|Please fill out this field message appears
+Edit Comment/Rating Form - Rating field not required|Submitting form without a rating is allowed|Tried submitting the form with a comment but no rating|Form was submitted
+Edit Comment/Rating Form - Update Comment button|User is redirected to the product detail page, a success message is displayed and the updated user comment appears in the comment list with the updated-on date displayed|Submitted an edited comment/rating|The product detail page appeared, a success message was displayed, and the updated user comment appeared in the comment list with the updated-on date displayed
+Product Rating|The product rating will update based on the total number of user ratings|Updated this rating to 4/5 with the other existing rating already set to 3/5|The product rating updates to 3.50/5 based on 2 reviews as expected
+
+**Contact Us Page**
+
+<details><summary>Fig. 14.2.2.15 Contact Us Page</summary>
+<img src="documents/site-contact.png"
+alt="Screenshot of the contact us page"></details>
+
+This feature has certain requirements tested as follows:
+
+Feature/Operation|Expect|Action|Result
+---|---|---|---
+Contact Details|Telephone number, opening hours, and email addresses for the business are displayed on the page|Opened the page|Contact Details are displayed
+Form pre-populated for logged-in user|For a logged-in user the Full Name field and the Email field are pre-populated if the user has included them in the user profile|Logged in and navigated to the Contact Us page|The Full Name and Email fields are filled in correctly
+Required Full Name field|Submitting the form without a Full Name returns error|Clicked Submit with Full Name field blank|Required field message appears
+Required Email field|Submitting the form without an Email returns error|Clicked Submit with Email Address field blank|Required field message appears
+Email|Submitting the form with an entry, not in an email address format returns an error|Clicked Submit with Email field containing no @|Email error message appears
+Required Query field|Submitting the form without a Query returns error|Clicked Submit with Query field blank|Required field message appears
+Submit|The query is added to the database and can be viewed from the admin panel with the viewed and closed checkboxes defaulting to false|Clicked submit|The query was available to view in the admin panel with viewed and closed appearing as false
+
+**My Profile Page**
+
+<details><summary>Fig. 14.2.2.16 My Profile Page</summary>
+<img src="documents/site-profile.png"
+alt="Screenshot of the my profile page"></details>
+
+This feature has certain requirements tested as follows:
+
+Feature/Operation|Expect|Action|Result
+---|---|---|---
+Order History|A list of previous orders is displayed|Logged in and navigated to the My Profile Page|The order history was displayed
+Order Number Link|Clicking the order number for any of the orders opens the order details for that order|Clicked on a test order number|The order details were displayed.
+Default Delivery Information|Any existing information is displayed in the editable form|Logged in and navigated to the My Profile Page|Existing information is displayed
+Phone Number field not required|Submitting form without a phone number is allowed|Tried submitting the form without a phone number|Form was submitted
+Address Line 1 field not required|Submitting form without an address line 1 is allowed|Tried submitting the form without an address line 1|Form was submitted
+Address Line 2 field not required|Submitting form without an address line 2 is allowed|Tried submitting the form without an address line 2|Form was submitted
+Town/City field not required|Submitting form without a Town/City is allowed|Tried submitting the form without a Town/City|Form was submitted
+County field not required|Submitting form without a County is allowed|Tried submitting the form without a County|Form was submitted
+Eircode field not required|Submitting form without an Eircode is allowed|Tried submitting the form without an Eircode|Form was submitted
+Update Information button|When the button is clicked the page refreshes, the updated information is displayed, and a success message appears|Clicked Update Information|The page refreshed with the updated information and the success message appeared
+Update Information button|When the button is clicked the updated information is saved to the database|Clicked Update Information|The database is updated
+Favourites|A list of products on the user's favourites list is displayed|Navigate to the My Profile page for a test user|The user's favourites list is displayed
+Product Image|Clicking on a product image brings the user to the product detail page for that product|Clicked on an image|The product detail page opened
+Product Name|Clicking on a product name brings the user to the product detail page for that product|Clicked on a product name|The product detail page opened
+Delete from Favourites|Clicking this option will open the delete confimation modal|Clicked the link|The delete confirmation modal opened
+Delete Confirmation Modal - Cancel| Clicking this option will cancel the deletion process|Clicked cancel|The deletion process was cancelled
+Delete confirmation Modal - Remove|Clicking this option will delete the favourite from the list and refresh the page|Clicked Remove|The page refreshed with the favourite removed from the list
+
+**Order History Page**
+
+<details><summary>Fig. 14.2.2.17 Order History Page</summary>
+<img src="documents/site-order-history.png"
+alt="Screenshot of the order history page"></details>
+
+This feature has certain requirements tested as follows:
+
+Feature/Operation|Expect|Action|Result
+---|---|---|---
+Info Message|A message is displayed at the top of the page explaining that this is a past confirmation for the order number in question|Clicked on a sample order|The info message was correctly displayed
+Order Summary|An Order Summary is displayed|Clicked on a sample order|The order summary for the selected order was correctly displayed
+Back to Profile button|Clicking the button returns the user to the profile page|Clicked on Back to Profile|The My Profile page opens
+
+**Product Management - Add Product Page**
+
+<details><summary>Fig. 14.2.2.18  Product Management - Add Product Page</summary>
+<img src="documents/site-add-product.png"
+alt="Screenshot of the add product page"></details>
+
+This feature has certain requirements tested as follows:
+
+Feature/Operation|Expect|Action|Result
+---|---|---|---
+Required Name field|Submitting the form without a Name returns error|Clicked Add Product with Name field blank|Required field message appears
+Required Description field|Submitting the form without a Description returns error|Clicked Add Product with Description field blank|Required field message appears
+Required Price field|Submitting the form without a Price returns error|Clicked Add Product with Price field blank|Required field message appears
+SKU and Image not required fields|Submitting the form without a SKU or Image is allowed|Clicked Add Product with SKU and Image fields blank|Form is submitted
+Add Product|Adds the product to the website and redirect to the new product page|Clicked Add Product|The product is added
+Cancel|Cancels the add product process and redirects to the shopping/products page|Clicked Cancel|Process cancelled and the shopping page opened
+
+**Product Management - Edit Product Page**
+
+<details><summary>Fig. 14.2.2.19  Product Management - Edit Product Page</summary>
+<img src="documents/site-product-edit.png"
+alt="Screenshot of the edit product page"></details>
+
+This feature has certain requirements tested as follows:
+
+Feature/Operation|Expect|Action|Result
+---|---|---|---
+Info Message|An info message tells the superuser they are editing a product|Navigated to edit product page|The info message is displayed
+Pre-populated form|The edit form appears pre-populated with the current details|Navigated to edit product page|The form appeared with the existing details displayed
+Required Name field|Submitting the form without a Name returns error|Clicked Update Product with Name field blank|Required field message appears
+Required Description field|Submitting the form without a Description returns error|Clicked Update Product with Description field blank|Required field message appears
+Required Price field|Submitting the form without a Price returns error|Clicked Update Product with Price field blank|Required field message appears
+SKU and Image not required fields|Submitting the form without a SKU or Image is allowed|Clicked Update Product with SKU and Image fields blank|Form is submitted
+Update Product|Adds the updated product details to the website and redirect to the product detail page|Clicked Update Product|The product is updated and the product detail page opens
+Cancel|Cancels the edit product process and redirects to the shopping/products page|Clicked Cancel|Process cancelled and the shopping page opened
+
+**Sign In Form**
+
+<details><summary>Fig. 14.2.2.20 Sign In Form</summary>
+<img src="documents/site-signin.png"
+alt="Screenshot of the website's sign in form"></details>
+
+This feature has certain requirements tested as follows:
+
+Feature/Operation|Expect|Action|Result
+---|---|---|---
+Required username or email field|Submitting the form without a username or password returns error|Clicked sign in in with username or email field blank|Required field message appears
+Required password field|Submitting the form without a password returns error|Clicked sign in with password field blank|Required field message appears
+Username or email|Submitting the form with an incorrect username or email returns an error message|Clicked sign in with an incorrect username/email|Incorrect username/password message appears
+Password|Submitting the form with an incorrect password returns an error message|Clicked sign in with an incorrect password|Incorrect username/password message appears
+Sign In Button|Clicking button will lead to the home page|Clicked Sign In|Home Page opened
+Sign Up! Link|Clicking the link leads to the Sign Up page|Clicked link|Sign Up page opens
+Forgot Password? link|Clicking the link leads to the Forgot Password page|Clicked link|Forgot password page opens
+
+**Sign Up Form**
+
+<details><summary>Fig. 14.2.2.21 Sign Up Form</summary>
+<img src="documents/site-signup.png"
+alt="Screenshot of the website's sign up form"></details>
+
+This feature has certain requirements tested as follows:
+
+Feature/Operation|Expect|Action|Result
+---|---|---|---
+Required email 1 field|Submitting the form without an email 1 returns error|Clicked sign up with email 1 field blank|Required field message appears
+Required email 2 field|Submitting the form without an email 2 returns error|Clicked sign up with email 2 field blank|Required field message appears
+Email|Submitting the form with email 1 and email 2 fields not matching returns an error message|Clicked sign up with email fields not matching|You must type the same email each time error message appears
+Required username field|Submitting the form without a username returns error|Clicked sign up with username field blank|Required field message appears
+Required password 1 field|Submitting the form without a password 1 returns error|Clicked sign up with password 1 field blank|Required field message appears
+Required password 2 field|Submitting the form without a password 2 returns error|Clicked sign up with password 2 field blank|Required field message appears
+Username|Submitting the form with an existing username returns an error message|Clicked sign up with an existing username|Username exists error message appears
+Password|Submitting the form with password 1 and password 2 fields not matching returns an error message|Clicked sign up with password fields not matching|You must type the same password each time error message appears
+Sign Up Button|Clicking button will add user to the database|Clicked Sign Up button|User added to database
+Sign In Link|Clicking the link leads to the Sign In page|Clicked link|Sign In page opens
+
+**Password Reset Form**
+
+<details><summary>Fig. 14.2.2.22 Password Reset Form</summary>
+<img src="documents/site-password-reset.png"
+alt="Screenshot of the website's password reset form"></details>
+
+This feature has certain requirements tested as follows:
+
+Feature/Operation|Expect|Action|Result
+---|---|---|---
+Required email field|Submitting the form without an email returns error|Clicked Reset My Password with email field blank|Required field message appears
+Email|Submitting the form with an entry, not in an email address format returns an error|Clicked Reset My Password with Email field containing no @|Email error message appears
+Reset My Password button|Clicking the button sends an email to the address provided and redirects to an email confirmation page|Clicked button|Email sent (see below) and confirmation message appears
+Email Reset Password Link|Clicking Email Link opens Change Password Form|Clicked Link|Change password Form opened
+Change Password Form - Required email 1 field|Submitting the form without an email 1 returns error|Clicked changed password with email 1 field blank|Required field message appears
+Change Password Form - Required email 2 field|Submitting the form without an email 2 returns error|Clicked change password with email 2 field blank|Required field message appears
+Change Password Form - Password|Submitting the form with password 1 and password 2 fields not matching returns an error message|Clicked change password with password fields not matching|You must type the same password each time error message appears
+Change Password button|Clicking the change password button updates the user password|Clicked change password|User password updated
+
+<details><summary>Fig. 14.2.2.23 Password Reset Email</summary>
+<img src="documents/password-reset-email.png"
+alt="Screenshot of the password reset email"></details>
+
+**Sign Out Page**
+
+<details><summary>Fig. 14.2.2.24 Sign Out Page</summary>
+<img src="documents/site-signout.png"
+alt="Screenshot of the website's sign out page"></details>
+
+This feature has certain requirements tested as follows:
+
+Feature/Operation|Expect|Action|Result
+---|---|---|---
+Back Button|Clicking this button takes the user to the home page|Clicked Back button|The home page opened
+Sign Out Button|Clicking this button signs out the user and returns to the home page with a sign out confirmation message|Clicked Sign Out button|Signed out the user and returned to the home page with a sign out confirmation message
+
 ## 15. Deployment
 
 ## 16. References and Credits
 
 ### 16.1 References
 
-* The Code Institute student Template for Gitpod provided by Code Institute at https://github.com/Code-Institute-Org/gitpod-full-template. This template allows easy set up of a repository and workspace.
+* The Code Institute student Template for Gitpod provided by Code Institute at https://github.com/Code-Institute-Org/gitpod-full-template. This template allows easy setup of a repository and workspace.
 
 * The Code Institute Hello Django and I Think therefore I Blog example projects provided within the online learning system (LMS). These provide general guidance as to minimun project requirements. They also provide an overview of best practice and industry conventions. Furthermore they outline the key aspects of the Django framework, the process to import Django into the IDE and the process to deploy a production version to Heroku.
 
