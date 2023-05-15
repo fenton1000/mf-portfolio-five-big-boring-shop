@@ -1223,7 +1223,7 @@ Back to Profile button|Clicking the button returns the user to the profile page|
 **Product Management - Add Product Page**
 
 <details><summary>Fig. 14.2.2.18  Product Management - Add Product Page</summary>
-<img src="documents/site-add-product.png"
+<img src="documents/site-product-add.png"
 alt="Screenshot of the add product page"></details>
 
 This feature has certain requirements tested as follows:
