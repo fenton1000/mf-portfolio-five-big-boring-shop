@@ -916,6 +916,148 @@ As a **Visiting User** I can **see an icon for the website on page tabs** so tha
 As a **Visiting User** I can **opt to sign up to a digital newsletter from the business** so that **I can keep up to date with new products and latest offers.** | A newsletter subscription box is provided in the footer on all pages. It is powered by MailChimp.
 As a **business owner** I can **maintain website consistency through the provision of a custom 404 page** so that **even when an error occurs that leads to a 404 return, the customer does not feel as if they have exited the site and can easily return to the home page.** | A custom 404 page has been provided.
 
+#### 14.2.2 Feature Testing
+
+**Navigation Bar**
+
+<details><summary>Fig. 14.2.2.1 Navigation Bar</summary>
+<img src="documents/site-navbar.png"
+alt="Screenshot of the website's navigation bar"></details>
+
+This feature has certain requirements tested as follows:
+
+Feature/Operation|Expect|Action|Result
+---|---|---|---
+BSS Logo|Clicking link on any other page will take user to the home page|Clicked link|Home page opened
+Home Link|Clicking link on any other page will take user to the home page|Clicked link|Home page opened
+Home Link|On home page the home link will be highlighted|Opened home page|Home Link is highlighted
+Shopping Link|Clicking link on any other page will take user to the shopping/products page|Clicked link|Shopping/Products Page Opened
+Shopping Link|On shopping page the shopping link will be highlighted|Opened shopping page|Shopping Link is highlighted
+Contact Us Link|Clicking link on any other page will take user to the Contact Us page|Clicked link|Contact Us page opened
+Contact Us Link|On Contact Us page the Contact Us link will be highlighted|Opened Contact Us page|Contact Us Link is highlighted
+Account Dropdown|Clicking on the Account dropdown when logged out will reveal links to Register and Sign In|Clicked on Account Dropdown|Links to Register and Sign In Appear
+Register Link|Clicking link on any other page will take user to the sign up page|Clicked link|Sign Up page opened
+Sign In Link|Clicking link on any other page will take user to the sign in page|Clicked link|Sign in page opened
+Account Dropdown|Clicking on the Account dropdown when logged in will reveal links to My Profile and Sign Out|Clicked on Account Dropdown|Links to My Profile and Sign Out Appear
+My Profile Link|Clicking link on any other page will take user to the My Profile page|Clicked link|My Profile page opened
+Sign Out Link|Clicking link on any other page will take user to the sign out confirmation page|Clicked link|Sign Out confirmation page opened
+Admin Dropdown|Admin Dropdowm will appear in navbar when superuser logs in|Logged in as superuser|Admin Dropdown appears
+Admin Dropdown|Clicking the Admin dropdown will reveal links to Admin Panel and Add Product|Clicked on Admin Dropdown|Admin Panel and Dropdown Links appear
+Admin Panel Link|Clicking link on any other page will take user to the Django Admin Panel|Clicked link|Django Admin Panel opened
+Add Product Link|Clicking link on any other page will take user to the Add Product page|Clicked link|Add Product page opened
+Shopping Cart Icon|Clicking cart Icon on any other page will take user to the Shopping Cart page|Clicked icon|Shopping Cart page opened
+Navbar Toggle on Mobile|Clicking the navbar toggle will reveal the links already tested above|Clicked toggle button|Navbar links appeared
+
+**Header**
+
+<details><summary>Fig. 10.2.2.2 Header on Desktop</summary>
+<img src="documents/site-header-desktop.png"
+alt="Screenshot of the website's header on desktop"></details>
+
+<details><summary>Fig. 10.2.2.3 Header on Mobile</summary>
+<img src="documents/site-header-mobile.png"
+alt="Screenshot of the website's header on mobile"></details>
+
+This feature has certain requirements tested as follows:
+
+Feature/Operation|Expect|Action|Result
+---|---|---|---
+Hero Image|Shopping Cart Image appears on desktop views|Open all pages at various wider test widths|Image of shopping cart appears correctly
+Business Name|Big Boring Shop will appear at top of page|Open all pages at various test widths|Business name appears correctly
+Your Shopping Delivered tagline|Your Shopping Delivered tagline will appear in header on all pages|Open all pages at various test widths|Your Shopping Delivered tagline appears correctly
+
+**Footer**
+
+<details><summary>Fig. 14.2.2.4 Footer</summary>
+<img src="documents/site-footer.png"
+alt="Screenshot of the website's footer"></details>
+
+
+This feature has certain requirements tested as follows:
+
+Feature/Operation|Expect|Action|Result
+---|---|---|---
+Facebook Link|Clicking Link opens Facebook in a new tab|Clicked link|Facebook opened in a new tab
+Instagram Link|Clicking Link opens Instagram in a new tab|Clicked link|Instagram opened in a new tab
+Twitter Link|Clicking Link opens Twitter in a new tab|Clicked link|Twitter opened in a new tab
+YouTube Link|Clicking Link opens YouTube in a new tab|Clicked link|YouTube opened in a new tab
+mailchimp Newsletter Subscription|Submitting an email address will return a confirmation message on screen|Submitted test email address|Confirmation message appeared on screen
+mailchimp Newsletter Subscription|Submitting an email address will add it to the contact list in the associated mailchimp Account|Submitted test email address|Test email address added to mailchimp contact list
+
+<details><summary>Fig. 14.2.2.5 mailchimp contact list</summary>
+<img src="documents/mailchimp.png"
+alt="Screenshot of the mailchimp contact list with test email address added"></details>
+
+**Home Page Main Section**
+
+<details><summary>Fig. 14.2.2.6 Home Page Main Section</summary>
+<img src="documents/site-home.png"
+alt="Screenshot of the website's home page main section"></details>
+
+
+This feature has certain requirements tested as follows:
+
+Feature/Operation|Expect|Action|Result
+---|---|---|---
+Catchphrase banner, About Us and Delivery panels|These items are clearly displayed when the home page is opened.|Opened Home page|The required items are visible
+
+**Shopping/Products Page**
+
+<details><summary>Fig. 14.2.2.7 Shopping/Products Page</summary>
+<img src="documents/site-products.png"
+alt="Screenshot of the website's shopping products page"></details>
+
+
+This feature has certain requirements tested as follows:
+
+Feature/Operation|Expect|Action|Result
+---|---|---|---
+Search Bar|Entering the search term water will display items that are water|Entered water into search bar|Correctly displays the two items still water and sparkling water
+Search Bar|Entering the search term local will display items that have local in their description|Entered local into search bar|Correctly displays 5 items with the word local or locally in their description
+Product Categories Dropdown - Fresh Food|Clicking the Fresh Food option will filter the list to products in the Fresh Food category|Clicked on Fresh Food|The product list is filtered to products in the Fresh Food category
+Product Categories Dropdown - Cupboard and Freezer|Clicking the Cupboard and Freezer option will filter the list to products in the Cupboard and Freezer category|Clicked on Cupboard and Freezer|The product list is filtered to products in the Cupboard and Freezer category
+Product Categories Dropdown - Drinks|Clicking the Drinks option will filter the list to products in the Drinks category|Clicked on Drinks|The product list is filtered to products in the Drinks category
+Product Categories Dropdown - Health and Beauty|Clicking the Health and Beauty option will filter the list to products in the Health and Beauty category|Clicked on Health and Beauty|The product list is filtered to products in the Health and Beauty category
+Product Categories Dropdown - Household|Clicking the Household option will filter the list to products in the Household category|Clicked on Household|The product list is filtered to products in the Household category
+Product Card - Product Image|Clicking on the product image will take the user to the product detail page for that product|Clicked on the image for a number of test products|The product detail page for the chosen product opened
+Product Card - Product Detail Link|Clicking on the product detail link will take the user to the product detail page for that product|Clicked on the product detail link for a number of test products|The product detail page for the chosen product opened
+
+**Product Detail Page**
+
+<details><summary>Fig. 14.2.2.8 Product Detail Page</summary>
+<img src="documents/site-product-details.png"
+alt="Screenshot of a sample of the website's product detail page"></details>
+
+
+This feature has certain requirements tested as follows:
+
+Feature/Operation|Expect|Action|Result
+---|---|---|---
+Add to Cart|Adding a number to the quantity field and clicking Add to Cart will add that quantity of that product to the cart|Set quantity to 2 and clicked add to cart|2 no. of the tested product were added to the cart
+Add to Cart|Adding a number to the quantity field and clicking Add to Cart will give a success message to the user|Set quantity to 2 and clicked add to cart|A success message was displayed.
+Add to Cart|A quantity of 0 cannot be added to the cart|Tried to add 0 quantity|Error message appears saying quantity must be greater than or equal to 1
+Add to Cart|A quantity with a negative number cannot be added to the cart|Tried to add -1 quantity|Error message appears saying quantity must be greater than or equal to 1
+Add to Cart|A quantity greater than 99 cannot be added to the cart|Tried to add 100 as quantity|Error message appears saying quantity must be less than or equal to 99
+Back Button|If the product detail page has been reached from the shopping page the back button will lead back to the shopping page|Clicked on a product from the shopping page and then clicked the Back button on the Product Detail Page|User return to the shopping page
+Back Button|If the product detail page has been reached from the favourites list on the profile page the back button will lead back to the profile page|Clicked on a product from the favourites list on the my profile page and then clicked the Back button on the Product Detail Page|User return to the my profile page
+Add to Favourites|Clicking Add to Favourites will cause a heart icon to be displayed on the product detail page and the option to Delete from Favourites will appear|Clicked on Add to Favourites|The heart icon and the Delete from Favourites option appeared
+Add to Favourites|Clicking Add to Favourites will add the product to the favourites list on the my profile page|Clicked on Add to Favourites|The product was added to the favourites list on the my profile page
+Add to Favourites|Adding a favourite will give a success message to the user|Added a favourite|A success message was displayed.
+Delete from Favourites|Clicking Delete from Favourites will cause the heart icon to disappear from the product detail page and the option to Add to Favourites will appear|Clicked on Delete from Favourites|The heart icon disappeared and the Delete from Favourites option was replaced with the Add to Favourites option
+Delete from Favourites|Clicking Delete from Favourites will delete the product from the favourites list on the my profile page|Clicked on Delete from Favourites|The product was deleted from the favourites list on the my profile page
+Delete from Favourites|Deleting a favourite will give a success message to the user|Deleted a favourite|A success message was displayed.
+Comment/Rating Form|Comment Rating form will appear on a product detail page when a logged in user has not commented|Logged in and navigated to a product that the logged in test user has not commented on|The form to comment/rate a product appears
+Comment/Rating form - Required comment field|Trying to submit the form without a comment is not allowed|Tried to submit the form without a comment|Please fill out this field message appears
+Comment/Rating Form - Rating field not required|Submitting form without a rating is allowed|Tried submitting a form with a comment but no rating|Form was submitted
+Comment/Rating Form - Submit|The product detail page will refresh, a success message is displayed the form disappears and the user comment appears in the comment list|Submitted comment/rating|The product detail page refreshed, a success message was displayed, the form disappeared and the user comment appeared in the comment list
+Product Rating|The product rating will update based on the total number of user ratings|For a test product, logged in as admin and rated the product 2/5, logged in as test user john and rated the product 3/5|The product rating updates to 2.50/5 based on 2 reviews as expected
+User Comment Options|When a users comment is displayed the options to edit or delete the comment will be provided|Submitted a test comment|The comment is displayed in the list of comments with options to edit or delete the comment/rating
+Edit this Comment/Rating|Clicking this link will open the edit comment/rating form|Clicked link|The edit comment/rating form opened
+Delete this Comment|Clicking this option will open the delete confimation modal|Clicked the link|The delete confirmation modal opened
+Delete Confirmation Modal - Cancel| Clicking this option will cancel the deletion process|Clicked cancel|The deletion process was cancelled
+Delete confirmation Modal - Delete Comment|Clicking this option will delete the user comment/rating|Clicked Delete Comment|The user comment/rating was deleted
+Comments and Ratings - Logged Out User|A logged out user can view comments/ratings but cannot leave edit or delete comments/ratings|Logged out and viewed the test product detail page|Comment and ratings are visible but the user has no option to leave a comment/rating or edit delete
+
 ## 15. Deployment
 
 ## 16. References and Credits
