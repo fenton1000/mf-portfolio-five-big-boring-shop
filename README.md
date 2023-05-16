@@ -1466,6 +1466,92 @@ The Shopping/Products Page contains the most content and was also tested as foll
 
 ## 15. Deployment
 
+### 15.1 via GitHub
+
+1. The Code Institute project template was accessed on GitHub at https://github.com/Code-Institute-Org/gitpod-full-template and the Use this Template button clicked to create a project-specific repository.
+
+2. All files and documents pushed from Gitpod appear in the repository.
+
+### 15.2 via Gitpod
+
+The site was developed in Gitpod as follows:
+
+1. From the GitHub repository created for the project the Gitpod button installed as a chrome browser extension was clicked. A Gitpod workspace was created.
+
+2. A Django Project was created.
+
+3. Initial Migrations were made and the local sqlite database created.
+
+4. To view project progress during development the command python3 manage.py runserver was entered in the IDE terminal.
+
+5. Required secret keys for django and stripe etc. are stored in an env.py file.
+
+6. The env.py file is added to the .gitignore file to ensure that information to be kept secure is not made public.
+
+7. At regular appropriate intervals the latest version of the code was saved via the git add and git commit commands. Appropriate commit messages were added to control the revisions.
+
+8. The git push command was used to push all committed code and documentation to the repository for secure storage.
+
+### 15.3 via Stripe
+
+1. The payment system is implemented using stripe.
+
+2. A stripe account is created and stripe development mode keys are copied to the env.py file and added to the Heroku convig vars when deploying the production version.
+
+3. Stripe Elements are used to create a payment input on the checkout form.
+
+4. Stripe procedures are implemented via recommended code in the checkout views.py file and the javascript strip_elements.js file to handle the payment.
+
+5. A webhook file and webhook handler file are used to recognise and handle stripe webhooks such as payment.success. These are used to confirm payment and add redundancy for the storing of orders following successful payments.
+
+6. The URL for the webhook handler is added to the stripe webhook settings via the stripe dashboard. The URLs for both the development and production versions are added.
+
+7. When testing payments the Stripe Events Log in the Developers section can be viewed to see if the payment was successfully processed.
+
+### 15.4 via AWS
+
+1. For the production version AWS storage is used to store static files and media files.
+
+2. An AWS bucket is created as a space to store the required files.
+
+3. A user group, user and policy are created to control permissions.
+
+4. The settings.py file is updated with AWS settings to use in the production version while maintaining local settings for the development version by using an if statement to look for "USE_AWS" in the environment. "USE_AWS" is added as a config var in Heroku.
+
+5. Static files are transferred to the AWS storage from the local version every time a new build is carried out in Heroku via the collectstatic command.
+
+6. Media files are transferred manually via the AWS dashboard.
+
+### 15.5 via Elephant SQL
+
+1. A project is created in Elephant SQL.
+
+2. The project URL is copied and stored in the Heroku config vars as DATABASE_URL
+
+3. The settings.py file is updated to include settings for this remote database to be used with the production version of the project. An if statement to look for DATABASE_URL in the environment allows these settings to be used in production while maintaining the local database set up for the development version.
+
+4. The DATABASE_URL is temporarily added to the env.py file and the python3 manage.py migrate command is used to set up the remote database. The DATABASE_URL is then removed from the env.py file to allow development to continue with the local database. If further development leads to database structure changes this step must be repeated to ensure these changes are implemented in the production version of the project.
+
+### 15.6 via Heroku
+
+1. Before deployment to Heroku, the settings.py file is updated to ensure that in the production version debug is set to False. This is achieved by means of an if statement set to look for the variable DEVELOPMENT in the environment. This variable is added to env.py only so as to ensure the correct DEBUG setting in both development and production versions.
+
+2. Prior to deployment to Heroku, the requirements.txt file is updated by typing the command pip3 freeze --local > requirements.txt to the terminal and following this all outstanding commits are pushed to the GitHub repository.
+
+3. In Heroku a new project is created to host the application.
+
+4. Within this project in the settings section the Config Vars area is updated by adding variables contained locally in the env.py file as well as the URLs for the database and the AWS storage. This includes the django secret key and stripe keys.
+
+5. In addition a key named PORT is created and it is given the value 8000.
+
+6. In the Deploy section the option to connect to GitHub is chosen, the repository name is found and clicked on.
+
+7. The option to deploy from the main branch is chosen and the project is deployed. This may take a few moments.
+
+8. Once deployed a button linking to the site is provided. When clicked it leads to the deployed application and the page address can be copied and provided as a link to the site/application.
+
+9. The live site/application can be accessed <a href="https://mf-pp5-big-boring-shop.herokuapp.com/" target="_blank">here</a>
+
 ## 16. References and Credits
 
 ### 16.1 References
