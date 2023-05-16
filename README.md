@@ -207,7 +207,7 @@ alt="wireframe of the shopping page main section"></details>
 
 * A Back button allows the shopper to return to the main products page.
 
-* If the user is logged in the option to add the item to favourites is provided or a heart symbol is displayed if the item is already on the logged in users favourites together with the option to delete it from the favourites list.
+* If the user is logged in the option to add the item to favourites is provided or a heart symbol is displayed if the item is already on the logged in user's favourites together with the option to delete it from the favourites list. **Note that deleting an item from the favourites here will refresh the product detail page. The option to remove an item from favourites is also provided on the my profile page and refreshes that page with the item removed. This is achieved by passing the appropriate redirect URL to the delete favourite view.**
 
 * If the user is an admin superuser the product management options to edit or delete a product are provided.
 
@@ -215,7 +215,7 @@ alt="wireframe of the shopping page main section"></details>
 
 * If the user is logged in a comment and rating form will appear to allow the user to comment on and rate the product. If they have already commented on the product, this comment will appear highlighted as the user's, together with options to edit and delete the comment/rating.
 
-* When a user adds or edits a rating the overall product rating is updated accordingly.
+* **When a user adds or edits a rating the overall product rating is updated accordingly, as the average based on all the ratings to date for that product.**
 
 <details><summary>Fig. 4.6.1 Product Detail Page - Desktop</summary>
 <img src="documents/product-detail-section-desktop.png"
@@ -251,7 +251,7 @@ alt="wireframe of the shopping cart section on mobile"></details>
 
 * A brief summary of the charges to be processed is provided.
 
-* This page contains a form with fields for full name, email address, phone number, Street Address 1, Street Address 2, Town or City, County and Eircode (post-code).
+* This page contains a form with fields for full name, email address, phone number, Street Address 1, Street Address 2, Town or City, County, and Eircode (postcode).
 
 * A checkbox is provided for logged-in users, allowing them the option to add or update the user's profile with the details provided.
 
@@ -281,9 +281,11 @@ alt="wireframe of the shopping cart section on mobile"></details>
 
 * This page contains contact details for the business.
 
-* A contact form is also provided. The form contains fields for full name, email and Query.
+* A contact form is also provided. The form contains fields for full name, email, and Query.
 
 * A submit button is provided. Upon submission the page refreshes with confirmation of the message sent displayed at the top of the page.
+
+* The contact form is available to both logged-in and logged-out users. If a user is logged-in the email address and name associated with their account will be added to the form.
 
 * When queries/comments are submitted in this way they can be viewed by the business in the admin panel. The admin panel also displays fields for viewed and closed to allow easy administration of queries/comments on the admin side.
 
@@ -295,7 +297,7 @@ alt="wireframe of the shopping cart section on mobile"></details>
 
 * The Order History section displays a list summary of all previous orders. The order number is a link to the details of that order.
 
-* The Favourites section displays the user’s favourites list together with an option to delete any favourite from the list. **NB Note that deleting an item from the list here will refresh the profile page. The option to remove an item from favourites is also provided in the product detail page and appears to the user as a toggle between adding and deleting. This is achieved by passing the appropriate redirect URL to the delete favourite view.**
+* The Favourites section displays the user’s favourites list together with an option to delete any favourite from the list. **Note that deleting an item from the list here will refresh the profile page. The option to remove an item from favourites is also provided in the product detail page and appears to the user as a toggle between adding and deleting. This is achieved by passing the appropriate redirect URL to the delete favourite view.**
 
 * Both the image and the product name of any item on the favourites list are links to the product detail page for the item.
 
