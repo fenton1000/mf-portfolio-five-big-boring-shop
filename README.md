@@ -1365,6 +1365,105 @@ Solution: The view was changed to initially set this variable to None and then b
 
 Solution: When styling the payment form an error occurred when the form was unintentionally given a second id. The javascript that ran the payment process relied on the first correct id but this was made redundant by the second. The incorrect id was removed, the styling updated to use the correct id and this allowed the javascript and therefore the payment system to work correctly. 
 
+### 14.4 Supported Screens and Browsers
+
+#### 14.4.1 Supported Screens (Responsiveness)
+
+The site responsiveness has been tested using Chrome Developer Tools and has been found to be responsive across a range of device screen sizes as follow:
+
+**Galaxy Fold - Page Examples**
+
+Home Page:
+
+![Screenshot of the home page on a galaxy fold mobile phone in dev tools](documents/home-galaxy-fold.png "Home Page on Galaxy Fold")
+
+Shopping/Products Page:
+
+![Screenshot of the shopping products page on a galaxy fold mobile phone in dev tools](documents/products-galaxy-fold.png "Shopping Products Page on Galaxy Fold")
+
+Product Detail Page Page:
+
+![Screenshot of the product detail page on a galaxy fold mobile phone in dev tools](documents/detail-galaxy-fold.png "Product Detail Page on Galaxy Fold")
+
+Shoopping Cart Page:
+
+![Screenshot of the shopping cart page on a galaxy fold mobile phone in dev tools](documents/cart-galaxy-fold.png "Shopping Cart Page on Galaxy Fold")
+
+My Profile Page:
+
+![Screenshot of the my profile page on a galaxy fold mobile phone in dev tools](documents/profile-galaxy-fold.png "My Profile Page on Galaxy Fold")
+
+**iPad Mini - Page Examples**
+
+Home Page:
+
+![Screenshot of the home page on an iPad Mini in dev tools](documents/home-mini.png "Home Page on iPad Mini")
+
+Shopping/Products Page:
+
+![Screenshot of the shopping products page on an iPad Mini in dev tools](documents/products-mini.png "Shopping Products Page on iPad Mini")
+
+Product Detail Page:
+
+![Screenshot of the product detail page on an iPad Mini in dev tools](documents/detail-mini.png "Product Detail Page on iPad Mini")
+
+Shopping Cart Page:
+
+![Screenshot of the shopping cart page on an iPad Mini in dev tools](documents/cart-mini.png "Shopping Cart Page on iPad Mini")
+
+My Profile Page:
+
+![Screenshot of the my profile page on an iPad Mini in dev tools](documents/profile-mini.png "My Profile Page on iPad Mini")
+
+In addition to these examples all other site pages have been tested on these devices. Furthermore the site responsiveness has also been tested on the following devices in Chrome Developer Tools and was found to be good:
+
+* iPhone SE
+* iPhone XR
+* Pixel 5
+* Samsung Galaxy S8+
+* Generic 768px Tablet
+* Generic 1024px Laptop
+* Generic 1440px large Laptop
+
+Finally the amiresposive website generates the following screen examples for the home page:
+
+![Screenshot of the home page on the am i responsive website](documents/amiresponsive.png "Home Page on amiresponsive.")
+
+#### 10.4.2 Supported Browsers
+
+The website was tested in the following browsers:
+
+**Google Chrome**
+
+![Screenshot of the home page in Google Chrome](documents/chrome.png "Google Chrome")
+
+**Microsoft Edge**
+
+![Screenshot of the home page in Microsoft Edge](documents/edge.png "Microsoft Edge")
+
+**Mozilla Firefox**
+
+![Screenshot of the home page in Mozilla Firefox](documents/firefox.png "Mozilla Firefox")
+
+**Browser Compatibility**
+
+Test|Chrome|Edge|Firefox
+---|---|---|---
+Intended Appearance|Good|Good|Good
+Intended Responsiveness|Good|Good|Good
+
+### 14.5 Accessibility and Performance
+
+Lighthouse was used to assess accessibility and performance. The results were found to be acceptable as follows:
+
+Home Page:
+
+![Screenshot of the lighthouse results for the home page](documents/lighthouse.png "Lighthouse Analysis for Home Page")
+
+The Shopping/Products Page contains the most content and was also tested as follows:
+
+![Screenshot of the lighthouse results for the products page](documents/lighthouse-products.png "Lighthouse Analysis for Products Page")
+
 ## 15. Deployment
 
 ## 16. References and Credits
