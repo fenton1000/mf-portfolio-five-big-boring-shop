@@ -646,7 +646,7 @@ The four timebox iterations for the project are as follows:
 
 ![Screenshot of iteration four timebox](documents/iteration-4.png "Iteration Four")
 
-For iteration 1 the story points total was set to 14. However only 6 PBIs were fully completed in the iteration with a a couple of PBIs ongoing at that point. Therefore at the start of iteration 2 the story point total was limited to 8. However in this iteration further PBIs were added throughout resulting in 22 points being completed. This gives and average velocity of approximately 14 points over the first two iterations. In iteration 3 the total story points added in the beginning was 12.
+For iteration 1 the story points total was set to 14. However only 6 PBIs were fully completed in the iteration with a couple of PBIs ongoing at that point. Therefore at the start of iteration 2 the story point total was limited to 8. However, in this iteration further PBIs were added throughout resulting in 22 points being completed. This gives an average velocity of approximately 14 points over the first two iterations. In iteration 3 the total story points added in the beginning was 12. In Iteration 3, 4 story points were completed with some remaining PBIs in progress having their combined total reduced by a further four points. Taking the total completed for Iteration 3 therefore as 8 points, the average velocity after 3 iterations was 12 points. As the final iteration runs between the final mentoring session and the project deadline it is a shorter 4 day sprint. Based on the above therefore the preferred maximum story point total for iteration 4 is 6 points and the actual total in the Iteration 4 timebox at the start is 5 points.
 
 When assigning and prioritising PBIs in a timebox, it was ensured that the story-point total for must-have PBIs was set to less than 60% of the total. In practice the percentage was generally much lower than this maximum allowed. It was also ensured that could-have PBIs made up at least 20% of the story-point total.
 
@@ -658,7 +658,7 @@ Finally a kanban board was used to assist in the tracking and coordination of PB
 
 **Board near End**
 
-![Screenshot of the kanban board near the end of the project](documents/kanban-end.png "Board near End")
+![Screenshot of the kanban board near the end of the project](documents/kanban-near-end.png "Board near End")
 
 ## 13. Technology
 
