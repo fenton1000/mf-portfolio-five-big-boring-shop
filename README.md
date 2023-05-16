@@ -530,6 +530,7 @@ The final keyword list is as follows:
 * Secondly, keywords have been added to the home page text, including some in strong HTML element tags, while maintaining the informative nature and flow of the text.
 * Image file names, link/anchor text, and alt text are relevant and include keywords where possible.
 * On links to external resources rel=”noopener” or rel=”nofollow” have been used as appropriate.
+* A robots.txt file and a sitemap.xml file have been created and added to the project file structure.
 
 ## 10. Web Marketing
 
