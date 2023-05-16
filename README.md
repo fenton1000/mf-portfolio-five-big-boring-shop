@@ -1331,6 +1331,40 @@ Feature/Operation|Expect|Action|Result
 Back Button|Clicking this button takes the user to the home page|Clicked Back button|The home page opened
 Sign Out Button|Clicking this button signs out the user and returns to the home page with a sign out confirmation message|Clicked Sign Out button|Signed out the user and returned to the home page with a sign out confirmation message
 
+### 14.3 Fixed Bugs
+
+1. The hero image disappeared at 768px before the full width simpler header for mobile became active leaving a blank space in the header.
+
+Solution: The media query that causes the hero image to disappear on smaller screens was adjusted to commence at 767px wide and down, leading to a smooth transition from the smaller screen layout to the wider screen layout.
+
+This bug was raised as a PBI within the agile design process. Further information on the bug and solution can be found [here.](https://github.com/fenton1000/mf-portfolio-five-big-boring-shop/issues/31)
+
+2. The running total in the navbar for the cart showed as €10 when the cart was empty.
+
+Solution: The cause of the error was in the calculation of the delivery charge. As the delivery charge applies to totals of less than €30, and €0 is less than €30, the delivery charge is what was appearing in the running total. This was solved by the addition of an if statement to the calculation, setting the delivery charge to 0 when the cart total is 0.
+
+This bug was raised as a PBI within the agile design process. Further information on the bug and solution can be found [here.](https://github.com/fenton1000/mf-portfolio-five-big-boring-shop/issues/32)
+
+3. An error occurred in the rendering of the product templates when a new product was uploaded without an image.
+
+Solution: A default image was added to the media file and appropriate if statements were added to the templates so that the default "no image" image is used if a product image does not exist.
+
+4. An error occured in the shopping cart when rendering the template.
+
+Solution: This error was caused by an incorrect reference to a context variable for the image. product.image had to be replaced with the correct variable item.product.image.
+
+5. An error occured rendering images using the MEDIA_URL context variable.
+
+Solution: The django.template.context_processors.media context processor was added in the settings.py file.
+
+6. An error occurred when rendering the product detail page if no user was logged in due to a context variable current_user_comments being passed for the rendering of the current users comments.
+
+Solution: The view was changed to initially set this variable to None and then by means of an if statement update it if a user is authenticated. The exact use of the current_user_comments variable was later changed due to a change to the product detail page layout but it is still passed and used in the template.
+
+7. An error occurred where the checkout form was adding the order to the database but was not sending the payment to be processed by stripe.
+
+Solution: When styling the payment form an error occurred when the form was unintentionally given a second id. The javascript that ran the payment process relied on the first correct id but this was made redundant by the second. The incorrect id was removed, the styling updated to use the correct id and this allowed the javascript and therefore the payment system to work correctly. 
+
 ## 15. Deployment
 
 ## 16. References and Credits
