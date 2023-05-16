@@ -1334,6 +1334,24 @@ Feature/Operation|Expect|Action|Result
 Back Button|Clicking this button takes the user to the home page|Clicked Back button|The home page opened
 Sign Out Button|Clicking this button signs out the user and returns to the home page with a sign out confirmation message|Clicked Sign Out button|Signed out the user and returned to the home page with a sign out confirmation message
 
+#### 14.2.3 Automated Testing
+
+Given the time constraints for the completion of this project and the extensive manual testing already undertaken, a full suite of automated tests for the entire project was not completed. Instead it was decided to undertake a sample set of tests. To achieve this it was considered best to focus on a single app within the project and to choose one of the apps created to contain a custom model as defined in the project requirements. Based on this approach it was decided to test the contact app.
+
+Automated testing of python code in the views.py, models.py and forms.py files of the contact app was carried out using Django's inbuilt unittest framework.
+
+The results of 11 tests successfully carried out is as follows:
+
+**Tests Run OK**
+
+![Screenshot showing the results of django unittest python testing](documents/unittest.png "Unittest Results")
+
+The tests provide 100% coverage of the models.py and forms.py files and 96% coverage of the views.py file. The result is an overall coverage of 99% for the app.
+
+**Coverage**
+
+![Screenshot showing the coverage for django unittest python testing](documents/coverage.png "Unittest Coverage")
+
 ### 14.3 Fixed Bugs
 
 1. The hero image disappeared at 768px before the full width simpler header for mobile became active leaving a blank space in the header.
